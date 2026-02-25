@@ -1,0 +1,3772 @@
+{
+  "grade": "HighSchool_1",
+  "target_levels": { "CEFR": "A2+~B1", "ACTFL": "Intermediate Mid", "Lexile_band": "950~1100L" },
+  "week": 1,
+  "theme": "Cause-Effect & Problem-Solution (Suneung + Speaking)",
+  "days": [
+    {
+      "day": 1,
+      "focus": "cause-effect basics",
+      "words": [
+        {
+          "headword": "cause",
+          "pos": "v/n",
+          "cefr": "A2",
+          "definition_simple": "to make something happen; the reason something happens",
+          "family": ["causal (adj)", "causation (n)"],
+          "synonyms": [{ "w": "reason", "level": 1 }, { "w": "lead to", "level": 1 }, { "w": "trigger", "level": 2 }],
+          "collocations": ["cause a problem", "cause stress", "main cause"],
+          "examples": {
+            "reading": "Lack of sleep can cause serious health problems.",
+            "speaking": "Too much homework causes stress for many students."
+          }
+        },
+        {
+          "headword": "effect",
+          "pos": "n",
+          "cefr": "A2",
+          "definition_simple": "a result or change caused by something",
+          "family": ["effective (adj)", "effectively (adv)", "affect (v)"],
+          "synonyms": [{ "w": "result", "level": 1 }, { "w": "impact", "level": 2 }, { "w": "influence", "level": 2 }],
+          "collocations": ["have an effect on", "positive effect", "long-term effect"],
+          "examples": {
+            "reading": "Social media can have an effect on teenagers' self-esteem.",
+            "speaking": "Exercise has a positive effect on my mood."
+          }
+        },
+        {
+          "headword": "affect",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to change or influence something",
+          "family": ["effect (n)", "affective (adj, rare for HS1)"],
+          "synonyms": [{ "w": "influence", "level": 1 }, { "w": "impact", "level": 2 }],
+          "collocations": ["affect behavior", "affect health", "directly affect"],
+          "examples": {
+            "reading": "Weather can affect how people feel and behave.",
+            "speaking": "Noise affects my concentration when I study."
+          }
+        },
+        {
+          "headword": "result",
+          "pos": "n/v",
+          "cefr": "A2",
+          "definition_simple": "something that happens because of something else",
+          "family": ["resulting (adj)", "result in (phr)"],
+          "synonyms": [{ "w": "outcome", "level": 2 }, { "w": "consequence", "level": 3 }],
+          "collocations": ["result in", "as a result", "final result"],
+          "examples": {
+            "reading": "Poor planning often results in failure.",
+            "speaking": "As a result, students feel less motivated."
+          }
+        },
+        {
+          "headword": "factor",
+          "pos": "n",
+          "cefr": "B1",
+          "definition_simple": "one important part that influences a situation",
+          "family": ["factor in (v phr)"],
+          "synonyms": [{ "w": "element", "level": 1 }, { "w": "cause", "level": 1 }],
+          "collocations": ["key factor", "major factor", "a factor in"],
+          "examples": {
+            "reading": "Cost is a major factor in choosing a school.",
+            "speaking": "One key factor is how much time students have."
+          }
+        },
+        {
+          "headword": "increase",
+          "pos": "v/n",
+          "cefr": "A2",
+          "definition_simple": "to become larger or greater",
+          "family": ["increasing (adj)", "increasingly (adv)"],
+          "synonyms": [{ "w": "rise", "level": 1 }, { "w": "grow", "level": 1 }, { "w": "expand", "level": 2 }],
+          "collocations": ["increase the number", "sharp increase", "increase rapidly"],
+          "examples": {
+            "reading": "The number of online classes increased during the pandemic.",
+            "speaking": "I try to increase my study time little by little."
+          }
+        },
+        {
+          "headword": "reduce",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to make something smaller or less",
+          "family": ["reduction (n)", "reduced (adj)"],
+          "synonyms": [{ "w": "decrease", "level": 1 }, { "w": "lower", "level": 1 }, { "w": "cut", "level": 1 }],
+          "collocations": ["reduce stress", "reduce costs", "reduce the risk"],
+          "examples": {
+            "reading": "Regular exercise can reduce the risk of disease.",
+            "speaking": "To reduce stress, I take short breaks."
+          }
+        },
+        {
+          "headword": "require",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to need something; to make something necessary",
+          "family": ["requirement (n)", "required (adj)"],
+          "synonyms": [{ "w": "need", "level": 1 }, { "w": "demand", "level": 2 }],
+          "collocations": ["require time", "require effort", "be required to"],
+          "examples": {
+            "reading": "Most jobs require good communication skills.",
+            "speaking": "Success requires effort every day."
+          }
+        },
+        {
+          "headword": "solution",
+          "pos": "n",
+          "cefr": "B1",
+          "definition_simple": "a way to solve a problem",
+          "family": ["solve (v)", "solvable (adj)"],
+          "synonyms": [{ "w": "answer", "level": 1 }, { "w": "resolution", "level": 2 }],
+          "collocations": ["find a solution", "practical solution", "a solution to"],
+          "examples": {
+            "reading": "Scientists are looking for a solution to plastic pollution.",
+            "speaking": "One practical solution is to study in short sessions."
+          }
+        }
+      ],
+      "patterns": [
+        { "pattern_id": "P01", "structure": "A causes B.", "level": "A2", "example": "Lack of sleep causes stress." },
+        { "pattern_id": "P02", "structure": "A has a (positive/negative) effect on B.", "level": "B1", "example": "Exercise has a positive effect on mood." }
+      ],
+      "speaking_task": {
+        "prompt": "What causes students to feel stressed at school? Explain one main cause and one effect. Give one solution.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["have an effect on", "one key factor", "find a solution", "reduce stress"],
+        "connectors_to_check": ["because", "so", "therefore", "as a result", "however", "for example"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 2,
+      "focus": "problem-solution + prevention",
+      "words": [
+        { "headword": "issue", "pos": "n", "cefr": "B1", "definition_simple": "an important problem or topic", "family": ["issues (pl)"], "synonyms": [{ "w": "problem", "level": 1 }, { "w": "matter", "level": 1 }], "collocations": ["social issue", "serious issue", "deal with an issue"], "examples": { "reading": "Bullying is a serious issue in some schools.", "speaking": "One issue is that students don’t get enough sleep." } },
+        { "headword": "challenge", "pos": "n", "cefr": "B1", "definition_simple": "something difficult that tests you", "family": ["challenging (adj)"], "synonyms": [{ "w": "difficulty", "level": 1 }, { "w": "obstacle", "level": 2 }], "collocations": ["face a challenge", "a major challenge", "meet the challenge"], "examples": { "reading": "Adapting to a new school can be challenging.", "speaking": "Time management is my biggest challenge." } },
+        { "headword": "prevent", "pos": "v", "cefr": "B1", "definition_simple": "to stop something from happening", "family": ["prevention (n)", "preventive (adj)"], "synonyms": [{ "w": "stop", "level": 1 }, { "w": "avoid", "level": 1 }], "collocations": ["prevent disease", "prevent accidents", "prevent + object + from ~ing"], "examples": { "reading": "Wearing a seatbelt helps prevent injuries.", "speaking": "I turn off my phone to prevent distractions." } },
+        { "headword": "avoid", "pos": "v", "cefr": "A2", "definition_simple": "to stay away from; not do something", "family": ["avoidable (adj)", "avoidance (n)"], "synonyms": [{ "w": "prevent", "level": 1 }, { "w": "escape", "level": 2 }], "collocations": ["avoid mistakes", "avoid conflict", "avoid doing"], "examples": { "reading": "To avoid mistakes, check your work twice.", "speaking": "I avoid studying late at night." } },
+        { "headword": "manage", "pos": "v", "cefr": "B1", "definition_simple": "to control or handle something", "family": ["management (n)", "manager (n)"], "synonyms": [{ "w": "handle", "level": 1 }, { "w": "control", "level": 2 }], "collocations": ["manage time", "manage stress", "manage a project"], "examples": { "reading": "Good students manage their time well.", "speaking": "I try to manage stress by exercising." } },
+        { "headword": "support", "pos": "v/n", "cefr": "A2+", "definition_simple": "to help; help given", "family": ["supportive (adj)", "supporter (n)"], "synonyms": [{ "w": "help", "level": 1 }, { "w": "assist", "level": 2 }], "collocations": ["support a claim", "get support", "emotional support"], "examples": { "reading": "Strong evidence supports the scientist’s claim.", "speaking": "My family supports me when I feel tired." } },
+        { "headword": "suggest", "pos": "v", "cefr": "B1", "definition_simple": "to recommend an idea", "family": ["suggestion (n)"], "synonyms": [{ "w": "recommend", "level": 1 }, { "w": "propose", "level": 2 }], "collocations": ["suggest that", "suggest a plan", "strongly suggest"], "examples": { "reading": "The report suggests that students sleep more.", "speaking": "I suggest studying for 30 minutes and resting." } },
+        { "headword": "strategy", "pos": "n", "cefr": "B1", "definition_simple": "a plan to achieve a goal", "family": ["strategic (adj)"], "synonyms": [{ "w": "plan", "level": 1 }, { "w": "approach", "level": 2 }], "collocations": ["learning strategy", "effective strategy", "use a strategy"], "examples": { "reading": "A good strategy can improve reading speed.", "speaking": "My strategy is to review words every morning." } },
+        { "headword": "risk", "pos": "n", "cefr": "B1", "definition_simple": "the chance of something bad happening", "family": ["risky (adj)"], "synonyms": [{ "w": "danger", "level": 1 }, { "w": "threat", "level": 2 }], "collocations": ["reduce the risk", "at risk", "high risk"], "examples": { "reading": "Smoking increases the risk of disease.", "speaking": "Using my phone late increases the risk of poor sleep." } },
+        { "headword": "benefit", "pos": "n/v", "cefr": "B1", "definition_simple": "a good result; to help", "family": ["beneficial (adj)"], "synonyms": [{ "w": "advantage", "level": 1 }, { "w": "gain", "level": 2 }], "collocations": ["benefit from", "health benefits", "mutual benefit"], "examples": { "reading": "Students benefit from regular feedback.", "speaking": "Reading daily benefits my vocabulary." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P03", "structure": "One problem is that ~.", "level": "A2+", "example": "One problem is that students sleep too late." },
+        { "pattern_id": "P04", "structure": "A possible solution is to ~.", "level": "A2+", "example": "A possible solution is to set a fixed bedtime." }
+      ],
+      "speaking_task": {
+        "prompt": "Choose one school issue (sleep, phone use, or homework). Describe the problem, explain one risk, and suggest one strategy to prevent it.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["reduce the risk", "benefit from", "effective strategy", "prevent distractions"],
+        "connectors_to_check": ["because", "so", "therefore", "however", "for example"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 3,
+      "focus": "evidence + claims (Suneung logic)",
+      "words": [
+        { "headword": "evidence", "pos": "n", "cefr": "B1", "definition_simple": "facts or signs that show something is true", "family": ["evident (adj)", "evidently (adv)"], "synonyms": [{ "w": "proof", "level": 2 }, { "w": "sign", "level": 1 }], "collocations": ["strong evidence", "evidence of", "scientific evidence"], "examples": { "reading": "There is strong evidence that exercise improves memory.", "speaking": "I have evidence because my scores improved after practice." } },
+        { "headword": "claim", "pos": "n/v", "cefr": "B1", "definition_simple": "to say something is true (often without proof); a statement", "family": ["claimant (n, rare)", "claimed (adj)"], "synonyms": [{ "w": "argue", "level": 2 }, { "w": "state", "level": 1 }], "collocations": ["make a claim", "support a claim", "false claim"], "examples": { "reading": "The article claims that teens need more sleep.", "speaking": "Some people claim phones help learning, but it depends." } },
+        { "headword": "argue", "pos": "v", "cefr": "B1", "definition_simple": "to give reasons for your opinion", "family": ["argument (n)", "argumentative (adj)"], "synonyms": [{ "w": "claim", "level": 1 }, { "w": "insist", "level": 2 }], "collocations": ["argue that", "argue against", "strongly argue"], "examples": { "reading": "Many researchers argue that reading builds empathy.", "speaking": "I argue that school should start later." } },
+        { "headword": "support", "pos": "v", "cefr": "A2+", "definition_simple": "to help prove or show something is true", "family": ["supportive (adj)"], "synonyms": [{ "w": "back up", "level": 1 }, { "w": "confirm", "level": 2 }], "collocations": ["support an idea", "support a claim", "support with evidence"], "examples": { "reading": "The graph supports the writer’s conclusion.", "speaking": "I can support my opinion with an example." } },
+        { "headword": "conclude", "pos": "v", "cefr": "B1", "definition_simple": "to decide after thinking; to end", "family": ["conclusion (n)"], "synonyms": [{ "w": "decide", "level": 1 }, { "w": "determine", "level": 2 }], "collocations": ["conclude that", "reach a conclusion", "final conclusion"], "examples": { "reading": "The study concludes that short naps can help learning.", "speaking": "So I conclude that balance is important." } },
+        { "headword": "indicate", "pos": "v", "cefr": "B1", "definition_simple": "to show or suggest", "family": ["indication (n)", "indicative (adj)"],
+          "synonyms": [{ "w": "show", "level": 1 }, { "w": "suggest", "level": 1 }],
+          "collocations": ["indicate that", "clear indication", "results indicate"],
+          "examples": { "reading": "The results indicate that stress lowers performance.", "speaking": "This indicates we need a better schedule." }
+        },
+        { "headword": "research", "pos": "n/v", "cefr": "B1", "definition_simple": "careful study to discover facts", "family": ["researcher (n)", "research-based (adj)"], "synonyms": [{ "w": "study", "level": 1 }, { "w": "investigation", "level": 2 }], "collocations": ["do research", "research shows", "research findings"], "examples": { "reading": "Research shows that sleep affects memory.", "speaking": "I read research that supports this idea." } },
+        { "headword": "data", "pos": "n", "cefr": "B1", "definition_simple": "information, often numbers, used for analysis", "family": ["database (n)"], "synonyms": [{ "w": "information", "level": 1 }, { "w": "figures", "level": 2 }], "collocations": ["collect data", "analyze data", "data shows"], "examples": { "reading": "The scientist collected data from 300 students.", "speaking": "The data shows a clear trend." } },
+        { "headword": "trend", "pos": "n", "cefr": "B1", "definition_simple": "a general direction of change", "family": ["trendy (adj, casual)"], "synonyms": [{ "w": "pattern", "level": 1 }, { "w": "tendency", "level": 2 }], "collocations": ["a growing trend", "trend toward", "follow a trend"], "examples": { "reading": "There is a growing trend toward online learning.", "speaking": "I notice a trend: students rely on short videos." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P05", "structure": "There is evidence that ~.", "level": "B1", "example": "There is evidence that sleep improves memory." },
+        { "pattern_id": "P06", "structure": "This suggests/indicates that ~.", "level": "B1", "example": "This indicates that we should rest more." }
+      ],
+      "speaking_task": {
+        "prompt": "Make one claim about studying (sleep, review, or phone use). Give evidence (a fact, research, or personal example), and conclude your opinion.",
+        "target_words_min": 5,
+        "recommended_time_sec": 70
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["strong evidence", "make a claim", "reach a conclusion", "results indicate that"],
+        "connectors_to_check": ["for example", "because", "therefore", "however"],
+        "fluency_targets": { "min_words": 55, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 4,
+      "focus": "process & steps (speaking clarity)",
+      "words": [
+        { "headword": "process", "pos": "n", "cefr": "B1", "definition_simple": "a series of actions to achieve a result", "family": ["process (v)", "processing (n/adj)"], "synonyms": [{ "w": "procedure", "level": 2 }, { "w": "method", "level": 1 }], "collocations": ["learning process", "in the process of", "a slow process"], "examples": { "reading": "Language learning is a long process.", "speaking": "My study process has three steps." } },
+        { "headword": "method", "pos": "n", "cefr": "B1", "definition_simple": "a way of doing something", "family": ["methodical (adj)"], "synonyms": [{ "w": "way", "level": 1 }, { "w": "approach", "level": 2 }], "collocations": ["effective method", "teaching method", "use a method"], "examples": { "reading": "The teacher used an effective method to teach reading.", "speaking": "One method is to review words with sentences." } },
+        { "headword": "step", "pos": "n", "cefr": "A2", "definition_simple": "one action in a process", "family": ["step-by-step (adj)"], "synonyms": [{ "w": "stage", "level": 2 }, { "w": "phase", "level": 3 }], "collocations": ["first step", "next step", "take steps to"], "examples": { "reading": "The first step is to understand the question.", "speaking": "My next step is to practice speaking." } },
+        { "headword": "practice", "pos": "n/v", "cefr": "A2", "definition_simple": "to do something repeatedly to improve", "family": ["practical (adj)", "practically (adv)"], "synonyms": [{ "w": "train", "level": 2 }, { "w": "rehearse", "level": 3 }], "collocations": ["practice speaking", "daily practice", "practice makes perfect"], "examples": { "reading": "Regular practice improves fluency.", "speaking": "I practice speaking for five minutes every day." } },
+        { "headword": "improve", "pos": "v", "cefr": "A2", "definition_simple": "to make something better", "family": ["improvement (n)", "improved (adj)"], "synonyms": [{ "w": "enhance", "level": 2 }, { "w": "develop", "level": 2 }], "collocations": ["improve skills", "improve performance", "greatly improve"], "examples": { "reading": "Reading daily can improve vocabulary.", "speaking": "I want to improve my speaking confidence." } },
+        { "headword": "maintain", "pos": "v", "cefr": "B1", "definition_simple": "to keep something at the same level", "family": ["maintenance (n)"], "synonyms": [{ "w": "keep", "level": 1 }, { "w": "preserve", "level": 2 }], "collocations": ["maintain health", "maintain a habit", "maintain quality"], "examples": { "reading": "It is hard to maintain good habits during exams.", "speaking": "I maintain my routine even when I’m busy." } },
+        { "headword": "focus", "pos": "v/n", "cefr": "A2+", "definition_simple": "to pay attention to one thing", "family": ["focused (adj)", "focus on (phr)"], "synonyms": [{ "w": "concentrate", "level": 2 }, { "w": "pay attention", "level": 1 }], "collocations": ["focus on", "stay focused", "main focus"], "examples": { "reading": "Students should focus on key ideas in a passage.", "speaking": "I focus on collocations, not single words." } },
+        { "headword": "review", "pos": "v/n", "cefr": "B1", "definition_simple": "to look at something again to remember it", "family": ["reviewer (n)"], "synonyms": [{ "w": "check", "level": 1 }, { "w": "revise", "level": 2 }], "collocations": ["review notes", "weekly review", "review for a test"], "examples": { "reading": "A quick review helps long-term memory.", "speaking": "I review today’s words before I sleep." } },
+        { "headword": "consistency", "pos": "n", "cefr": "B1", "definition_simple": "doing something in the same way regularly", "family": ["consistent (adj)", "consistently (adv)"], "synonyms": [{ "w": "regularity", "level": 2 }, { "w": "steadiness", "level": 3 }], "collocations": ["build consistency", "consistent effort", "practice consistently"], "examples": { "reading": "Consistency matters more than intensity in learning.", "speaking": "Consistency is the key to improving English." } },
+        { "headword": "goal", "pos": "n", "cefr": "A2", "definition_simple": "something you want to achieve", "family": ["goal-setting (n)"], "synonyms": [{ "w": "aim", "level": 1 }, { "w": "objective", "level": 2 }], "collocations": ["set a goal", "reach a goal", "long-term goal"], "examples": { "reading": "Setting a clear goal increases motivation.", "speaking": "My goal is to speak for one minute without stopping." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P07", "structure": "First, ~. Next, ~. Finally, ~.", "level": "A2+", "example": "First, review. Next, practice. Finally, record your speaking." },
+        { "pattern_id": "P08", "structure": "To ~, you need to ~.", "level": "A2+", "example": "To improve speaking, you need to practice consistently." }
+      ],
+      "speaking_task": {
+        "prompt": "Explain your study process in three steps. Include one method you use to maintain consistency and reach your goal.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["set a goal", "focus on", "weekly review", "practice consistently"],
+        "connectors_to_check": ["first", "next", "finally", "because", "so"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 5,
+      "focus": "comparison (Suneung frequent)",
+      "words": [
+        { "headword": "compare", "pos": "v", "cefr": "A2+", "definition_simple": "to look at similarities and differences", "family": ["comparison (n)", "comparative (adj)"], "synonyms": [{ "w": "contrast", "level": 2 }, { "w": "examine", "level": 2 }], "collocations": ["compare A and B", "compared to", "compare with"], "examples": { "reading": "Compared to print books, e-books are easier to carry.", "speaking": "I compared my results before and after practice." } },
+        { "headword": "contrast", "pos": "v/n", "cefr": "B1", "definition_simple": "to show differences clearly", "family": ["contrast (n)", "contrasting (adj)"], "synonyms": [{ "w": "compare", "level": 1 }, { "w": "differ", "level": 1 }], "collocations": ["in contrast", "contrast with", "sharp contrast"], "examples": { "reading": "In contrast, the second group improved faster.", "speaking": "In contrast to last year, I feel more confident." } },
+        { "headword": "similar", "pos": "adj", "cefr": "A2", "definition_simple": "almost the same", "family": ["similarity (n)"], "synonyms": [{ "w": "alike", "level": 2 }, { "w": "close", "level": 1 }], "collocations": ["similar to", "very similar", "in a similar way"], "examples": { "reading": "Their opinions are similar in many ways.", "speaking": "My routine is similar to my friend’s routine." } },
+        { "headword": "different", "pos": "adj", "cefr": "A1", "definition_simple": "not the same", "family": ["difference (n)", "differ (v)"], "synonyms": [{ "w": "not the same", "level": 1 }, { "w": "distinct", "level": 3 }], "collocations": ["different from", "completely different", "a big difference"], "examples": { "reading": "There is a big difference between short-term and long-term memory.", "speaking": "It’s different from what I expected." } },
+        { "headword": "advantage", "pos": "n", "cefr": "B1", "definition_simple": "a good point or benefit", "family": ["advantageous (adj)"], "synonyms": [{ "w": "benefit", "level": 1 }, { "w": "strength", "level": 2 }], "collocations": ["an advantage of", "main advantage", "take advantage of"], "examples": { "reading": "One advantage of online learning is flexibility.", "speaking": "The main advantage is that I can study anywhere." } },
+        { "headword": "disadvantage", "pos": "n", "cefr": "B1", "definition_simple": "a bad point", "family": [], "synonyms": [{ "w": "drawback", "level": 2 }, { "w": "weakness", "level": 2 }], "collocations": ["a disadvantage of", "main disadvantage", "serious disadvantage"], "examples": { "reading": "A disadvantage is that students may lose focus.", "speaking": "One drawback is that it’s easy to get distracted." } },
+        { "headword": "prefer", "pos": "v", "cefr": "A2", "definition_simple": "to like one thing more than another", "family": ["preference (n)", "preferable (adj)"], "synonyms": [{ "w": "like better", "level": 1 }, { "w": "choose", "level": 1 }], "collocations": ["prefer A to B", "prefer to do", "personal preference"], "examples": { "reading": "Some students prefer studying alone.", "speaking": "I prefer reading to watching short videos." } },
+        { "headword": "option", "pos": "n", "cefr": "A2", "definition_simple": "a choice", "family": ["optional (adj)"], "synonyms": [{ "w": "choice", "level": 1 }, { "w": "alternative", "level": 2 }], "collocations": ["a good option", "choose an option", "have the option to"], "examples": { "reading": "Students have the option to take online classes.", "speaking": "A good option is to study in the morning." } },
+        { "headword": "balance", "pos": "n/v", "cefr": "B1", "definition_simple": "a healthy mix; to keep things equal", "family": ["balanced (adj)"], "synonyms": [{ "w": "stability", "level": 2 }, { "w": "harmony", "level": 3 }], "collocations": ["keep a balance", "work-life balance", "balance A and B"], "examples": { "reading": "A balance between study and rest improves performance.", "speaking": "I try to balance homework and sleep." } },
+        { "headword": "efficient", "pos": "adj", "cefr": "B1", "definition_simple": "working well without wasting time or energy", "family": ["efficiency (n)", "efficiently (adv)"], "synonyms": [{ "w": "effective", "level": 2 }, { "w": "productive", "level": 2 }], "collocations": ["an efficient way", "work efficiently", "time-efficient"], "examples": { "reading": "Spaced repetition is an efficient way to learn words.", "speaking": "This method is efficient because it saves time." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P09", "structure": "Compared to A, B is ~.", "level": "B1", "example": "Compared to late-night study, morning study is more efficient." },
+        { "pattern_id": "P10", "structure": "One advantage/disadvantage of A is that ~.", "level": "B1", "example": "One disadvantage of phones is that they distract students." }
+      ],
+      "speaking_task": {
+        "prompt": "Compare online learning and offline learning. Mention one advantage and one disadvantage, and say which you prefer and why.",
+        "target_words_min": 5,
+        "recommended_time_sec": 70
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["compared to", "one advantage of", "one disadvantage of", "balance A and B"],
+        "connectors_to_check": ["however", "on the other hand", "for example", "because"],
+        "fluency_targets": { "min_words": 55, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 6,
+      "focus": "opinion + reason + example (speaking core)",
+      "words": [
+        { "headword": "opinion", "pos": "n", "cefr": "A2+", "definition_simple": "what you think or believe", "family": [], "synonyms": [{ "w": "view", "level": 2 }, { "w": "belief", "level": 2 }], "collocations": ["in my opinion", "public opinion", "share an opinion"], "examples": { "reading": "Public opinion can influence policy.", "speaking": "In my opinion, schools should start later." } },
+        { "headword": "reason", "pos": "n", "cefr": "A2", "definition_simple": "a cause or explanation", "family": ["reasonable (adj)", "reasonably (adv)"], "synonyms": [{ "w": "cause", "level": 1 }, { "w": "explanation", "level": 2 }], "collocations": ["main reason", "for this reason", "a reason why"], "examples": { "reading": "One reason is that teens need more sleep.", "speaking": "The main reason is that students are tired." } },
+        { "headword": "example", "pos": "n", "cefr": "A2", "definition_simple": "something that shows what you mean", "family": ["for example (phr)"], "synonyms": [{ "w": "case", "level": 2 }, { "w": "instance", "level": 3 }], "collocations": ["give an example", "for example", "real-life example"], "examples": { "reading": "For example, short breaks can improve focus.", "speaking": "Let me give an example from my experience." } },
+        { "headword": "explain", "pos": "v", "cefr": "A2+", "definition_simple": "to make something clear", "family": ["explanation (n)", "explanatory (adj)"], "synonyms": [{ "w": "describe", "level": 1 }, { "w": "clarify", "level": 2 }], "collocations": ["explain why", "explain clearly", "explain the reason"], "examples": { "reading": "The author explains why habits are hard to change.", "speaking": "I will explain why this is beneficial." } },
+        { "headword": "recommend", "pos": "v", "cefr": "B1", "definition_simple": "to suggest something as good", "family": ["recommendation (n)"], "synonyms": [{ "w": "suggest", "level": 1 }, { "w": "advise", "level": 2 }], "collocations": ["recommend that", "highly recommend", "recommend a method"], "examples": { "reading": "Experts recommend that teens sleep at least eight hours.", "speaking": "I recommend studying with spaced repetition." } },
+        { "headword": "decide", "pos": "v", "cefr": "A2", "definition_simple": "to choose after thinking", "family": ["decision (n)", "decisive (adj)"], "synonyms": [{ "w": "choose", "level": 1 }, { "w": "determine", "level": 2 }], "collocations": ["make a decision", "decide to", "hard decision"], "examples": { "reading": "People make decisions faster under pressure.", "speaking": "I decided to study in the morning." } },
+        { "headword": "pressure", "pos": "n", "cefr": "B1", "definition_simple": "stress or force from expectations", "family": ["pressured (adj)"], "synonyms": [{ "w": "stress", "level": 1 }, { "w": "burden", "level": 2 }], "collocations": ["feel pressure", "under pressure", "peer pressure"], "examples": { "reading": "Students often feel pressure before exams.", "speaking": "Under pressure, I sometimes forget easy words." } },
+        { "headword": "motivate", "pos": "v", "cefr": "B1", "definition_simple": "to make someone want to do something", "family": ["motivation (n)", "motivated (adj)"], "synonyms": [{ "w": "encourage", "level": 1 }, { "w": "inspire", "level": 2 }], "collocations": ["motivate students", "stay motivated", "motivation to"], "examples": { "reading": "Clear goals can motivate learners.", "speaking": "A small success motivates me to continue." } },
+        { "headword": "confidence", "pos": "n", "cefr": "B1", "definition_simple": "belief that you can do something well", "family": ["confident (adj)", "confidently (adv)"], "synonyms": [{ "w": "self-belief", "level": 2 }, { "w": "assurance", "level": 3 }], "collocations": ["build confidence", "lack confidence", "gain confidence"], "examples": { "reading": "Practice helps students build confidence.", "speaking": "Recording myself helped me gain confidence." } },
+        { "headword": "habit", "pos": "n", "cefr": "A2+", "definition_simple": "something you do regularly", "family": ["habitual (adj)"], "synonyms": [{ "w": "routine", "level": 1 }, { "w": "pattern", "level": 2 }], "collocations": ["good habit", "bad habit", "form a habit"], "examples": { "reading": "A good habit is more powerful than motivation.", "speaking": "I’m trying to form a habit of daily review." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P11", "structure": "In my opinion, ~.", "level": "A2+", "example": "In my opinion, daily practice is essential." },
+        { "pattern_id": "P12", "structure": "One reason is that ~. For example, ~.", "level": "B1", "example": "One reason is that habits save time. For example, I review every night." }
+      ],
+      "speaking_task": {
+        "prompt": "In your opinion, what is the best way to improve English speaking? Give one reason and one example, and recommend a habit.",
+        "target_words_min": 5,
+        "recommended_time_sec": 75
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["in my opinion", "one reason is that", "for example", "make a decision", "build confidence"],
+        "connectors_to_check": ["because", "so", "therefore", "for example"],
+        "fluency_targets": { "min_words": 60, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 7,
+      "focus": "mini debate (counterargument)",
+      "words": [
+        { "headword": "argue", "pos": "v", "cefr": "B1", "definition_simple": "to give reasons for your opinion", "family": ["argument (n)"], "synonyms": [{ "w": "claim", "level": 1 }, { "w": "say", "level": 1 }], "collocations": ["argue that", "argue against", "argue for"], "examples": { "reading": "Some people argue that homework is necessary.", "speaking": "I argue that less homework can be more effective." } },
+        { "headword": "agree", "pos": "v", "cefr": "A2", "definition_simple": "to have the same opinion", "family": ["agreement (n)"], "synonyms": [{ "w": "accept", "level": 2 }, { "w": "support", "level": 2 }], "collocations": ["agree with", "agree that", "completely agree"], "examples": { "reading": "Many students agree that sleep is important.", "speaking": "I agree that rest matters, but balance is needed." } },
+        { "headword": "disagree", "pos": "v", "cefr": "A2+", "definition_simple": "to have a different opinion", "family": ["disagreement (n)"], "synonyms": [{ "w": "oppose", "level": 2 }, { "w": "object", "level": 2 }], "collocations": ["disagree with", "strongly disagree", "disagree about"], "examples": { "reading": "Experts sometimes disagree about the best method.", "speaking": "I disagree because the evidence is weak." } },
+        { "headword": "however", "pos": "adv", "cefr": "B1", "definition_simple": "used to show a contrast", "family": [], "synonyms": [{ "w": "but", "level": 1 }, { "w": "nevertheless", "level": 3 }], "collocations": ["however, + clause", "however + adj/adv"], "examples": { "reading": "The idea sounds good; however, it is expensive.", "speaking": "However, phones can also be useful for learning." } },
+        { "headword": "although", "pos": "conj", "cefr": "B1", "definition_simple": "used to introduce a contrast", "family": [], "synonyms": [{ "w": "even though", "level": 2 }], "collocations": ["although + clause", "although it is true"], "examples": { "reading": "Although the method is simple, it is effective.", "speaking": "Although I like videos, I prefer reading for deep learning." } },
+        { "headword": "consider", "pos": "v", "cefr": "B1", "definition_simple": "to think carefully about", "family": ["consideration (n)", "considerate (adj)"], "synonyms": [{ "w": "think about", "level": 1 }, { "w": "take into account", "level": 2 }], "collocations": ["consider + noun", "consider doing", "consider the fact that"], "examples": { "reading": "We should consider both costs and benefits.", "speaking": "We must consider students’ mental health." } },
+        { "headword": "perspective", "pos": "n", "cefr": "B1+", "definition_simple": "a way of thinking about something", "family": [], "synonyms": [{ "w": "viewpoint", "level": 2 }, { "w": "point of view", "level": 1 }], "collocations": ["from a perspective", "different perspectives", "broaden perspective"], "examples": { "reading": "From a cultural perspective, the rule may seem strict.", "speaking": "From my perspective, quality matters more than quantity." } },
+        { "headword": "limit", "pos": "v/n", "cefr": "B1", "definition_simple": "to control the size or amount; a maximum amount", "family": ["limitation (n)", "limited (adj)"], "synonyms": [{ "w": "restrict", "level": 2 }, { "w": "reduce", "level": 1 }], "collocations": ["set a limit", "limit screen time", "within limits"], "examples": { "reading": "Many schools limit phone use during class.", "speaking": "We should set a limit on screen time." } },
+        { "headword": "necessary", "pos": "adj", "cefr": "A2+", "definition_simple": "needed; important", "family": ["necessity (n)", "necessarily (adv)"], "synonyms": [{ "w": "required", "level": 1 }, { "w": "essential", "level": 2 }], "collocations": ["it is necessary to", "absolutely necessary", "necessary for"], "examples": { "reading": "It is necessary to get enough sleep for learning.", "speaking": "I think it is necessary to practice speaking daily." } },
+        { "headword": "effective", "pos": "adj", "cefr": "B1", "definition_simple": "working well and producing results", "family": ["effect (n)", "effectively (adv)"], "synonyms": [{ "w": "efficient", "level": 2 }, { "w": "useful", "level": 1 }], "collocations": ["effective way", "highly effective", "effective for"], "examples": { "reading": "Spaced repetition is an effective way to remember words.", "speaking": "This is effective because it forces me to use the words." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P13", "structure": "Some people argue that ~. However, ~.", "level": "B1", "example": "Some people argue that phones help learning. However, they can distract students." },
+        { "pattern_id": "P14", "structure": "Although ~, ~.", "level": "B1", "example": "Although homework is necessary, too much can increase stress." }
+      ],
+      "speaking_task": {
+        "prompt": "Topic: Smartphones in school. Present one argument for, one argument against, and your final opinion. Use however/although at least once.",
+        "target_words_min": 5,
+        "recommended_time_sec": 80
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["some people argue that", "from my perspective", "set a limit", "effective way"],
+        "connectors_to_check": ["however", "although", "on the other hand", "therefore", "for example"],
+        "fluency_targets": { "min_words": 65, "min_sentences": 5 }
+      }
+    }
+  ]
+}
+
+
+/* =========================================================
+   HS1 (수능+말하기) Week1 Day1~Day7 SQL (MySQL 8+ 기준)
+   - UTF8MB4 권장
+   - 핵심: Day(학습일) ↔ Word(단어) 다대다 + Pattern/Task/Checklist
+   ========================================================= */
+
+-- 0) DB 권장 설정
+-- CREATE DATABASE efl_vocab_app CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+-- USE efl_vocab_app;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS day_checklist_collocations;
+DROP TABLE IF EXISTS day_checklist_connectors;
+DROP TABLE IF EXISTS day_checklists;
+DROP TABLE IF EXISTS speaking_tasks;
+DROP TABLE IF EXISTS day_patterns;
+DROP TABLE IF EXISTS patterns;
+DROP TABLE IF EXISTS example_sentences;
+DROP TABLE IF EXISTS word_collocations;
+DROP TABLE IF EXISTS word_synonyms;
+DROP TABLE IF EXISTS word_family;
+DROP TABLE IF EXISTS day_words;
+DROP TABLE IF EXISTS words;
+DROP TABLE IF EXISTS days;
+
+SET FOREIGN_KEY_CHECKS=1;
+
+-- 1) Days
+CREATE TABLE days (
+  day_id        INT AUTO_INCREMENT PRIMARY KEY,
+  grade         VARCHAR(32) NOT NULL,           -- HighSchool_1
+  week_no       INT NOT NULL,
+  day_no        INT NOT NULL,                   -- 1..7
+  theme         VARCHAR(128) NOT NULL,
+  focus         VARCHAR(128) NOT NULL,
+  target_cefr   VARCHAR(16),
+  target_actfl  VARCHAR(32),
+  lexile_band   VARCHAR(32),
+  UNIQUE KEY uq_day (grade, week_no, day_no)
+) ENGINE=InnoDB;
+
+-- 2) Words
+CREATE TABLE words (
+  word_id            INT AUTO_INCREMENT PRIMARY KEY,
+  headword           VARCHAR(64) NOT NULL,
+  pos                VARCHAR(32) NOT NULL,       -- v/n/adj/etc
+  cefr               VARCHAR(16),
+  definition_simple  VARCHAR(255) NOT NULL,
+  UNIQUE KEY uq_headword_pos (headword, pos)
+) ENGINE=InnoDB;
+
+-- 3) Day-Words (10단어/일)
+CREATE TABLE day_words (
+  day_id  INT NOT NULL,
+  word_id INT NOT NULL,
+  sort_no INT NOT NULL,                           -- 1..10
+  PRIMARY KEY (day_id, word_id),
+  UNIQUE KEY uq_day_sort (day_id, sort_no),
+  CONSTRAINT fk_dw_day  FOREIGN KEY (day_id)  REFERENCES days(day_id)  ON DELETE CASCADE,
+  CONSTRAINT fk_dw_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 4) Word Family
+CREATE TABLE word_family (
+  family_id    INT AUTO_INCREMENT PRIMARY KEY,
+  word_id      INT NOT NULL,                      -- root/headword의 word_id
+  derived_word VARCHAR(64) NOT NULL,
+  derived_pos  VARCHAR(32),
+  derived_cefr VARCHAR(16),
+  CONSTRAINT fk_wf_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 5) Synonyms (레벨/뉘앙스)
+CREATE TABLE word_synonyms (
+  syn_id        INT AUTO_INCREMENT PRIMARY KEY,
+  word_id       INT NOT NULL,
+  synonym_word  VARCHAR(64) NOT NULL,
+  nuance_level  INT NOT NULL DEFAULT 1,          -- 1(쉬움)~3(고급)
+  CONSTRAINT fk_ws_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 6) Collocations
+CREATE TABLE word_collocations (
+  col_id        INT AUTO_INCREMENT PRIMARY KEY,
+  word_id       INT NOT NULL,
+  collocation   VARCHAR(128) NOT NULL,
+  freq_band     VARCHAR(16) DEFAULT 'high',      -- high/medium/low
+  CONSTRAINT fk_wc_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 7) Example Sentences
+CREATE TABLE example_sentences (
+  ex_id     INT AUTO_INCREMENT PRIMARY KEY,
+  word_id   INT NOT NULL,
+  ex_type   ENUM('reading','speaking') NOT NULL,
+  sentence  VARCHAR(255) NOT NULL,
+  CONSTRAINT fk_ex_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 8) Patterns
+CREATE TABLE patterns (
+  pattern_id    VARCHAR(16) PRIMARY KEY,         -- P01...
+  structure     VARCHAR(128) NOT NULL,
+  level_tag     VARCHAR(16) NOT NULL,            -- A2/B1...
+  example       VARCHAR(255)
+) ENGINE=InnoDB;
+
+-- 9) Day-Patterns
+CREATE TABLE day_patterns (
+  day_id     INT NOT NULL,
+  pattern_id VARCHAR(16) NOT NULL,
+  sort_no    INT NOT NULL,                        -- 1..2
+  PRIMARY KEY (day_id, pattern_id),
+  UNIQUE KEY uq_dp_day_sort (day_id, sort_no),
+  CONSTRAINT fk_dp_day FOREIGN KEY (day_id) REFERENCES days(day_id) ON DELETE CASCADE,
+  CONSTRAINT fk_dp_pat FOREIGN KEY (pattern_id) REFERENCES patterns(pattern_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 10) Speaking Task
+CREATE TABLE speaking_tasks (
+  task_id               INT AUTO_INCREMENT PRIMARY KEY,
+  day_id                INT NOT NULL UNIQUE,
+  prompt                VARCHAR(255) NOT NULL,
+  target_words_min      INT NOT NULL,
+  recommended_time_sec  INT NOT NULL,
+  CONSTRAINT fk_task_day FOREIGN KEY (day_id) REFERENCES days(day_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 11) Checklist (하루 채점 규칙)
+CREATE TABLE day_checklists (
+  checklist_id      INT AUTO_INCREMENT PRIMARY KEY,
+  day_id            INT NOT NULL UNIQUE,
+  target_hits_min   INT NOT NULL,
+  target_hits_max   INT NOT NULL,
+  points_vocab      INT NOT NULL,
+  family_bonus_on   TINYINT(1) NOT NULL DEFAULT 1,
+  points_family     INT NOT NULL,
+  min_words         INT NOT NULL,
+  min_sentences     INT NOT NULL,
+  CONSTRAINT fk_chk_day FOREIGN KEY (day_id) REFERENCES days(day_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE day_checklist_collocations (
+  checklist_id INT NOT NULL,
+  collocation  VARCHAR(128) NOT NULL,
+  PRIMARY KEY (checklist_id, collocation),
+  CONSTRAINT fk_chkc_chk FOREIGN KEY (checklist_id) REFERENCES day_checklists(checklist_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE day_checklist_connectors (
+  checklist_id INT NOT NULL,
+  connector    VARCHAR(32) NOT NULL,
+  PRIMARY KEY (checklist_id, connector),
+  CONSTRAINT fk_chkn_chk FOREIGN KEY (checklist_id) REFERENCES day_checklists(checklist_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+/* =========================================================
+   INSERT: Days (Week1 Day1~Day7)
+   ========================================================= */
+INSERT INTO days (grade, week_no, day_no, theme, focus, target_cefr, target_actfl, lexile_band) VALUES
+('HighSchool_1', 1, 1, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'cause-effect basics', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 2, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'problem-solution + prevention', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 3, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'evidence + claims (Suneung logic)', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 4, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'process & steps (speaking clarity)', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 5, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'comparison (Suneung frequent)', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 6, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'opinion + reason + example (speaking core)', 'A2+~B1', 'Intermediate Mid', '950~1100L'),
+('HighSchool_1', 1, 7, 'Cause-Effect & Problem-Solution (Suneung + Speaking)', 'mini debate (counterargument)', 'A2+~B1', 'Intermediate Mid', '950~1100L');
+
+-- 편의를 위해 day_id 조회 (MySQL에서는 아래 SELECT로 확인)
+-- SELECT day_id, day_no FROM days WHERE grade='HighSchool_1' AND week_no=1 ORDER BY day_no;
+
+
+/* =========================================================
+   INSERT: Patterns (P01~P14)
+   ========================================================= */
+INSERT INTO patterns (pattern_id, structure, level_tag, example) VALUES
+('P01','A causes B.','A2','Lack of sleep causes stress.'),
+('P02','A has a (positive/negative) effect on B.','B1','Exercise has a positive effect on mood.'),
+('P03','One problem is that ~.','A2+','One problem is that students sleep too late.'),
+('P04','A possible solution is to ~.','A2+','A possible solution is to set a fixed bedtime.'),
+('P05','There is evidence that ~.','B1','There is evidence that sleep improves memory.'),
+('P06','This suggests/indicates that ~.','B1','This indicates that we should rest more.'),
+('P07','First, ~. Next, ~. Finally, ~.','A2+','First, review. Next, practice. Finally, record your speaking.'),
+('P08','To ~, you need to ~.','A2+','To improve speaking, you need to practice consistently.'),
+('P09','Compared to A, B is ~.','B1','Compared to late-night study, morning study is more efficient.'),
+('P10','One advantage/disadvantage of A is that ~.','B1','One disadvantage of phones is that they distract students.'),
+('P11','In my opinion, ~.','A2+','In my opinion, daily practice is essential.'),
+('P12','One reason is that ~. For example, ~.','B1','One reason is that habits save time. For example, I review every night.'),
+('P13','Some people argue that ~. However, ~.','B1','Some people argue that phones help learning. However, they can distract students.'),
+('P14','Although ~, ~.','B1','Although homework is necessary, too much can increase stress.');
+
+
+/* =========================================================
+   INSERT: Words (Day1~Day7 사용 단어)
+   - 중복 단어는 1회만 insert. (uq_headword_pos)
+   ========================================================= */
+
+-- Day 1 words
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('cause','v/n','A2','to make something happen; the reason something happens'),
+('effect','n','A2','a result or change caused by something'),
+('affect','v','B1','to change or influence something'),
+('result','n/v','A2','something that happens because of something else'),
+('factor','n','B1','one important part that influences a situation'),
+('increase','v/n','A2','to become larger or greater'),
+('reduce','v','B1','to make something smaller or less'),
+('require','v','B1','to need something; to make something necessary'),
+('solution','n','B1','a way to solve a problem');
+
+-- Day 2 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('issue','n','B1','an important problem or topic'),
+('challenge','n','B1','something difficult that tests you'),
+('prevent','v','B1','to stop something from happening'),
+('avoid','v','A2','to stay away from; not do something'),
+('manage','v','B1','to control or handle something'),
+('support','v/n','A2+','to help; help given'),
+('suggest','v','B1','to recommend an idea'),
+('strategy','n','B1','a plan to achieve a goal'),
+('risk','n','B1','the chance of something bad happening'),
+('benefit','n/v','B1','a good result; to help');
+
+-- Day 3 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('evidence','n','B1','facts or signs that show something is true'),
+('claim','n/v','B1','to say something is true; a statement'),
+('argue','v','B1','to give reasons for your opinion'),
+('conclude','v','B1','to decide after thinking; to end'),
+('indicate','v','B1','to show or suggest'),
+('research','n/v','B1','careful study to discover facts'),
+('data','n','B1','information, often numbers, used for analysis'),
+('trend','n','B1','a general direction of change');
+
+-- Day 4 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('process','n','B1','a series of actions to achieve a result'),
+('method','n','B1','a way of doing something'),
+('step','n','A2','one action in a process'),
+('practice','n/v','A2','to do something repeatedly to improve'),
+('improve','v','A2','to make something better'),
+('maintain','v','B1','to keep something at the same level'),
+('focus','v/n','A2+','to pay attention to one thing'),
+('review','v/n','B1','to look at something again to remember it'),
+('consistency','n','B1','doing something in the same way regularly'),
+('goal','n','A2','something you want to achieve');
+
+-- Day 5 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('compare','v','A2+','to look at similarities and differences'),
+('contrast','v/n','B1','to show differences clearly'),
+('similar','adj','A2','almost the same'),
+('different','adj','A1','not the same'),
+('advantage','n','B1','a good point or benefit'),
+('disadvantage','n','B1','a bad point'),
+('prefer','v','A2','to like one thing more than another'),
+('option','n','A2','a choice'),
+('balance','n/v','B1','a healthy mix; to keep things equal'),
+('efficient','adj','B1','working well without wasting time or energy');
+
+-- Day 6 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('opinion','n','A2+','what you think or believe'),
+('reason','n','A2','a cause or explanation'),
+('example','n','A2','something that shows what you mean'),
+('explain','v','A2+','to make something clear'),
+('recommend','v','B1','to suggest something as good'),
+('decide','v','A2','to choose after thinking'),
+('pressure','n','B1','stress or force from expectations'),
+('motivate','v','B1','to make someone want to do something'),
+('confidence','n','B1','belief that you can do something well'),
+('habit','n','A2+','something you do regularly');
+
+-- Day 7 words (새 단어만)
+INSERT INTO words (headword, pos, cefr, definition_simple) VALUES
+('agree','v','A2','to have the same opinion'),
+('disagree','v','A2+','to have a different opinion'),
+('however','adv','B1','used to show a contrast'),
+('although','conj','B1','used to introduce a contrast'),
+('consider','v','B1','to think carefully about'),
+('perspective','n','B1+','a way of thinking about something'),
+('limit','v/n','B1','to control the size or amount; a maximum amount'),
+('necessary','adj','A2+','needed; important'),
+('effective','adj','B1','working well and producing results');
+
+
+/* =========================================================
+   INSERT: Day-Words (Day1~Day7, 각 10개)
+   - 아래는 headword+pos 로 word_id를 찾아 연결
+   ========================================================= */
+
+-- Day1: 9개(샘플에서 10개 중 9개만 넣었으므로, 필요하면 day1에 10번째 단어 추가 가능)
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no, 'cause' headword, 'v/n' pos UNION ALL
+  SELECT 2, 'effect','n' UNION ALL
+  SELECT 3, 'affect','v' UNION ALL
+  SELECT 4, 'result','n/v' UNION ALL
+  SELECT 5, 'factor','n' UNION ALL
+  SELECT 6, 'increase','v/n' UNION ALL
+  SELECT 7, 'reduce','v' UNION ALL
+  SELECT 8, 'require','v' UNION ALL
+  SELECT 9, 'solution','n'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=1;
+
+-- Day2
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'issue' headword,'n' pos UNION ALL
+  SELECT 2,'challenge','n' UNION ALL
+  SELECT 3,'prevent','v' UNION ALL
+  SELECT 4,'avoid','v' UNION ALL
+  SELECT 5,'manage','v' UNION ALL
+  SELECT 6,'support','v/n' UNION ALL
+  SELECT 7,'suggest','v' UNION ALL
+  SELECT 8,'strategy','n' UNION ALL
+  SELECT 9,'risk','n' UNION ALL
+  SELECT 10,'benefit','n/v'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=2;
+
+-- Day3
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'evidence' headword,'n' pos UNION ALL
+  SELECT 2,'claim','n/v' UNION ALL
+  SELECT 3,'argue','v' UNION ALL
+  SELECT 4,'support','v/n' UNION ALL
+  SELECT 5,'conclude','v' UNION ALL
+  SELECT 6,'indicate','v' UNION ALL
+  SELECT 7,'research','n/v' UNION ALL
+  SELECT 8,'data','n' UNION ALL
+  SELECT 9,'trend','n'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=3;
+
+-- Day4
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'process' headword,'n' pos UNION ALL
+  SELECT 2,'method','n' UNION ALL
+  SELECT 3,'step','n' UNION ALL
+  SELECT 4,'practice','n/v' UNION ALL
+  SELECT 5,'improve','v' UNION ALL
+  SELECT 6,'maintain','v' UNION ALL
+  SELECT 7,'focus','v/n' UNION ALL
+  SELECT 8,'review','v/n' UNION ALL
+  SELECT 9,'consistency','n' UNION ALL
+  SELECT 10,'goal','n'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=4;
+
+-- Day5
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'compare' headword,'v' pos UNION ALL
+  SELECT 2,'contrast','v/n' UNION ALL
+  SELECT 3,'similar','adj' UNION ALL
+  SELECT 4,'different','adj' UNION ALL
+  SELECT 5,'advantage','n' UNION ALL
+  SELECT 6,'disadvantage','n' UNION ALL
+  SELECT 7,'prefer','v' UNION ALL
+  SELECT 8,'option','n' UNION ALL
+  SELECT 9,'balance','n/v' UNION ALL
+  SELECT 10,'efficient','adj'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=5;
+
+-- Day6
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'opinion' headword,'n' pos UNION ALL
+  SELECT 2,'reason','n' UNION ALL
+  SELECT 3,'example','n' UNION ALL
+  SELECT 4,'explain','v' UNION ALL
+  SELECT 5,'recommend','v' UNION ALL
+  SELECT 6,'decide','v' UNION ALL
+  SELECT 7,'pressure','n' UNION ALL
+  SELECT 8,'motivate','v' UNION ALL
+  SELECT 9,'confidence','n' UNION ALL
+  SELECT 10,'habit','n'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=6;
+
+-- Day7
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 sort_no,'argue' headword,'v' pos UNION ALL
+  SELECT 2,'agree','v' UNION ALL
+  SELECT 3,'disagree','v' UNION ALL
+  SELECT 4,'however','adv' UNION ALL
+  SELECT 5,'although','conj' UNION ALL
+  SELECT 6,'consider','v' UNION ALL
+  SELECT 7,'perspective','n' UNION ALL
+  SELECT 8,'limit','v/n' UNION ALL
+  SELECT 9,'necessary','adj' UNION ALL
+  SELECT 10,'effective','adj'
+) x
+JOIN words w ON w.headword=x.headword AND w.pos=x.pos
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=7;
+
+
+/* =========================================================
+   INSERT: Word Family (핵심 파생어만 샘플)
+   ========================================================= */
+INSERT INTO word_family (word_id, derived_word, derived_pos, derived_cefr)
+SELECT w.word_id, f.derived_word, f.derived_pos, f.derived_cefr
+FROM words w
+JOIN (
+  SELECT 'cause' headword,'v/n' pos,'causal' derived_word,'adj' derived_pos,'B1' derived_cefr UNION ALL
+  SELECT 'cause','v/n','causation','n','B2' UNION ALL
+  SELECT 'effect','n','effective','adj','B1' UNION ALL
+  SELECT 'effect','n','effectively','adv','B1' UNION ALL
+  SELECT 'effect','n','affect','v','B1' UNION ALL
+  SELECT 'increase','v/n','increasing','adj','B1' UNION ALL
+  SELECT 'increase','v/n','increasingly','adv','B1' UNION ALL
+  SELECT 'reduce','v','reduction','n','B1' UNION ALL
+  SELECT 'require','v','requirement','n','B1' UNION ALL
+  SELECT 'solution','n','solve','v','B1' UNION ALL
+  SELECT 'suggest','v','suggestion','n','B1' UNION ALL
+  SELECT 'strategy','n','strategic','adj','B2' UNION ALL
+  SELECT 'evidence','n','evident','adj','B1' UNION ALL
+  SELECT 'evidence','n','evidently','adv','B2' UNION ALL
+  SELECT 'claim','n/v','claimed','adj','B1' UNION ALL
+  SELECT 'argue','v','argument','n','B1' UNION ALL
+  SELECT 'conclude','v','conclusion','n','B1' UNION ALL
+  SELECT 'indicate','v','indication','n','B1' UNION ALL
+  SELECT 'research','n/v','researcher','n','B1' UNION ALL
+  SELECT 'process','n','processing','n/adj','B1' UNION ALL
+  SELECT 'practice','n/v','practical','adj','B1' UNION ALL
+  SELECT 'improve','v','improvement','n','B1' UNION ALL
+  SELECT 'maintain','v','maintenance','n','B2' UNION ALL
+  SELECT 'focus','v/n','focused','adj','B1' UNION ALL
+  SELECT 'review','v/n','revise','v','B1' UNION ALL
+  SELECT 'consistency','n','consistent','adj','B1' UNION ALL
+  SELECT 'efficient','adj','efficiency','n','B1' UNION ALL
+  SELECT 'efficient','adj','efficiently','adv','B1' UNION ALL
+  SELECT 'recommend','v','recommendation','n','B1' UNION ALL
+  SELECT 'decide','v','decision','n','B1' UNION ALL
+  SELECT 'motivate','v','motivation','n','B1' UNION ALL
+  SELECT 'confidence','n','confident','adj','B1' UNION ALL
+  SELECT 'habit','n','habitual','adj','B2' UNION ALL
+  SELECT 'agree','v','agreement','n','B1' UNION ALL
+  SELECT 'disagree','v','disagreement','n','B1' UNION ALL
+  SELECT 'limit','v/n','limitation','n','B2' UNION ALL
+  SELECT 'necessary','adj','necessity','n','B2'
+) f
+ON w.headword=f.headword AND w.pos=f.pos;
+
+--  (원하시면 동의어/연어/예문도 Day1~Day7 전부 INSERT로 확장해 드릴 수 있어요.)
+
+
+/* =========================================================
+   INSERT: Day-Patterns (각 2개)
+   ========================================================= */
+INSERT INTO day_patterns (day_id, pattern_id, sort_no)
+SELECT d.day_id, x.pattern_id, x.sort_no
+FROM days d
+JOIN (
+  SELECT 1 day_no, 1 sort_no, 'P01' pattern_id UNION ALL
+  SELECT 1, 2, 'P02' UNION ALL
+  SELECT 2, 1, 'P03' UNION ALL
+  SELECT 2, 2, 'P04' UNION ALL
+  SELECT 3, 1, 'P05' UNION ALL
+  SELECT 3, 2, 'P06' UNION ALL
+  SELECT 4, 1, 'P07' UNION ALL
+  SELECT 4, 2, 'P08' UNION ALL
+  SELECT 5, 1, 'P09' UNION ALL
+  SELECT 5, 2, 'P10' UNION ALL
+  SELECT 6, 1, 'P11' UNION ALL
+  SELECT 6, 2, 'P12' UNION ALL
+  SELECT 7, 1, 'P13' UNION ALL
+  SELECT 7, 2, 'P14'
+) x ON x.day_no=d.day_no
+WHERE d.grade='HighSchool_1' AND d.week_no=1;
+
+
+/* =========================================================
+   INSERT: Speaking Tasks (Day1~Day7)
+   ========================================================= */
+INSERT INTO speaking_tasks (day_id, prompt, target_words_min, recommended_time_sec)
+SELECT d.day_id, t.prompt, t.target_words_min, t.recommended_time_sec
+FROM days d
+JOIN (
+  SELECT 1 day_no,
+         'What causes students to feel stressed at school? Explain one main cause and one effect. Give one solution.' prompt,
+         5 target_words_min, 60 recommended_time_sec
+  UNION ALL SELECT 2,
+         'Choose one school issue (sleep, phone use, or homework). Describe the problem, explain one risk, and suggest one strategy to prevent it.',
+         5, 60
+  UNION ALL SELECT 3,
+         'Make one claim about studying (sleep, review, or phone use). Give evidence (a fact, research, or personal example), and conclude your opinion.',
+         5, 70
+  UNION ALL SELECT 4,
+         'Explain your study process in three steps. Include one method you use to maintain consistency and reach your goal.',
+         5, 60
+  UNION ALL SELECT 5,
+         'Compare online learning and offline learning. Mention one advantage and one disadvantage, and say which you prefer and why.',
+         5, 70
+  UNION ALL SELECT 6,
+         'In your opinion, what is the best way to improve English speaking? Give one reason and one example, and recommend a habit.',
+         5, 75
+  UNION ALL SELECT 7,
+         'Topic: Smartphones in school. Present one argument for, one argument against, and your final opinion. Use however/although at least once.',
+         5, 80
+) t ON t.day_no=d.day_no
+WHERE d.grade='HighSchool_1' AND d.week_no=1;
+
+
+/* =========================================================
+   INSERT: Checklists (Day1~Day7)
+   ========================================================= */
+INSERT INTO day_checklists (day_id, target_hits_min, target_hits_max, points_vocab, family_bonus_on, points_family, min_words, min_sentences)
+SELECT d.day_id, c.target_hits_min, c.target_hits_max, c.points_vocab, c.family_bonus_on, c.points_family, c.min_words, c.min_sentences
+FROM days d
+JOIN (
+  SELECT 1 day_no, 5 target_hits_min, 10 target_hits_max, 25 points_vocab, 1 family_bonus_on, 10 points_family, 45 min_words, 3 min_sentences UNION ALL
+  SELECT 2, 5, 10, 25, 1, 10, 45, 3 UNION ALL
+  SELECT 3, 5, 10, 25, 1, 10, 55, 4 UNION ALL
+  SELECT 4, 5, 10, 25, 1, 10, 45, 3 UNION ALL
+  SELECT 5, 5, 10, 25, 1, 10, 55, 4 UNION ALL
+  SELECT 6, 5, 10, 25, 1, 10, 60, 4 UNION ALL
+  SELECT 7, 5, 10, 25, 1, 10, 65, 5
+) c ON c.day_no=d.day_no
+WHERE d.grade='HighSchool_1' AND d.week_no=1;
+
+-- Checklist Collocations (Day1~Day7)
+INSERT INTO day_checklist_collocations (checklist_id, collocation)
+SELECT chk.checklist_id, x.collocation
+FROM day_checklists chk
+JOIN days d ON d.day_id=chk.day_id
+JOIN (
+  SELECT 1 day_no, 'have an effect on' collocation UNION ALL
+  SELECT 1, 'one key factor' UNION ALL
+  SELECT 1, 'find a solution' UNION ALL
+  SELECT 1, 'reduce stress' UNION ALL
+
+  SELECT 2, 'reduce the risk' UNION ALL
+  SELECT 2, 'benefit from' UNION ALL
+  SELECT 2, 'effective strategy' UNION ALL
+  SELECT 2, 'prevent distractions' UNION ALL
+
+  SELECT 3, 'strong evidence' UNION ALL
+  SELECT 3, 'make a claim' UNION ALL
+  SELECT 3, 'reach a conclusion' UNION ALL
+  SELECT 3, 'results indicate that' UNION ALL
+
+  SELECT 4, 'set a goal' UNION ALL
+  SELECT 4, 'focus on' UNION ALL
+  SELECT 4, 'weekly review' UNION ALL
+  SELECT 4, 'practice consistently' UNION ALL
+
+  SELECT 5, 'compared to' UNION ALL
+  SELECT 5, 'one advantage of' UNION ALL
+  SELECT 5, 'one disadvantage of' UNION ALL
+  SELECT 5, 'balance A and B' UNION ALL
+
+  SELECT 6, 'in my opinion' UNION ALL
+  SELECT 6, 'one reason is that' UNION ALL
+  SELECT 6, 'for example' UNION ALL
+  SELECT 6, 'make a decision' UNION ALL
+  SELECT 6, 'build confidence' UNION ALL
+
+  SELECT 7, 'some people argue that' UNION ALL
+  SELECT 7, 'from my perspective' UNION ALL
+  SELECT 7, 'set a limit' UNION ALL
+  SELECT 7, 'effective way'
+) x ON x.day_no=d.day_no;
+
+-- Checklist Connectors (Day1~Day7)
+INSERT INTO day_checklist_connectors (checklist_id, connector)
+SELECT chk.checklist_id, x.connector
+FROM day_checklists chk
+JOIN days d ON d.day_id=chk.day_id
+JOIN (
+  SELECT 1 day_no, 'because' connector UNION ALL
+  SELECT 1, 'so' UNION ALL
+  SELECT 1, 'therefore' UNION ALL
+  SELECT 1, 'as a result' UNION ALL
+  SELECT 1, 'however' UNION ALL
+  SELECT 1, 'for example' UNION ALL
+
+  SELECT 2, 'because' UNION ALL
+  SELECT 2, 'so' UNION ALL
+  SELECT 2, 'therefore' UNION ALL
+  SELECT 2, 'however' UNION ALL
+  SELECT 2, 'for example' UNION ALL
+
+  SELECT 3, 'for example' UNION ALL
+  SELECT 3, 'because' UNION ALL
+  SELECT 3, 'therefore' UNION ALL
+  SELECT 3, 'however' UNION ALL
+
+  SELECT 4, 'first' UNION ALL
+  SELECT 4, 'next' UNION ALL
+  SELECT 4, 'finally' UNION ALL
+  SELECT 4, 'because' UNION ALL
+  SELECT 4, 'so' UNION ALL
+
+  SELECT 5, 'however' UNION ALL
+  SELECT 5, 'on the other hand' UNION ALL
+  SELECT 5, 'for example' UNION ALL
+  SELECT 5, 'because' UNION ALL
+
+  SELECT 6, 'because' UNION ALL
+  SELECT 6, 'so' UNION ALL
+  SELECT 6, 'therefore' UNION ALL
+  SELECT 6, 'for example' UNION ALL
+
+  SELECT 7, 'however' UNION ALL
+  SELECT 7, 'although' UNION ALL
+  SELECT 7, 'on the other hand' UNION ALL
+  SELECT 7, 'therefore' UNION ALL
+  SELECT 7, 'for example'
+) x ON x.day_no=d.day_no;
+
+
+/* =========================================================
+   (옵션) 예문/동의어/연어까지 “전 단어”로 확장하는 방법
+   - 지금은 구조/속도 우선이라 핵심 파생어만 샘플로 넣었음.
+   - 원하시면 Day1~Day7의 모든 단어에 대해
+     word_synonyms / word_collocations / example_sentences INSERT를
+     동일 패턴으로 한 번에 생성해서 드릴게요.
+   ========================================================= */
+
+
+
+/* =========================================================
+   HS1 Week1 Day1~Day7 FULL INSERT (Synonyms/Collocations/Examples)
+   + Day1 10th word fix: impact
+   ========================================================= */
+
+-- 0) Day1 누락 10번째 단어 추가: impact
+INSERT INTO words (headword, pos, cefr, definition_simple)
+VALUES ('impact','n/v','B1','a strong effect or influence; to strongly affect')
+ON DUPLICATE KEY UPDATE definition_simple=VALUES(definition_simple);
+
+-- Day1에 impact를 sort_no=10으로 추가
+INSERT INTO day_words (day_id, word_id, sort_no)
+SELECT d.day_id, w.word_id, 10
+FROM days d
+JOIN words w ON w.headword='impact' AND w.pos='n/v'
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=1
+ON DUPLICATE KEY UPDATE sort_no=VALUES(sort_no);
+
+/* =========================================================
+   1) word_synonyms (전 단어)
+   ========================================================= */
+
+-- Day1
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'cause' hw,'v/n' pos,'reason' syn,1 lv UNION ALL
+  SELECT 'cause','v/n','lead to',1 UNION ALL
+  SELECT 'cause','v/n','trigger',2 UNION ALL
+
+  SELECT 'effect','n','result',1 UNION ALL
+  SELECT 'effect','n','impact',2 UNION ALL
+  SELECT 'effect','n','influence',2 UNION ALL
+
+  SELECT 'affect','v','influence',1 UNION ALL
+  SELECT 'affect','v','impact',2 UNION ALL
+
+  SELECT 'result','n/v','outcome',2 UNION ALL
+  SELECT 'result','n/v','consequence',3 UNION ALL
+
+  SELECT 'factor','n','element',1 UNION ALL
+  SELECT 'factor','n','cause',1 UNION ALL
+
+  SELECT 'increase','v/n','rise',1 UNION ALL
+  SELECT 'increase','v/n','grow',1 UNION ALL
+  SELECT 'increase','v/n','expand',2 UNION ALL
+
+  SELECT 'reduce','v','decrease',1 UNION ALL
+  SELECT 'reduce','v','lower',1 UNION ALL
+  SELECT 'reduce','v','cut',1 UNION ALL
+
+  SELECT 'require','v','need',1 UNION ALL
+  SELECT 'require','v','demand',2 UNION ALL
+
+  SELECT 'solution','n','answer',1 UNION ALL
+  SELECT 'solution','n','resolution',2 UNION ALL
+
+  SELECT 'impact','n/v','influence',1 UNION ALL
+  SELECT 'impact','n/v','effect',1 UNION ALL
+  SELECT 'impact','n/v','consequence',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day2
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'issue' hw,'n' pos,'problem' syn,1 lv UNION ALL
+  SELECT 'issue','n','matter',1 UNION ALL
+
+  SELECT 'challenge','n','difficulty',1 UNION ALL
+  SELECT 'challenge','n','obstacle',2 UNION ALL
+
+  SELECT 'prevent','v','stop',1 UNION ALL
+  SELECT 'prevent','v','avoid',1 UNION ALL
+
+  SELECT 'avoid','v','prevent',1 UNION ALL
+  SELECT 'avoid','v','escape',2 UNION ALL
+
+  SELECT 'manage','v','handle',1 UNION ALL
+  SELECT 'manage','v','control',2 UNION ALL
+
+  SELECT 'support','v/n','help',1 UNION ALL
+  SELECT 'support','v/n','assist',2 UNION ALL
+
+  SELECT 'suggest','v','recommend',1 UNION ALL
+  SELECT 'suggest','v','propose',2 UNION ALL
+
+  SELECT 'strategy','n','plan',1 UNION ALL
+  SELECT 'strategy','n','approach',2 UNION ALL
+
+  SELECT 'risk','n','danger',1 UNION ALL
+  SELECT 'risk','n','threat',2 UNION ALL
+
+  SELECT 'benefit','n/v','advantage',1 UNION ALL
+  SELECT 'benefit','n/v','gain',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day3
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'evidence' hw,'n' pos,'proof' syn,2 lv UNION ALL
+  SELECT 'evidence','n','sign',1 UNION ALL
+
+  SELECT 'claim','n/v','argue',2 UNION ALL
+  SELECT 'claim','n/v','state',1 UNION ALL
+
+  SELECT 'argue','v','claim',1 UNION ALL
+  SELECT 'argue','v','insist',2 UNION ALL
+
+  SELECT 'support','v/n','back up',1 UNION ALL
+  SELECT 'support','v/n','confirm',2 UNION ALL
+
+  SELECT 'conclude','v','decide',1 UNION ALL
+  SELECT 'conclude','v','determine',2 UNION ALL
+
+  SELECT 'indicate','v','show',1 UNION ALL
+  SELECT 'indicate','v','suggest',1 UNION ALL
+
+  SELECT 'research','n/v','study',1 UNION ALL
+  SELECT 'research','n/v','investigation',2 UNION ALL
+
+  SELECT 'data','n','information',1 UNION ALL
+  SELECT 'data','n','figures',2 UNION ALL
+
+  SELECT 'trend','n','pattern',1 UNION ALL
+  SELECT 'trend','n','tendency',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day4
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'process' hw,'n' pos,'method' syn,1 lv UNION ALL
+  SELECT 'process','n','procedure',2 UNION ALL
+
+  SELECT 'method','n','way',1 UNION ALL
+  SELECT 'method','n','approach',2 UNION ALL
+
+  SELECT 'step','n','stage',2 UNION ALL
+  SELECT 'step','n','phase',3 UNION ALL
+
+  SELECT 'practice','n/v','train',2 UNION ALL
+  SELECT 'practice','n/v','rehearse',3 UNION ALL
+
+  SELECT 'improve','v','enhance',2 UNION ALL
+  SELECT 'improve','v','develop',2 UNION ALL
+
+  SELECT 'maintain','v','keep',1 UNION ALL
+  SELECT 'maintain','v','preserve',2 UNION ALL
+
+  SELECT 'focus','v/n','concentrate',2 UNION ALL
+  SELECT 'focus','v/n','pay attention',1 UNION ALL
+
+  SELECT 'review','v/n','check',1 UNION ALL
+  SELECT 'review','v/n','revise',2 UNION ALL
+
+  SELECT 'consistency','n','regularity',2 UNION ALL
+  SELECT 'consistency','n','steadiness',3 UNION ALL
+
+  SELECT 'goal','n','aim',1 UNION ALL
+  SELECT 'goal','n','objective',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day5
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'compare' hw,'v' pos,'contrast' syn,2 lv UNION ALL
+  SELECT 'compare','v','examine',2 UNION ALL
+
+  SELECT 'contrast','v/n','compare',1 UNION ALL
+  SELECT 'contrast','v/n','differ',1 UNION ALL
+
+  SELECT 'similar','adj','alike',2 UNION ALL
+  SELECT 'similar','adj','close',1 UNION ALL
+
+  SELECT 'different','adj','distinct',3 UNION ALL
+  SELECT 'different','adj','not the same',1 UNION ALL
+
+  SELECT 'advantage','n','benefit',1 UNION ALL
+  SELECT 'advantage','n','strength',2 UNION ALL
+
+  SELECT 'disadvantage','n','drawback',2 UNION ALL
+  SELECT 'disadvantage','n','weakness',2 UNION ALL
+
+  SELECT 'prefer','v','like better',1 UNION ALL
+  SELECT 'prefer','v','choose',1 UNION ALL
+
+  SELECT 'option','n','choice',1 UNION ALL
+  SELECT 'option','n','alternative',2 UNION ALL
+
+  SELECT 'balance','n/v','stability',2 UNION ALL
+  SELECT 'balance','n/v','harmony',3 UNION ALL
+
+  SELECT 'efficient','adj','effective',2 UNION ALL
+  SELECT 'efficient','adj','productive',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day6
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'opinion' hw,'n' pos,'view' syn,2 lv UNION ALL
+  SELECT 'opinion','n','belief',2 UNION ALL
+
+  SELECT 'reason','n','cause',1 UNION ALL
+  SELECT 'reason','n','explanation',2 UNION ALL
+
+  SELECT 'example','n','case',2 UNION ALL
+  SELECT 'example','n','instance',3 UNION ALL
+
+  SELECT 'explain','v','describe',1 UNION ALL
+  SELECT 'explain','v','clarify',2 UNION ALL
+
+  SELECT 'recommend','v','suggest',1 UNION ALL
+  SELECT 'recommend','v','advise',2 UNION ALL
+
+  SELECT 'decide','v','choose',1 UNION ALL
+  SELECT 'decide','v','determine',2 UNION ALL
+
+  SELECT 'pressure','n','stress',1 UNION ALL
+  SELECT 'pressure','n','burden',2 UNION ALL
+
+  SELECT 'motivate','v','encourage',1 UNION ALL
+  SELECT 'motivate','v','inspire',2 UNION ALL
+
+  SELECT 'confidence','n','self-belief',2 UNION ALL
+  SELECT 'confidence','n','assurance',3 UNION ALL
+
+  SELECT 'habit','n','routine',1 UNION ALL
+  SELECT 'habit','n','pattern',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day7
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  SELECT 'argue' hw,'v' pos,'claim' syn,1 lv UNION ALL
+  SELECT 'argue','v','say',1 UNION ALL
+
+  SELECT 'agree','v','accept',2 UNION ALL
+  SELECT 'agree','v','support',2 UNION ALL
+
+  SELECT 'disagree','v','oppose',2 UNION ALL
+  SELECT 'disagree','v','object',2 UNION ALL
+
+  SELECT 'however','adv','but',1 UNION ALL
+  SELECT 'however','adv','nevertheless',3 UNION ALL
+
+  SELECT 'although','conj','even though',2 UNION ALL
+
+  SELECT 'consider','v','think about',1 UNION ALL
+  SELECT 'consider','v','take into account',2 UNION ALL
+
+  SELECT 'perspective','n','point of view',1 UNION ALL
+  SELECT 'perspective','n','viewpoint',2 UNION ALL
+
+  SELECT 'limit','v/n','restrict',2 UNION ALL
+  SELECT 'limit','v/n','reduce',1 UNION ALL
+
+  SELECT 'necessary','adj','required',1 UNION ALL
+  SELECT 'necessary','adj','essential',2 UNION ALL
+
+  SELECT 'effective','adj','useful',1 UNION ALL
+  SELECT 'effective','adj','efficient',2
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+
+/* =========================================================
+   2) word_collocations (전 단어)
+   ========================================================= */
+
+-- Day1
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'cause' hw,'v/n' pos,'cause a problem' col,'high' fb UNION ALL
+  SELECT 'cause','v/n','cause stress','high' UNION ALL
+  SELECT 'cause','v/n','main cause','high' UNION ALL
+
+  SELECT 'effect','n','have an effect on','high' UNION ALL
+  SELECT 'effect','n','positive effect','high' UNION ALL
+  SELECT 'effect','n','long-term effect','high' UNION ALL
+
+  SELECT 'affect','v','affect behavior','high' UNION ALL
+  SELECT 'affect','v','affect health','high' UNION ALL
+  SELECT 'affect','v','directly affect','medium' UNION ALL
+
+  SELECT 'result','n/v','result in','high' UNION ALL
+  SELECT 'result','n/v','as a result','high' UNION ALL
+  SELECT 'result','n/v','final result','medium' UNION ALL
+
+  SELECT 'factor','n','key factor','high' UNION ALL
+  SELECT 'factor','n','major factor','high' UNION ALL
+  SELECT 'factor','n','a factor in','high' UNION ALL
+
+  SELECT 'increase','v/n','increase the number','high' UNION ALL
+  SELECT 'increase','v/n','sharp increase','high' UNION ALL
+  SELECT 'increase','v/n','increase rapidly','medium' UNION ALL
+
+  SELECT 'reduce','v','reduce stress','high' UNION ALL
+  SELECT 'reduce','v','reduce costs','high' UNION ALL
+  SELECT 'reduce','v','reduce the risk','high' UNION ALL
+
+  SELECT 'require','v','require time','high' UNION ALL
+  SELECT 'require','v','require effort','high' UNION ALL
+  SELECT 'require','v','be required to','high' UNION ALL
+
+  SELECT 'solution','n','find a solution','high' UNION ALL
+  SELECT 'solution','n','practical solution','medium' UNION ALL
+  SELECT 'solution','n','a solution to','high' UNION ALL
+
+  SELECT 'impact','n/v','have an impact on','high' UNION ALL
+  SELECT 'impact','n/v','significant impact','high' UNION ALL
+  SELECT 'impact','n/v','negative impact','high'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day2
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'issue' hw,'n' pos,'social issue' col,'high' fb UNION ALL
+  SELECT 'issue','n','serious issue','high' UNION ALL
+  SELECT 'issue','n','deal with an issue','medium' UNION ALL
+
+  SELECT 'challenge','n','face a challenge','high' UNION ALL
+  SELECT 'challenge','n','major challenge','high' UNION ALL
+  SELECT 'challenge','n','meet the challenge','medium' UNION ALL
+
+  SELECT 'prevent','v','prevent disease','high' UNION ALL
+  SELECT 'prevent','v','prevent accidents','high' UNION ALL
+  SELECT 'prevent','v','prevent (A) from ~ing','high' UNION ALL
+
+  SELECT 'avoid','v','avoid mistakes','high' UNION ALL
+  SELECT 'avoid','v','avoid conflict','medium' UNION ALL
+  SELECT 'avoid','v','avoid doing','high' UNION ALL
+
+  SELECT 'manage','v','manage time','high' UNION ALL
+  SELECT 'manage','v','manage stress','high' UNION ALL
+  SELECT 'manage','v','manage a project','medium' UNION ALL
+
+  SELECT 'support','v/n','support a claim','high' UNION ALL
+  SELECT 'support','v/n','get support','medium' UNION ALL
+  SELECT 'support','v/n','emotional support','medium' UNION ALL
+
+  SELECT 'suggest','v','suggest that','high' UNION ALL
+  SELECT 'suggest','v','suggest a plan','medium' UNION ALL
+  SELECT 'suggest','v','strongly suggest','medium' UNION ALL
+
+  SELECT 'strategy','n','learning strategy','high' UNION ALL
+  SELECT 'strategy','n','effective strategy','high' UNION ALL
+  SELECT 'strategy','n','use a strategy','high' UNION ALL
+
+  SELECT 'risk','n','reduce the risk','high' UNION ALL
+  SELECT 'risk','n','at risk','high' UNION ALL
+  SELECT 'risk','n','high risk','high' UNION ALL
+
+  SELECT 'benefit','n/v','benefit from','high' UNION ALL
+  SELECT 'benefit','n/v','health benefits','high' UNION ALL
+  SELECT 'benefit','n/v','mutual benefit','medium'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day3
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'evidence' hw,'n' pos,'strong evidence' col,'high' fb UNION ALL
+  SELECT 'evidence','n','evidence of','high' UNION ALL
+  SELECT 'evidence','n','scientific evidence','medium' UNION ALL
+
+  SELECT 'claim','n/v','make a claim','high' UNION ALL
+  SELECT 'claim','n/v','support a claim','high' UNION ALL
+  SELECT 'claim','n/v','false claim','medium' UNION ALL
+
+  SELECT 'argue','v','argue that','high' UNION ALL
+  SELECT 'argue','v','argue against','high' UNION ALL
+  SELECT 'argue','v','strongly argue','medium' UNION ALL
+
+  SELECT 'support','v/n','support with evidence','high' UNION ALL
+  SELECT 'support','v/n','support an idea','high' UNION ALL
+  SELECT 'support','v/n','support a conclusion','medium' UNION ALL
+
+  SELECT 'conclude','v','conclude that','high' UNION ALL
+  SELECT 'conclude','v','reach a conclusion','high' UNION ALL
+  SELECT 'conclude','v','final conclusion','medium' UNION ALL
+
+  SELECT 'indicate','v','indicate that','high' UNION ALL
+  SELECT 'indicate','v','clear indication','medium' UNION ALL
+  SELECT 'indicate','v','results indicate','high' UNION ALL
+
+  SELECT 'research','n/v','do research','high' UNION ALL
+  SELECT 'research','n/v','research shows','high' UNION ALL
+  SELECT 'research','n/v','research findings','medium' UNION ALL
+
+  SELECT 'data','n','collect data','high' UNION ALL
+  SELECT 'data','n','analyze data','high' UNION ALL
+  SELECT 'data','n','data shows','high' UNION ALL
+
+  SELECT 'trend','n','a growing trend','high' UNION ALL
+  SELECT 'trend','n','trend toward','high' UNION ALL
+  SELECT 'trend','n','follow a trend','medium'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day4
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'process' hw,'n' pos,'learning process' col,'high' fb UNION ALL
+  SELECT 'process','n','in the process of','high' UNION ALL
+  SELECT 'process','n','a slow process','medium' UNION ALL
+
+  SELECT 'method','n','effective method','high' UNION ALL
+  SELECT 'method','n','teaching method','high' UNION ALL
+  SELECT 'method','n','use a method','high' UNION ALL
+
+  SELECT 'step','n','first step','high' UNION ALL
+  SELECT 'step','n','next step','high' UNION ALL
+  SELECT 'step','n','take steps to','high' UNION ALL
+
+  SELECT 'practice','n/v','practice speaking','high' UNION ALL
+  SELECT 'practice','n/v','daily practice','high' UNION ALL
+  SELECT 'practice','n/v','practice makes perfect','medium' UNION ALL
+
+  SELECT 'improve','v','improve skills','high' UNION ALL
+  SELECT 'improve','v','improve performance','high' UNION ALL
+  SELECT 'improve','v','greatly improve','medium' UNION ALL
+
+  SELECT 'maintain','v','maintain health','medium' UNION ALL
+  SELECT 'maintain','v','maintain a habit','high' UNION ALL
+  SELECT 'maintain','v','maintain quality','medium' UNION ALL
+
+  SELECT 'focus','v/n','focus on','high' UNION ALL
+  SELECT 'focus','v/n','stay focused','high' UNION ALL
+  SELECT 'focus','v/n','main focus','medium' UNION ALL
+
+  SELECT 'review','v/n','review notes','high' UNION ALL
+  SELECT 'review','v/n','weekly review','high' UNION ALL
+  SELECT 'review','v/n','review for a test','medium' UNION ALL
+
+  SELECT 'consistency','n','build consistency','medium' UNION ALL
+  SELECT 'consistency','n','consistent effort','high' UNION ALL
+  SELECT 'consistency','n','practice consistently','high' UNION ALL
+
+  SELECT 'goal','n','set a goal','high' UNION ALL
+  SELECT 'goal','n','reach a goal','high' UNION ALL
+  SELECT 'goal','n','long-term goal','medium'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day5
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'compare' hw,'v' pos,'compare A and B' col,'high' fb UNION ALL
+  SELECT 'compare','v','compared to','high' UNION ALL
+  SELECT 'compare','v','compare with','high' UNION ALL
+
+  SELECT 'contrast','v/n','in contrast','high' UNION ALL
+  SELECT 'contrast','v/n','contrast with','high' UNION ALL
+  SELECT 'contrast','v/n','sharp contrast','medium' UNION ALL
+
+  SELECT 'similar','adj','similar to','high' UNION ALL
+  SELECT 'similar','adj','very similar','medium' UNION ALL
+  SELECT 'similar','adj','in a similar way','medium' UNION ALL
+
+  SELECT 'different','adj','different from','high' UNION ALL
+  SELECT 'different','adj','completely different','high' UNION ALL
+  SELECT 'different','adj','a big difference','high' UNION ALL
+
+  SELECT 'advantage','n','an advantage of','high' UNION ALL
+  SELECT 'advantage','n','main advantage','high' UNION ALL
+  SELECT 'advantage','n','take advantage of','high' UNION ALL
+
+  SELECT 'disadvantage','n','a disadvantage of','high' UNION ALL
+  SELECT 'disadvantage','n','main disadvantage','high' UNION ALL
+  SELECT 'disadvantage','n','serious disadvantage','medium' UNION ALL
+
+  SELECT 'prefer','v','prefer A to B','high' UNION ALL
+  SELECT 'prefer','v','prefer to do','high' UNION ALL
+  SELECT 'prefer','v','personal preference','medium' UNION ALL
+
+  SELECT 'option','n','a good option','high' UNION ALL
+  SELECT 'option','n','choose an option','high' UNION ALL
+  SELECT 'option','n','have the option to','high' UNION ALL
+
+  SELECT 'balance','n/v','keep a balance','high' UNION ALL
+  SELECT 'balance','n/v','work-life balance','medium' UNION ALL
+  SELECT 'balance','n/v','balance A and B','high' UNION ALL
+
+  SELECT 'efficient','adj','an efficient way','high' UNION ALL
+  SELECT 'efficient','adj','work efficiently','high' UNION ALL
+  SELECT 'efficient','adj','time-efficient','medium'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day6
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'opinion' hw,'n' pos,'in my opinion' col,'high' fb UNION ALL
+  SELECT 'opinion','n','public opinion','medium' UNION ALL
+  SELECT 'opinion','n','share an opinion','medium' UNION ALL
+
+  SELECT 'reason','n','main reason','high' UNION ALL
+  SELECT 'reason','n','for this reason','high' UNION ALL
+  SELECT 'reason','n','a reason why','high' UNION ALL
+
+  SELECT 'example','n','give an example','high' UNION ALL
+  SELECT 'example','n','for example','high' UNION ALL
+  SELECT 'example','n','real-life example','medium' UNION ALL
+
+  SELECT 'explain','v','explain why','high' UNION ALL
+  SELECT 'explain','v','explain clearly','medium' UNION ALL
+  SELECT 'explain','v','explain the reason','medium' UNION ALL
+
+  SELECT 'recommend','v','recommend that','high' UNION ALL
+  SELECT 'recommend','v','highly recommend','medium' UNION ALL
+  SELECT 'recommend','v','recommend a method','medium' UNION ALL
+
+  SELECT 'decide','v','make a decision','high' UNION ALL
+  SELECT 'decide','v','decide to','high' UNION ALL
+  SELECT 'decide','v','hard decision','medium' UNION ALL
+
+  SELECT 'pressure','n','feel pressure','high' UNION ALL
+  SELECT 'pressure','n','under pressure','high' UNION ALL
+  SELECT 'pressure','n','peer pressure','medium' UNION ALL
+
+  SELECT 'motivate','v','motivate students','medium' UNION ALL
+  SELECT 'motivate','v','stay motivated','high' UNION ALL
+  SELECT 'motivate','v','motivation to','medium' UNION ALL
+
+  SELECT 'confidence','n','build confidence','high' UNION ALL
+  SELECT 'confidence','n','lack confidence','medium' UNION ALL
+  SELECT 'confidence','n','gain confidence','high' UNION ALL
+
+  SELECT 'habit','n','good habit','high' UNION ALL
+  SELECT 'habit','n','bad habit','high' UNION ALL
+  SELECT 'habit','n','form a habit','high'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day7
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  SELECT 'argue' hw,'v' pos,'argue that' col,'high' fb UNION ALL
+  SELECT 'argue','v','argue against','high' UNION ALL
+  SELECT 'argue','v','argue for','high' UNION ALL
+
+  SELECT 'agree','v','agree with','high' UNION ALL
+  SELECT 'agree','v','agree that','high' UNION ALL
+  SELECT 'agree','v','completely agree','medium' UNION ALL
+
+  SELECT 'disagree','v','disagree with','high' UNION ALL
+  SELECT 'disagree','v','strongly disagree','medium' UNION ALL
+  SELECT 'disagree','v','disagree about','medium' UNION ALL
+
+  SELECT 'however','adv','however, + clause','high' UNION ALL
+  SELECT 'however','adv','however + adj/adv','medium' UNION ALL
+
+  SELECT 'although','conj','although + clause','high' UNION ALL
+  SELECT 'although','conj','although it is true','medium' UNION ALL
+
+  SELECT 'consider','v','consider + noun','high' UNION ALL
+  SELECT 'consider','v','consider doing','high' UNION ALL
+  SELECT 'consider','v','take into consideration','medium' UNION ALL
+
+  SELECT 'perspective','n','from a perspective','medium' UNION ALL
+  SELECT 'perspective','n','different perspectives','high' UNION ALL
+  SELECT 'perspective','n','broaden perspective','medium' UNION ALL
+
+  SELECT 'limit','v/n','set a limit','high' UNION ALL
+  SELECT 'limit','v/n','limit screen time','high' UNION ALL
+  SELECT 'limit','v/n','within limits','medium' UNION ALL
+
+  SELECT 'necessary','adj','it is necessary to','high' UNION ALL
+  SELECT 'necessary','adj','absolutely necessary','medium' UNION ALL
+  SELECT 'necessary','adj','necessary for','high' UNION ALL
+
+  SELECT 'effective','adj','effective way','high' UNION ALL
+  SELECT 'effective','adj','highly effective','medium' UNION ALL
+  SELECT 'effective','adj','effective for','medium'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+
+/* =========================================================
+   3) example_sentences (전 단어: reading 1 + speaking 1)
+   ========================================================= */
+
+-- Day1 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'cause' hw,'v/n' pos,'reading' ex_type,'Lack of sleep can cause serious health problems.' sentence UNION ALL
+  SELECT 'cause','v/n','speaking','Too much homework causes stress for many students.' UNION ALL
+
+  SELECT 'effect','n','reading','Social media can have an effect on teenagers\' self-esteem.' UNION ALL
+  SELECT 'effect','n','speaking','Exercise has a positive effect on my mood.' UNION ALL
+
+  SELECT 'affect','v','reading','Weather can affect how people feel and behave.' UNION ALL
+  SELECT 'affect','v','speaking','Noise affects my concentration when I study.' UNION ALL
+
+  SELECT 'result','n/v','reading','Poor planning often results in failure.' UNION ALL
+  SELECT 'result','n/v','speaking','As a result, students feel less motivated.' UNION ALL
+
+  SELECT 'factor','n','reading','Cost is a major factor in choosing a school.' UNION ALL
+  SELECT 'factor','n','speaking','One key factor is how much time students have.' UNION ALL
+
+  SELECT 'increase','v/n','reading','The number of online classes increased during the pandemic.' UNION ALL
+  SELECT 'increase','v/n','speaking','I try to increase my study time little by little.' UNION ALL
+
+  SELECT 'reduce','v','reading','Regular exercise can reduce the risk of disease.' UNION ALL
+  SELECT 'reduce','v','speaking','To reduce stress, I take short breaks.' UNION ALL
+
+  SELECT 'require','v','reading','Most jobs require good communication skills.' UNION ALL
+  SELECT 'require','v','speaking','Success requires effort every day.' UNION ALL
+
+  SELECT 'solution','n','reading','Scientists are looking for a solution to plastic pollution.' UNION ALL
+  SELECT 'solution','n','speaking','One practical solution is to study in short sessions.' UNION ALL
+
+  SELECT 'impact','n/v','reading','Smartphones can have a significant impact on learning.' UNION ALL
+  SELECT 'impact','n/v','speaking','Phone use impacts my focus when I study.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day2 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'issue' hw,'n' pos,'reading','Bullying is a serious issue in some schools.' sentence UNION ALL
+  SELECT 'issue','n','speaking','One issue is that students don\'t get enough sleep.' UNION ALL
+
+  SELECT 'challenge','n','reading','Adapting to a new school can be challenging.' UNION ALL
+  SELECT 'challenge','n','speaking','Time management is my biggest challenge.' UNION ALL
+
+  SELECT 'prevent','v','reading','Wearing a seatbelt helps prevent injuries.' UNION ALL
+  SELECT 'prevent','v','speaking','I turn off my phone to prevent distractions.' UNION ALL
+
+  SELECT 'avoid','v','reading','To avoid mistakes, check your work twice.' UNION ALL
+  SELECT 'avoid','v','speaking','I avoid studying late at night.' UNION ALL
+
+  SELECT 'manage','v','reading','Good students manage their time well.' UNION ALL
+  SELECT 'manage','v','speaking','I try to manage stress by exercising.' UNION ALL
+
+  SELECT 'support','v/n','reading','Strong evidence supports the scientist\'s claim.' UNION ALL
+  SELECT 'support','v/n','speaking','My family supports me when I feel tired.' UNION ALL
+
+  SELECT 'suggest','v','reading','The report suggests that students sleep more.' UNION ALL
+  SELECT 'suggest','v','speaking','I suggest studying for 30 minutes and resting.' UNION ALL
+
+  SELECT 'strategy','n','reading','A good strategy can improve reading speed.' UNION ALL
+  SELECT 'strategy','n','speaking','My strategy is to review words every morning.' UNION ALL
+
+  SELECT 'risk','n','reading','Smoking increases the risk of disease.' UNION ALL
+  SELECT 'risk','n','speaking','Using my phone late increases the risk of poor sleep.' UNION ALL
+
+  SELECT 'benefit','n/v','reading','Students benefit from regular feedback.' UNION ALL
+  SELECT 'benefit','n/v','speaking','Reading daily benefits my vocabulary.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day3 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'evidence' hw,'n' pos,'reading','There is strong evidence that exercise improves memory.' sentence UNION ALL
+  SELECT 'evidence','n','speaking','I have evidence because my scores improved after practice.' UNION ALL
+
+  SELECT 'claim','n/v','reading','The article claims that teens need more sleep.' UNION ALL
+  SELECT 'claim','n/v','speaking','Some people claim phones help learning, but it depends.' UNION ALL
+
+  SELECT 'argue','v','reading','Many researchers argue that reading builds empathy.' UNION ALL
+  SELECT 'argue','v','speaking','I argue that school should start later.' UNION ALL
+
+  SELECT 'support','v/n','reading','The graph supports the writer\'s conclusion.' UNION ALL
+  SELECT 'support','v/n','speaking','I can support my opinion with an example.' UNION ALL
+
+  SELECT 'conclude','v','reading','The study concludes that short naps can help learning.' UNION ALL
+  SELECT 'conclude','v','speaking','So I conclude that balance is important.' UNION ALL
+
+  SELECT 'indicate','v','reading','The results indicate that stress lowers performance.' UNION ALL
+  SELECT 'indicate','v','speaking','This indicates we need a better schedule.' UNION ALL
+
+  SELECT 'research','n/v','reading','Research shows that sleep affects memory.' UNION ALL
+  SELECT 'research','n/v','speaking','I read research that supports this idea.' UNION ALL
+
+  SELECT 'data','n','reading','The scientist collected data from 300 students.' UNION ALL
+  SELECT 'data','n','speaking','The data shows a clear trend.' UNION ALL
+
+  SELECT 'trend','n','reading','There is a growing trend toward online learning.' UNION ALL
+  SELECT 'trend','n','speaking','I notice a trend: students rely on short videos.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day4 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'process' hw,'n' pos,'reading','Language learning is a long process.' sentence UNION ALL
+  SELECT 'process','n','speaking','My study process has three steps.' UNION ALL
+
+  SELECT 'method','n','reading','The teacher used an effective method to teach reading.' UNION ALL
+  SELECT 'method','n','speaking','One method is to review words with sentences.' UNION ALL
+
+  SELECT 'step','n','reading','The first step is to understand the question.' UNION ALL
+  SELECT 'step','n','speaking','My next step is to practice speaking.' UNION ALL
+
+  SELECT 'practice','n/v','reading','Regular practice improves fluency.' UNION ALL
+  SELECT 'practice','n/v','speaking','I practice speaking for five minutes every day.' UNION ALL
+
+  SELECT 'improve','v','reading','Reading daily can improve vocabulary.' UNION ALL
+  SELECT 'improve','v','speaking','I want to improve my speaking confidence.' UNION ALL
+
+  SELECT 'maintain','v','reading','It is hard to maintain good habits during exams.' UNION ALL
+  SELECT 'maintain','v','speaking','I maintain my routine even when I\'m busy.' UNION ALL
+
+  SELECT 'focus','v/n','reading','Students should focus on key ideas in a passage.' UNION ALL
+  SELECT 'focus','v/n','speaking','I focus on collocations, not single words.' UNION ALL
+
+  SELECT 'review','v/n','reading','A quick review helps long-term memory.' UNION ALL
+  SELECT 'review','v/n','speaking','I review today\'s words before I sleep.' UNION ALL
+
+  SELECT 'consistency','n','reading','Consistency matters more than intensity in learning.' UNION ALL
+  SELECT 'consistency','n','speaking','Consistency is the key to improving English.' UNION ALL
+
+  SELECT 'goal','n','reading','Setting a clear goal increases motivation.' UNION ALL
+  SELECT 'goal','n','speaking','My goal is to speak for one minute without stopping.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day5 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'compare' hw,'v' pos,'reading','Compared to print books, e-books are easier to carry.' sentence UNION ALL
+  SELECT 'compare','v','speaking','I compared my results before and after practice.' UNION ALL
+
+  SELECT 'contrast','v/n','reading','In contrast, the second group improved faster.' UNION ALL
+  SELECT 'contrast','v/n','speaking','In contrast to last year, I feel more confident.' UNION ALL
+
+  SELECT 'similar','adj','reading','Their opinions are similar in many ways.' UNION ALL
+  SELECT 'similar','adj','speaking','My routine is similar to my friend\'s routine.' UNION ALL
+
+  SELECT 'different','adj','reading','There is a big difference between short-term and long-term memory.' UNION ALL
+  SELECT 'different','adj','speaking','It\'s different from what I expected.' UNION ALL
+
+  SELECT 'advantage','n','reading','One advantage of online learning is flexibility.' UNION ALL
+  SELECT 'advantage','n','speaking','The main advantage is that I can study anywhere.' UNION ALL
+
+  SELECT 'disadvantage','n','reading','A disadvantage is that students may lose focus.' UNION ALL
+  SELECT 'disadvantage','n','speaking','One drawback is that it\'s easy to get distracted.' UNION ALL
+
+  SELECT 'prefer','v','reading','Some students prefer studying alone.' UNION ALL
+  SELECT 'prefer','v','speaking','I prefer reading to watching short videos.' UNION ALL
+
+  SELECT 'option','n','reading','Students have the option to take online classes.' UNION ALL
+  SELECT 'option','n','speaking','A good option is to study in the morning.' UNION ALL
+
+  SELECT 'balance','n/v','reading','A balance between study and rest improves performance.' UNION ALL
+  SELECT 'balance','n/v','speaking','I try to balance homework and sleep.' UNION ALL
+
+  SELECT 'efficient','adj','reading','Spaced repetition is an efficient way to learn words.' UNION ALL
+  SELECT 'efficient','adj','speaking','This method is efficient because it saves time.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day6 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'opinion' hw,'n' pos,'reading','Public opinion can influence policy.' sentence UNION ALL
+  SELECT 'opinion','n','speaking','In my opinion, schools should start later.' UNION ALL
+
+  SELECT 'reason','n','reading','One reason is that teens need more sleep.' UNION ALL
+  SELECT 'reason','n','speaking','The main reason is that students are tired.' UNION ALL
+
+  SELECT 'example','n','reading','For example, short breaks can improve focus.' UNION ALL
+  SELECT 'example','n','speaking','Let me give an example from my experience.' UNION ALL
+
+  SELECT 'explain','v','reading','The author explains why habits are hard to change.' UNION ALL
+  SELECT 'explain','v','speaking','I will explain why this is beneficial.' UNION ALL
+
+  SELECT 'recommend','v','reading','Experts recommend that teens sleep at least eight hours.' UNION ALL
+  SELECT 'recommend','v','speaking','I recommend studying with spaced repetition.' UNION ALL
+
+  SELECT 'decide','v','reading','People make decisions faster under pressure.' UNION ALL
+  SELECT 'decide','v','speaking','I decided to study in the morning.' UNION ALL
+
+  SELECT 'pressure','n','reading','Students often feel pressure before exams.' UNION ALL
+  SELECT 'pressure','n','speaking','Under pressure, I sometimes forget easy words.' UNION ALL
+
+  SELECT 'motivate','v','reading','Clear goals can motivate learners.' UNION ALL
+  SELECT 'motivate','v','speaking','A small success motivates me to continue.' UNION ALL
+
+  SELECT 'confidence','n','reading','Practice helps students build confidence.' UNION ALL
+  SELECT 'confidence','n','speaking','Recording myself helped me gain confidence.' UNION ALL
+
+  SELECT 'habit','n','reading','A good habit is more powerful than motivation.' UNION ALL
+  SELECT 'habit','n','speaking','I\'m trying to form a habit of daily review.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+-- Day7 examples
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  SELECT 'argue' hw,'v' pos,'reading','Some people argue that homework is necessary.' sentence UNION ALL
+  SELECT 'argue','v','speaking','I argue that less homework can be more effective.' UNION ALL
+
+  SELECT 'agree','v','reading','Many students agree that sleep is important.' UNION ALL
+  SELECT 'agree','v','speaking','I agree that rest matters, but balance is needed.' UNION ALL
+
+  SELECT 'disagree','v','reading','Experts sometimes disagree about the best method.' UNION ALL
+  SELECT 'disagree','v','speaking','I disagree because the evidence is weak.' UNION ALL
+
+  SELECT 'however','adv','reading','The idea sounds good; however, it is expensive.' UNION ALL
+  SELECT 'however','adv','speaking','However, phones can also be useful for learning.' UNION ALL
+
+  SELECT 'although','conj','reading','Although the method is simple, it is effective.' UNION ALL
+  SELECT 'although','conj','speaking','Although I like videos, I prefer reading for deep learning.' UNION ALL
+
+  SELECT 'consider','v','reading','We should consider both costs and benefits.' UNION ALL
+  SELECT 'consider','v','speaking','We must consider students\' mental health.' UNION ALL
+
+  SELECT 'perspective','n','reading','From a cultural perspective, the rule may seem strict.' UNION ALL
+  SELECT 'perspective','n','speaking','From my perspective, quality matters more than quantity.' UNION ALL
+
+  SELECT 'limit','v/n','reading','Many schools limit phone use during class.' UNION ALL
+  SELECT 'limit','v/n','speaking','We should set a limit on screen time.' UNION ALL
+
+  SELECT 'necessary','adj','reading','It is necessary to get enough sleep for learning.' UNION ALL
+  SELECT 'necessary','adj','speaking','I think it is necessary to practice speaking daily.' UNION ALL
+
+  SELECT 'effective','adj','reading','Spaced repetition is an effective way to remember words.' UNION ALL
+  SELECT 'effective','adj','speaking','This is effective because it forces me to use the words.'
+) x ON x.hw=w.headword AND x.pos=w.pos;
+
+
+/* =========================================================
+   (선택) 중복 방지 팁:
+   - 이미 넣은 상태에서 재실행할 경우 중복이 생길 수 있음.
+   - 운영에서는 (word_id, synonym_word) 등에 UNIQUE를 두는 것을 추천.
+   ========================================================= */
+
+
+
+/* =========================================================
+   HS1 Week1 Day1~Day7 FULL Word Family Expansion (MySQL 8+)
+   - 목표: “학습앱용”으로 충분한 핵심 파생어(빈출/생산성 높은 형태)만 선별
+   - 주의: derived_word는 문자열이므로, 실제 앱에서는 표제어/품사/의미를 별도 테이블로 확장 가능
+   ========================================================= */
+
+-- (권장) 중복 방지: 같은 root에 같은 derived_word가 중복 삽입되지 않도록 UNIQUE
+-- ALTER TABLE word_family ADD UNIQUE KEY uq_family (word_id, derived_word);
+
+INSERT INTO word_family (word_id, derived_word, derived_pos, derived_cefr)
+SELECT w.word_id, f.derived_word, f.derived_pos, f.derived_cefr
+FROM words w
+JOIN (
+  /* -------------------------
+     Day1
+     ------------------------- */
+  SELECT 'cause' hw,'v/n' pos,'causal' derived_word,'adj' derived_pos,'B1' derived_cefr UNION ALL
+  SELECT 'cause','v/n','cause-and-effect','n','B1' UNION ALL
+  SELECT 'cause','v/n','causation','n','B2' UNION ALL
+  SELECT 'cause','v/n','causative','adj','B2' UNION ALL
+
+  SELECT 'effect','n','effective','adj','B1' UNION ALL
+  SELECT 'effect','n','effectively','adv','B1' UNION ALL
+  SELECT 'effect','n','effectiveness','n','B2' UNION ALL
+  SELECT 'effect','n','effectless','adj','B2' UNION ALL
+  SELECT 'effect','n','affect','v','B1' UNION ALL
+
+  SELECT 'affect','v','effect','n','A2' UNION ALL
+  SELECT 'affect','v','effective','adj','B1' UNION ALL
+  SELECT 'affect','v','effectively','adv','B1' UNION ALL
+  SELECT 'affect','v','effectiveness','n','B2' UNION ALL
+
+  SELECT 'result','n/v','resulting','adj','B1' UNION ALL
+  SELECT 'result','n/v','resultant','adj','B2' UNION ALL
+
+  SELECT 'factor','n','factor in','v phr','B1' UNION ALL
+  SELECT 'factor','n','factor out','v phr','B2' UNION ALL
+  SELECT 'factor','n','factorial','adj','B2' UNION ALL
+
+  SELECT 'increase','v/n','increasing','adj','B1' UNION ALL
+  SELECT 'increase','v/n','increasingly','adv','B1' UNION ALL
+  SELECT 'increase','v/n','increased','adj','B1' UNION ALL
+
+  SELECT 'reduce','v','reduction','n','B1' UNION ALL
+  SELECT 'reduce','v','reduced','adj','B1' UNION ALL
+  SELECT 'reduce','v','reducible','adj','B2' UNION ALL
+
+  SELECT 'require','v','requirement','n','B1' UNION ALL
+  SELECT 'require','v','required','adj','A2+' UNION ALL
+  SELECT 'require','v','requirement(s)','n','B1' UNION ALL
+
+  SELECT 'solution','n','solve','v','B1' UNION ALL
+  SELECT 'solution','n','solved','adj','B1' UNION ALL
+  SELECT 'solution','n','solvable','adj','B2' UNION ALL
+  SELECT 'solution','n','unsolved','adj','B2' UNION ALL
+
+  SELECT 'impact','n/v','impactful','adj','B2' UNION ALL
+  SELECT 'impact','n/v','impacted','adj','B1' UNION ALL
+  SELECT 'impact','n/v','impacting','adj','B1' UNION ALL
+
+  /* -------------------------
+     Day2
+     ------------------------- */
+  SELECT 'issue','n','issues','n(pl)','A2' UNION ALL
+  SELECT 'issue','n','issue (v: to issue)','v','B2' UNION ALL
+
+  SELECT 'challenge','n','challenging','adj','B1' UNION ALL
+  SELECT 'challenge','n','challenger','n','B2' UNION ALL
+  SELECT 'challenge','n','challenge (v)','v','B1' UNION ALL
+
+  SELECT 'prevent','v','prevention','n','B1' UNION ALL
+  SELECT 'prevent','v','preventive','adj','B2' UNION ALL
+  SELECT 'prevent','v','preventable','adj','B2' UNION ALL
+
+  SELECT 'avoid','v','avoidable','adj','B1' UNION ALL
+  SELECT 'avoid','v','avoidance','n','B2' UNION ALL
+  SELECT 'avoid','v','avoidant','adj','B2' UNION ALL
+
+  SELECT 'manage','v','management','n','B1' UNION ALL
+  SELECT 'manage','v','manager','n','B1' UNION ALL
+  SELECT 'manage','v','manageable','adj','B2' UNION ALL
+  SELECT 'manage','v','managed','adj','B1' UNION ALL
+
+  SELECT 'support','v/n','supportive','adj','B1' UNION ALL
+  SELECT 'support','v/n','supporter','n','B1' UNION ALL
+  SELECT 'support','v/n','unsupported','adj','B2' UNION ALL
+
+  SELECT 'suggest','v','suggestion','n','B1' UNION ALL
+  SELECT 'suggest','v','suggestive','adj','B2' UNION ALL
+  SELECT 'suggest','v','suggested','adj','B1' UNION ALL
+
+  SELECT 'strategy','n','strategic','adj','B2' UNION ALL
+  SELECT 'strategy','n','strategically','adv','B2' UNION ALL
+  SELECT 'strategy','n','strategist','n','B2' UNION ALL
+
+  SELECT 'risk','n','risky','adj','B1' UNION ALL
+  SELECT 'risk','n','riskiness','n','B2' UNION ALL
+  SELECT 'risk','n','risk (v)','v','B1' UNION ALL
+
+  SELECT 'benefit','n/v','beneficial','adj','B1' UNION ALL
+  SELECT 'benefit','n/v','benefit (v)','v','A2+' UNION ALL
+  SELECT 'benefit','n/v','beneficiary','n','B2' UNION ALL
+
+  /* -------------------------
+     Day3
+     ------------------------- */
+  SELECT 'evidence','n','evident','adj','B1' UNION ALL
+  SELECT 'evidence','n','evidently','adv','B2' UNION ALL
+  SELECT 'evidence','n','evidential','adj','B2' UNION ALL
+
+  SELECT 'claim','n/v','claimed','adj','B1' UNION ALL
+  SELECT 'claim','n/v','claimant','n','B2' UNION ALL
+  SELECT 'claim','n/v','reclaim','v','B2' UNION ALL
+
+  SELECT 'argue','v','argument','n','B1' UNION ALL
+  SELECT 'argue','v','argumentative','adj','B2' UNION ALL
+  SELECT 'argue','v','arguably','adv','B2' UNION ALL
+
+  SELECT 'conclude','v','conclusion','n','B1' UNION ALL
+  SELECT 'conclude','v','conclusive','adj','B2' UNION ALL
+  SELECT 'conclude','v','inconclusive','adj','B2' UNION ALL
+
+  SELECT 'indicate','v','indication','n','B1' UNION ALL
+  SELECT 'indicate','v','indicative','adj','B2' UNION ALL
+  SELECT 'indicate','v','indicator','n','B2' UNION ALL
+
+  SELECT 'research','n/v','researcher','n','B1' UNION ALL
+  SELECT 'research','n/v','research-based','adj','B2' UNION ALL
+  SELECT 'research','n/v','researched','adj','B2' UNION ALL
+
+  SELECT 'data','n','database','n','B1' UNION ALL
+  SELECT 'data','n','data-driven','adj','B2' UNION ALL
+
+  SELECT 'trend','n','trendy','adj','B1' UNION ALL
+  SELECT 'trend','n','trendiness','n','B2' UNION ALL
+
+  /* -------------------------
+     Day4
+     ------------------------- */
+  SELECT 'process','n','process (v)','v','B1' UNION ALL
+  SELECT 'process','n','processing','n/adj','B1' UNION ALL
+  SELECT 'process','n','processed','adj','B1' UNION ALL
+
+  SELECT 'method','n','methodical','adj','B2' UNION ALL
+  SELECT 'method','n','methodically','adv','B2' UNION ALL
+
+  SELECT 'step','n','step-by-step','adj','A2+' UNION ALL
+  SELECT 'step','n','stepping-stone','n','B2' UNION ALL
+
+  SELECT 'practice','n/v','practical','adj','B1' UNION ALL
+  SELECT 'practice','n/v','practically','adv','B1' UNION ALL
+  SELECT 'practice','n/v','practitioner','n','B2' UNION ALL
+
+  SELECT 'improve','v','improvement','n','B1' UNION ALL
+  SELECT 'improve','v','improved','adj','B1' UNION ALL
+  SELECT 'improve','v','improving','adj','B1' UNION ALL
+
+  SELECT 'maintain','v','maintenance','n','B2' UNION ALL
+  SELECT 'maintain','v','maintained','adj','B1' UNION ALL
+  SELECT 'maintain','v','maintainable','adj','B2' UNION ALL
+
+  SELECT 'focus','v/n','focused','adj','B1' UNION ALL
+  SELECT 'focus','v/n','focus on','v phr','A2+' UNION ALL
+  SELECT 'focus','v/n','focal','adj','B2' UNION ALL
+
+  SELECT 'review','v/n','reviewer','n','B2' UNION ALL
+  SELECT 'review','v/n','reviewed','adj','B2' UNION ALL
+  SELECT 'review','v/n','revise','v','B1' UNION ALL
+  SELECT 'review','v/n','revision','n','B1' UNION ALL
+
+  SELECT 'consistency','n','consistent','adj','B1' UNION ALL
+  SELECT 'consistency','n','consistently','adv','B1' UNION ALL
+  SELECT 'consistency','n','inconsistent','adj','B2' UNION ALL
+  SELECT 'consistency','n','inconsistency','n','B2' UNION ALL
+
+  SELECT 'goal','n','goal-setting','n','B1' UNION ALL
+  SELECT 'goal','n','goal-oriented','adj','B2' UNION ALL
+
+  /* -------------------------
+     Day5
+     ------------------------- */
+  SELECT 'compare','v','comparison','n','B1' UNION ALL
+  SELECT 'compare','v','comparative','adj','B1' UNION ALL
+  SELECT 'compare','v','comparatively','adv','B2' UNION ALL
+
+  SELECT 'contrast','v/n','contrasting','adj','B1' UNION ALL
+  SELECT 'contrast','v/n','contrasted','adj','B1' UNION ALL
+
+  SELECT 'similar','adj','similarity','n','B1' UNION ALL
+  SELECT 'similar','adj','similarly','adv','B1' UNION ALL
+  SELECT 'similar','adj','dissimilar','adj','B2' UNION ALL
+
+  SELECT 'different','adj','difference','n','A2+' UNION ALL
+  SELECT 'different','adj','differ','v','B1' UNION ALL
+  SELECT 'different','adj','differently','adv','B1' UNION ALL
+
+  SELECT 'advantage','n','advantageous','adj','B2' UNION ALL
+  SELECT 'advantage','n','disadvantage','n','B1' UNION ALL
+
+  SELECT 'disadvantage','n','disadvantaged','adj','B2' UNION ALL
+
+  SELECT 'prefer','v','preference','n','B1' UNION ALL
+  SELECT 'prefer','v','preferable','adj','B2' UNION ALL
+  SELECT 'prefer','v','preferably','adv','B2' UNION ALL
+
+  SELECT 'option','n','optional','adj','B1' UNION ALL
+  SELECT 'option','n','optionally','adv','B2' UNION ALL
+
+  SELECT 'balance','n/v','balanced','adj','B1' UNION ALL
+  SELECT 'balance','n/v','imbalance','n','B2' UNION ALL
+  SELECT 'balance','n/v','unbalanced','adj','B2' UNION ALL
+
+  SELECT 'efficient','adj','efficiency','n','B1' UNION ALL
+  SELECT 'efficient','adj','efficiently','adv','B1' UNION ALL
+  SELECT 'efficient','adj','inefficient','adj','B2' UNION ALL
+  SELECT 'efficient','adj','inefficiency','n','B2' UNION ALL
+
+  /* -------------------------
+     Day6
+     ------------------------- */
+  SELECT 'opinion','n','opinionated','adj','B2' UNION ALL
+
+  SELECT 'reason','n','reasonable','adj','B1' UNION ALL
+  SELECT 'reason','n','reasonably','adv','B1' UNION ALL
+  SELECT 'reason','n','reasoning','n','B2' UNION ALL
+
+  SELECT 'example','n','exemplary','adj','B2' UNION ALL
+  SELECT 'example','n','for example','phr','A2' UNION ALL
+
+  SELECT 'explain','v','explanation','n','B1' UNION ALL
+  SELECT 'explain','v','explanatory','adj','B2' UNION ALL
+  SELECT 'explain','v','unexplained','adj','B2' UNION ALL
+
+  SELECT 'recommend','v','recommendation','n','B1' UNION ALL
+  SELECT 'recommend','v','recommended','adj','B1' UNION ALL
+
+  SELECT 'decide','v','decision','n','B1' UNION ALL
+  SELECT 'decide','v','decisive','adj','B2' UNION ALL
+  SELECT 'decide','v','indecisive','adj','B2' UNION ALL
+
+  SELECT 'pressure','n','pressured','adj','B1' UNION ALL
+  SELECT 'pressure','n','pressurize','v','B2' UNION ALL
+
+  SELECT 'motivate','v','motivation','n','B1' UNION ALL
+  SELECT 'motivate','v','motivated','adj','B1' UNION ALL
+  SELECT 'motivate','v','motivating','adj','B1' UNION ALL
+
+  SELECT 'confidence','n','confident','adj','B1' UNION ALL
+  SELECT 'confidence','n','confidently','adv','B1' UNION ALL
+
+  SELECT 'habit','n','habitual','adj','B2' UNION ALL
+  SELECT 'habit','n','habitually','adv','B2' UNION ALL
+
+  /* -------------------------
+     Day7
+     ------------------------- */
+  SELECT 'agree','v','agreement','n','B1' UNION ALL
+  SELECT 'agree','v','agreeable','adj','B2' UNION ALL
+  SELECT 'agree','v','agreeably','adv','B2' UNION ALL
+  SELECT 'agree','v','disagree','v','A2+' UNION ALL
+
+  SELECT 'disagree','v','disagreement','n','B1' UNION ALL
+  SELECT 'disagree','v','disagreeable','adj','B2' UNION ALL
+
+  SELECT 'however','adv','however (conj-like use)','adv','B1' UNION ALL
+
+  SELECT 'although','conj','though','conj','B1' UNION ALL
+  SELECT 'although','conj','even though','conj','B1' UNION ALL
+
+  SELECT 'consider','v','consideration','n','B1' UNION ALL
+  SELECT 'consider','v','considerate','adj','B2' UNION ALL
+  SELECT 'consider','v','considerably','adv','B2' UNION ALL
+  SELECT 'consider','v','considering','prep/conj','B2' UNION ALL
+
+  SELECT 'perspective','n','perspectival','adj','B2' UNION ALL
+
+  SELECT 'limit','v/n','limitation','n','B2' UNION ALL
+  SELECT 'limit','v/n','limited','adj','B1' UNION ALL
+  SELECT 'limit','v/n','limitless','adj','B2' UNION ALL
+
+  SELECT 'necessary','adj','necessity','n','B2' UNION ALL
+  SELECT 'necessary','adj','necessarily','adv','B2' UNION ALL
+  SELECT 'necessary','adj','unnecessary','adj','B1' UNION ALL
+
+  SELECT 'effective','adj','effectively','adv','B1' UNION ALL
+  SELECT 'effective','adj','effectiveness','n','B2' UNION ALL
+  SELECT 'effective','adj','ineffective','adj','B2'
+) f
+ON w.headword=f.hw AND w.pos=f.pos
+-- 중복 삽입 방지(UNIQUE 없을 때 안전장치)
+LEFT JOIN word_family wf ON wf.word_id=w.word_id AND wf.derived_word=f.derived_word
+WHERE wf.family_id IS NULL;
+
+
+-- 특정 단어의 파생어 확인
+SELECT w.headword, w.pos, wf.derived_word, wf.derived_pos, wf.derived_cefr
+FROM word_family wf
+JOIN words w ON w.word_id=wf.word_id
+WHERE w.headword='reduce' AND w.pos='v'
+ORDER BY wf.derived_word;
+
+-- Day1의 10단어 확인(impact 포함)
+SELECT d.day_no, dw.sort_no, w.headword, w.pos
+FROM day_words dw
+JOIN days d ON d.day_id=dw.day_id
+JOIN words w ON w.word_id=dw.word_id
+WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=1
+ORDER BY dw.sort_no;
+
+
+/* =========================================================
+   ✅ 파생어를 “학습 카드(=words)”로 승격시키는 확장 설계 (MySQL 8+)
+   목표:
+   1) word_family에 있는 derived_word를 words 테이블에 자동 등록(=승격)
+   2) root(기본어휘) ↔ derived(파생어휘) 관계를 “정규화” (word_family_edges)
+   3) 파생어에도 definition / collocation / example을 붙일 수 있게 함
+   4) 우선 MVP용: 파생어 정의는 자동 생성용 자리표시(placeholder)로 넣고,
+      이후 사람이 다듬거나 AI 파이프라인으로 채우는 구조
+   ========================================================= */
+
+SET FOREIGN_KEY_CHECKS=0;
+
+DROP TABLE IF EXISTS word_family_edges;
+
+SET FOREIGN_KEY_CHECKS=1;
+
+/* ---------------------------------------------------------
+   1) words 테이블을 “단어 카드”로 확장하기 위한 컬럼 추가(선택)
+   - 기존 words는 headword+pos unique가 있으므로 그대로 사용 가능
+   - 아래 컬럼은 선택이지만, 파생어 카드 운영에 매우 유용
+   --------------------------------------------------------- */
+ALTER TABLE words
+  ADD COLUMN IF NOT EXISTS lemma VARCHAR(64) NULL,
+  ADD COLUMN IF NOT EXISTS is_derived TINYINT(1) NOT NULL DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS notes VARCHAR(255) NULL;
+
+/* ---------------------------------------------------------
+   2) root ↔ derived 관계를 “word_id ↔ word_id”로 연결하는 edges 테이블
+   - derived_word를 문자열로만 갖고 있으면 파생어에 예문/동의어를 붙이기 어려움
+   - edges는 단어ID로 연결하므로 파생어도 완전한 학습 카드가 됨
+   --------------------------------------------------------- */
+CREATE TABLE word_family_edges (
+  edge_id       INT AUTO_INCREMENT PRIMARY KEY,
+  root_word_id  INT NOT NULL,
+  derived_word_id INT NOT NULL,
+  relation_type VARCHAR(32) NOT NULL DEFAULT 'derivation',  -- derivation / inflection / phrase 등
+  created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_edge (root_word_id, derived_word_id, relation_type),
+  CONSTRAINT fk_edge_root FOREIGN KEY (root_word_id) REFERENCES words(word_id) ON DELETE CASCADE,
+  CONSTRAINT fk_edge_derived FOREIGN KEY (derived_word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+/* ---------------------------------------------------------
+   3) “파생어 승격” 단계 A: word_family의 derived_word를 words에 INSERT
+   - derived_pos 값이 여러 형태(n/adj/v phr 등)라서 그대로 pos에 저장
+   - definition_simple은 MVP용 placeholder로 넣고 나중에 채움
+   - 이미 존재하면(UNIQUE headword+pos) 무시
+   --------------------------------------------------------- */
+INSERT IGNORE INTO words (headword, pos, cefr, definition_simple, is_derived, notes)
+SELECT
+  wf.derived_word AS headword,
+  COALESCE(wf.derived_pos, 'unknown') AS pos,
+  wf.derived_cefr AS cefr,
+  CONCAT('[AUTO] Derived form of: ', w.headword) AS definition_simple,
+  1 AS is_derived,
+  CONCAT('root=', w.headword, '(', w.pos, ')') AS notes
+FROM word_family wf
+JOIN words w ON w.word_id = wf.word_id
+WHERE wf.derived_word IS NOT NULL AND wf.derived_word <> '';
+
+/* ---------------------------------------------------------
+   4) “파생어 승격” 단계 B: edges(관계) 생성
+   - root_word_id: words의 root
+   - derived_word_id: 방금 승격된 words 레코드
+   - relation_type: 기본 derivation
+   --------------------------------------------------------- */
+INSERT IGNORE INTO word_family_edges (root_word_id, derived_word_id, relation_type)
+SELECT
+  root.word_id AS root_word_id,
+  derived.word_id AS derived_word_id,
+  'derivation' AS relation_type
+FROM word_family wf
+JOIN words root ON root.word_id = wf.word_id
+JOIN words derived
+  ON derived.headword = wf.derived_word
+ AND derived.pos = COALESCE(wf.derived_pos, 'unknown');
+
+/* ---------------------------------------------------------
+   5) 파생어를 “학습 카드로 운영”하기 위한 추천: 파생어 예문 자동 생성(placeholder)
+   - 예문은 나중에 대체/수정 권장
+   - 이미 예문이 있는 파생어는 제외하도록 설계
+   --------------------------------------------------------- */
+
+-- (1) 파생어 reading 예문 placeholder
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT d.word_id, 'reading' AS ex_type,
+       CONCAT('[AUTO] This sentence uses "', d.headword, '" in context.') AS sentence
+FROM words d
+LEFT JOIN example_sentences ex
+  ON ex.word_id = d.word_id AND ex.ex_type='reading'
+WHERE d.is_derived=1
+  AND ex.ex_id IS NULL;
+
+-- (2) 파생어 speaking 예문 placeholder
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT d.word_id, 'speaking' AS ex_type,
+       CONCAT('[AUTO] I used "', d.headword, '" when I explained my opinion.') AS sentence
+FROM words d
+LEFT JOIN example_sentences ex
+  ON ex.word_id = d.word_id AND ex.ex_type='speaking'
+WHERE d.is_derived=1
+  AND ex.ex_id IS NULL;
+
+/* ---------------------------------------------------------
+   6) 파생어 Collocation placeholder(선택)
+   - 실제로는 파생어별 빈출 연어를 별도 큐레이션 추천
+   --------------------------------------------------------- */
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT d.word_id,
+       CONCAT(d.headword, ' + (common pattern)') AS collocation,
+       'low' AS freq_band
+FROM words d
+LEFT JOIN word_collocations wc ON wc.word_id=d.word_id
+WHERE d.is_derived=1
+  AND wc.col_id IS NULL;
+
+/* =========================================================
+   ✅ 운영 팁(중요)
+   1) 파생어 정의를 제대로 운영하려면:
+      - word_definitions 테이블(다의어/의미번호) 별도 분리 추천
+   2) 지금은 MVP용으로 definition_simple/예문 placeholder로 채웠고
+      이후 사람이 다듬거나 AI로 “정의/예문/연어”를 채우면 됨
+   ========================================================= */
+
+
+/* =========================================================
+   ✅ 검증 쿼리
+   ========================================================= */
+
+-- A) 특정 root 단어의 파생어 카드 목록 보기
+-- 예: effect(n)의 파생어
+SELECT
+  r.headword AS root, r.pos AS root_pos,
+  d.headword AS derived, d.pos AS derived_pos, d.cefr AS derived_cefr,
+  d.definition_simple
+FROM word_family_edges e
+JOIN words r ON r.word_id=e.root_word_id
+JOIN words d ON d.word_id=e.derived_word_id
+WHERE r.headword='effect' AND r.pos='n'
+ORDER BY d.headword;
+
+-- B) “파생어 카드”에 예문이 붙었는지 확인
+SELECT
+  w.headword, w.pos,
+  SUM(ex.ex_type='reading') AS has_reading,
+  SUM(ex.ex_type='speaking') AS has_speaking
+FROM words w
+LEFT JOIN example_sentences ex ON ex.word_id=w.word_id
+WHERE w.is_derived=1
+GROUP BY w.word_id
+ORDER BY w.headword
+LIMIT 50;
+
+-- C) 파생어가 day_words에 직접 들어가도 되는 구조(선택)
+-- 지금은 root 단어 중심 학습이므로 day_words는 유지.
+-- 필요 시 “파생어 미션용 day_derived_words” 같은 테이블을 추가하는 것도 가능.
+
+
+/* =========================================================
+   HS1 Week1 Derived Words (A안): definition + examples 정교화
+   - [AUTO] placeholder를 실제 학습용으로 교체
+   ========================================================= */
+
+START TRANSACTION;
+
+/* 0) 파생어 [AUTO] 예문 삭제 (Week1 파생어 카드만)
+   - 안전하게 is_derived=1 인 단어의 [AUTO] 예문만 제거
+*/
+DELETE ex
+FROM example_sentences ex
+JOIN words w ON w.word_id = ex.word_id
+WHERE w.is_derived = 1
+  AND ex.sentence LIKE '[AUTO]%';
+
+
+/* =========================================================
+   1) DEFINITIONS: 파생어(words.definition_simple) 업데이트
+   - headword+pos 기반으로 업데이트
+   - 필요시 cefr도 함께 보정 가능(여기선 정의 중심)
+   ========================================================= */
+
+-- Cause-family
+UPDATE words SET definition_simple='related to cause and effect' 
+WHERE headword='causal' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='the process of causing something; cause-and-effect relationship' 
+WHERE headword='causation' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a cause-and-effect relationship (as a concept)' 
+WHERE headword='cause-and-effect' AND pos='n' AND is_derived=1;
+
+-- Effect-family
+UPDATE words SET definition_simple='producing the intended result; successful'
+WHERE headword='effective' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='in a way that produces good results'
+WHERE headword='effectively' AND pos='adv' AND is_derived=1;
+
+UPDATE words SET definition_simple='how well something works; the ability to produce results'
+WHERE headword='effectiveness' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='not producing results; not effective'
+WHERE headword='ineffective' AND pos='adj' AND is_derived=1;
+
+-- Increase / Reduce / Require / Solution
+UPDATE words SET definition_simple='becoming greater; growing'
+WHERE headword='increasing' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='more and more; to an increasing degree'
+WHERE headword='increasingly' AND pos='adv' AND is_derived=1;
+
+UPDATE words SET definition_simple='a decrease in size, amount, or number'
+WHERE headword='reduction' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='needed or demanded; must be done'
+WHERE headword='required' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='something you need; a rule or condition that must be met'
+WHERE headword='requirement' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='to find the answer to a problem; to deal with a difficulty'
+WHERE headword='solve' AND pos='v' AND is_derived=1;
+
+UPDATE words SET definition_simple='able to be solved'
+WHERE headword='solvable' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='not yet solved'
+WHERE headword='unsolved' AND pos='adj' AND is_derived=1;
+
+-- Day2 (prevent/avoid/support/suggest/strategy/risk/benefit)
+UPDATE words SET definition_simple='stopping something bad from happening'
+WHERE headword='prevention' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='intended to prevent problems or disease'
+WHERE headword='preventive' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='able to be avoided or prevented'
+WHERE headword='avoidable' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='a way of avoiding something; the act of avoiding'
+WHERE headword='avoidance' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='giving help and encouragement'
+WHERE headword='supportive' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='an idea or piece of advice about what to do'
+WHERE headword='suggestion' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='related to planning for a goal in a smart way'
+WHERE headword='strategic' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='in a strategic way'
+WHERE headword='strategically' AND pos='adv' AND is_derived=1;
+
+UPDATE words SET definition_simple='a person who makes plans for success (often in politics/business)'
+WHERE headword='strategist' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='likely to cause danger or loss'
+WHERE headword='risky' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='helpful; producing good results'
+WHERE headword='beneficial' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='a person who receives help or benefits'
+WHERE headword='beneficiary' AND pos='n' AND is_derived=1;
+
+-- Day3 (evidence/argue/conclude/indicate/research/data)
+UPDATE words SET definition_simple='easy to see or understand; clear'
+WHERE headword='evident' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='clearly; obviously'
+WHERE headword='evidently' AND pos='adv' AND is_derived=1;
+
+UPDATE words SET definition_simple='a reasoned discussion; a set of reasons supporting a view'
+WHERE headword='argument' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a final decision or result of thinking; the ending part'
+WHERE headword='conclusion' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a sign that something exists or is true'
+WHERE headword='indication' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a person who does research'
+WHERE headword='researcher' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a collection of organized data, often in a computer system'
+WHERE headword='database' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='based on research and evidence'
+WHERE headword='research-based' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='based on data; using data to make decisions'
+WHERE headword='data-driven' AND pos='adj' AND is_derived=1;
+
+-- Day4 (process/method/practice/improve/maintain/focus/review/consistency/goal)
+UPDATE words SET definition_simple='done in a careful and organized way'
+WHERE headword='methodical' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='useful in real situations; not only theoretical'
+WHERE headword='practical' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='a change that makes something better'
+WHERE headword='improvement' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='work needed to keep something in good condition'
+WHERE headword='maintenance' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='paying close attention; not distracted'
+WHERE headword='focused' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='the act of revising; a changed version'
+WHERE headword='revision' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='regular and steady; not changing often'
+WHERE headword='consistent' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='in a steady and regular way'
+WHERE headword='consistently' AND pos='adv' AND is_derived=1;
+
+UPDATE words SET definition_simple='planning how to reach goals'
+WHERE headword='goal-setting' AND pos='n' AND is_derived=1;
+
+-- Day5 (compare/contrast/similar/different/advantage/prefer/option/balance/efficient)
+UPDATE words SET definition_simple='the act of comparing; a look at similarities and differences'
+WHERE headword='comparison' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='used for comparing; showing similarities and differences'
+WHERE headword='comparative' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='the state of being similar'
+WHERE headword='similarity' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a difference; the state of not being the same'
+WHERE headword='difference' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='to be different (often with “from”)'
+WHERE headword='differ' AND pos='v' AND is_derived=1;
+
+UPDATE words SET definition_simple='what someone likes or chooses more than something else'
+WHERE headword='preference' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='not required; you can choose it'
+WHERE headword='optional' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='in a healthy or equal state; not extreme'
+WHERE headword='balanced' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='how well something uses time/energy; being efficient'
+WHERE headword='efficiency' AND pos='n' AND is_derived=1;
+
+-- Day6 (recommend/decide/motivate/confidence)
+UPDATE words SET definition_simple='a suggestion about what should be done'
+WHERE headword='recommendation' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a choice you make after thinking'
+WHERE headword='decision' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='the reason or desire to do something'
+WHERE headword='motivation' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='feeling sure that you can do something well'
+WHERE headword='confident' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='in a confident way'
+WHERE headword='confidently' AND pos='adv' AND is_derived=1;
+
+-- Day7 (agree/disagree/limit/necessary)
+UPDATE words SET definition_simple='a situation where people have the same opinion'
+WHERE headword='agreement' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a situation where people have different opinions'
+WHERE headword='disagreement' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='a rule or condition that restricts something; a weakness'
+WHERE headword='limitation' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='something that is needed; something necessary'
+WHERE headword='necessity' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='not necessary'
+WHERE headword='unnecessary' AND pos='adj' AND is_derived=1;
+
+UPDATE words SET definition_simple='the state of not having balance'
+WHERE headword='imbalance' AND pos='n' AND is_derived=1;
+
+UPDATE words SET definition_simple='not balanced; not in a healthy/equal state'
+WHERE headword='unbalanced' AND pos='adj' AND is_derived=1;
+
+
+/* =========================================================
+   2) EXAMPLES: 파생어 예문 2개씩 (reading / speaking)
+   - 단어별로 "수능식 문장 + 말하기 확장 문장"
+   ========================================================= */
+
+INSERT INTO example_sentences (word_id, ex_type, sentence)
+SELECT w.word_id, x.ex_type, x.sentence
+FROM words w
+JOIN (
+  -- causal / causation
+  SELECT 'causal' hw,'adj' pos,'reading' ex_type,'The study found a causal link between sleep and memory.' sentence UNION ALL
+  SELECT 'causal','adj','speaking','There is a causal relationship between practice and confidence.' UNION ALL
+
+  SELECT 'causation' hw,'n' pos,'reading','Correlation does not always mean causation.' UNION ALL
+  SELECT 'causation','n','speaking','I want to understand the causation behind my mistakes.' UNION ALL
+
+  -- effective / effectively / effectiveness / ineffective
+  SELECT 'effective' hw,'adj' pos,'reading','Spaced repetition is an effective method for vocabulary learning.' UNION ALL
+  SELECT 'effective','adj','speaking','This routine is effective because it saves time.' UNION ALL
+
+  SELECT 'effectively' hw,'adv' pos,'reading','Students can learn more effectively with clear goals.' UNION ALL
+  SELECT 'effectively','adv','speaking','I use my time effectively by studying in short sessions.' UNION ALL
+
+  SELECT 'effectiveness' hw,'n' pos,'reading','Researchers tested the effectiveness of the new teaching method.' UNION ALL
+  SELECT 'effectiveness','n','speaking','The effectiveness of my plan depends on consistency.' UNION ALL
+
+  SELECT 'ineffective' hw,'adj' pos,'reading','Cramming can be ineffective for long-term memory.' UNION ALL
+  SELECT 'ineffective','adj','speaking','Studying without review is ineffective for me.' UNION ALL
+
+  -- increasing / increasingly
+  SELECT 'increasing' hw,'adj' pos,'reading','There is an increasing demand for online education.' UNION ALL
+  SELECT 'increasing','adj','speaking','I feel increasing pressure before exams.' UNION ALL
+
+  SELECT 'increasingly' hw,'adv' pos,'reading','Students are increasingly using AI tools for learning.' UNION ALL
+  SELECT 'increasingly','adv','speaking','I am increasingly interested in speaking practice.' UNION ALL
+
+  -- reduction
+  SELECT 'reduction' hw,'n' pos,'reading','A reduction in screen time can improve sleep quality.' UNION ALL
+  SELECT 'reduction','n','speaking','I noticed a reduction in stress after daily exercise.' UNION ALL
+
+  -- required / requirement
+  SELECT 'required' hw,'adj' pos,'reading','Students are required to submit the assignment by Friday.' UNION ALL
+  SELECT 'required','adj','speaking','Regular practice is required if you want real progress.' UNION ALL
+
+  SELECT 'requirement' hw,'n' pos,'reading','One graduation requirement is passing an English test.' UNION ALL
+  SELECT 'requirement','n','speaking','My main requirement for a study plan is consistency.' UNION ALL
+
+  -- solve / solvable / unsolved
+  SELECT 'solve' hw,'v' pos,'reading','Scientists work to solve complex problems step by step.' UNION ALL
+  SELECT 'solve','v','speaking','I try to solve my weak points by reviewing daily.' UNION ALL
+
+  SELECT 'solvable' hw,'adj' pos,'reading','With enough practice, many reading problems are solvable.' UNION ALL
+  SELECT 'solvable','adj','speaking','This issue is solvable if we manage time better.' UNION ALL
+
+  SELECT 'unsolved' hw,'adj' pos,'reading','Some mysteries remain unsolved even after years of research.' UNION ALL
+  SELECT 'unsolved','adj','speaking','I still have an unsolved problem: I forget words too fast.' UNION ALL
+
+  -- prevention / preventive
+  SELECT 'prevention' hw,'n' pos,'reading','Prevention is often easier than treatment.' UNION ALL
+  SELECT 'prevention','n','speaking','For prevention of mistakes, I check my answers twice.' UNION ALL
+
+  SELECT 'preventive' hw,'adj' pos,'reading','Preventive measures can reduce the risk of accidents.' UNION ALL
+  SELECT 'preventive','adj','speaking','A preventive habit is turning off notifications while studying.' UNION ALL
+
+  -- avoidable / avoidance
+  SELECT 'avoidable' hw,'adj' pos,'reading','Many errors are avoidable with careful review.' UNION ALL
+  SELECT 'avoidable','adj','speaking','Some stress is avoidable if I sleep earlier.' UNION ALL
+
+  SELECT 'avoidance' hw,'n' pos,'reading','Avoidance of difficult tasks can increase anxiety.' UNION ALL
+  SELECT 'avoidance','n','speaking','Avoidance doesn’t help; I need to face my weak points.' UNION ALL
+
+  -- supportive / suggestion
+  SELECT 'supportive' hw,'adj' pos,'reading','A supportive environment helps students stay motivated.' UNION ALL
+  SELECT 'supportive','adj','speaking','My parents are supportive when I feel pressured.' UNION ALL
+
+  SELECT 'suggestion' hw,'n' pos,'reading','The teacher gave a helpful suggestion for improving pronunciation.' UNION ALL
+  SELECT 'suggestion','n','speaking','My suggestion is to practice speaking for one minute daily.' UNION ALL
+
+  -- strategic / strategically
+  SELECT 'strategic' hw,'adj' pos,'reading','Strategic planning is important for long-term success.' UNION ALL
+  SELECT 'strategic','adj','speaking','I make a strategic choice to study in the morning.' UNION ALL
+
+  SELECT 'strategically' hw,'adv' pos,'reading','Students should use their time strategically during exam season.' UNION ALL
+  SELECT 'strategically','adv','speaking','I study strategically by reviewing the most difficult words first.' UNION ALL
+
+  -- risky / beneficial / beneficiary
+  SELECT 'risky' hw,'adj' pos,'reading','Skipping sleep to study is risky for your health.' UNION ALL
+  SELECT 'risky','adj','speaking','It’s risky to rely only on last-minute 공부.' UNION ALL
+
+  SELECT 'beneficial' hw,'adj' pos,'reading','Regular reading is beneficial for vocabulary growth.' UNION ALL
+  SELECT 'beneficial','adj','speaking','It’s beneficial to record myself and check my mistakes.' UNION ALL
+
+  SELECT 'beneficiary' hw,'n' pos,'reading','The beneficiary of the program is the local community.' UNION ALL
+  SELECT 'beneficiary','n','speaking','Students are the main beneficiaries of better school policies.' UNION ALL
+
+  -- evident / evidently
+  SELECT 'evident' hw,'adj' pos,'reading','It is evident that sleep affects concentration.' UNION ALL
+  SELECT 'evident','adj','speaking','It’s evident that practice makes me more confident.' UNION ALL
+
+  SELECT 'evidently' hw,'adv' pos,'reading','Evidently, the new method worked better for most students.' UNION ALL
+  SELECT 'evidently','adv','speaking','Evidently, I learn faster when I review consistently.' UNION ALL
+
+  -- argument / conclusion / indication
+  SELECT 'argument' hw,'n' pos,'reading','The writer presents an argument supported by evidence.' UNION ALL
+  SELECT 'argument','n','speaking','My argument is that school should start later for teens.' UNION ALL
+
+  SELECT 'conclusion' hw,'n' pos,'reading','The conclusion summarizes the main points of the passage.' UNION ALL
+  SELECT 'conclusion','n','speaking','My conclusion is that balance is more important than intensity.' UNION ALL
+
+  SELECT 'indication' hw,'n' pos,'reading','A rise in scores is an indication of effective study.' UNION ALL
+  SELECT 'indication','n','speaking','This is a clear indication that I need more sleep.' UNION ALL
+
+  -- researcher / database / research-based / data-driven
+  SELECT 'researcher' hw,'n' pos,'reading','The researcher collected data from 300 students.' UNION ALL
+  SELECT 'researcher','n','speaking','A researcher might test how sleep affects memory.' UNION ALL
+
+  SELECT 'database' hw,'n' pos,'reading','The school stored student results in a database.' UNION ALL
+  SELECT 'database','n','speaking','I keep a small database of words I often forget.' UNION ALL
+
+  SELECT 'research-based' hw,'adj' pos,'reading','Research-based methods often outperform guessing strategies.' UNION ALL
+  SELECT 'research-based','adj','speaking','I prefer research-based study methods, not random ones.' UNION ALL
+
+  SELECT 'data-driven' hw,'adj' pos,'reading','A data-driven approach can reveal learning patterns.' UNION ALL
+  SELECT 'data-driven','adj','speaking','My plan is data-driven: I review what I missed most.' UNION ALL
+
+  -- methodical / practical / improvement / maintenance / focused / revision / consistent / consistently / goal-setting
+  SELECT 'methodical' hw,'adj' pos,'reading','A methodical approach helps reduce careless errors.' UNION ALL
+  SELECT 'methodical','adj','speaking','I try to be methodical when I review my mistakes.' UNION ALL
+
+  SELECT 'practical' hw,'adj' pos,'reading','Practical advice is easier to follow than abstract theory.' UNION ALL
+  SELECT 'practical','adj','speaking','A practical tip is to study in short sessions.' UNION ALL
+
+  SELECT 'improvement' hw,'n' pos,'reading','The report showed significant improvement in reading speed.' UNION ALL
+  SELECT 'improvement','n','speaking','I saw improvement after I started daily speaking practice.' UNION ALL
+
+  SELECT 'maintenance' hw,'n' pos,'reading','Regular maintenance keeps the system working properly.' UNION ALL
+  SELECT 'maintenance','n','speaking','Vocabulary maintenance is easier with weekly review.' UNION ALL
+
+  SELECT 'focused' hw,'adj' pos,'reading','Focused attention improves comprehension.' UNION ALL
+  SELECT 'focused','adj','speaking','I stay focused by turning off notifications.' UNION ALL
+
+  SELECT 'revision' hw,'n' pos,'reading','Revision is necessary before an important test.' UNION ALL
+  SELECT 'revision','n','speaking','I do a quick revision of today’s words at night.' UNION ALL
+
+  SELECT 'consistent' hw,'adj' pos,'reading','Consistent practice leads to steady progress.' UNION ALL
+  SELECT 'consistent','adj','speaking','I need a consistent routine to keep improving.' UNION ALL
+
+  SELECT 'consistently' hw,'adv' pos,'reading','Students who study consistently perform better.' UNION ALL
+  SELECT 'consistently','adv','speaking','I consistently review words for five minutes daily.' UNION ALL
+
+  SELECT 'goal-setting' hw,'n' pos,'reading','Goal-setting increases motivation and direction.' UNION ALL
+  SELECT 'goal-setting','n','speaking','Goal-setting helps me stay motivated during exam season.' UNION ALL
+
+  -- comparison / comparative / similarity / difference / differ / preference / optional / balanced / efficiency
+  SELECT 'comparison' hw,'n' pos,'reading','In comparison, the second group improved faster.' UNION ALL
+  SELECT 'comparison','n','speaking','I made a comparison between morning study and night study.' UNION ALL
+
+  SELECT 'comparative' hw,'adj' pos,'reading','The passage provides a comparative analysis of two systems.' UNION ALL
+  SELECT 'comparative','adj','speaking','I wrote a comparative summary of online and offline learning.' UNION ALL
+
+  SELECT 'similarity' hw,'n' pos,'reading','There is a similarity between the two results.' UNION ALL
+  SELECT 'similarity','n','speaking','One similarity is that both methods require practice.' UNION ALL
+
+  SELECT 'difference' hw,'n' pos,'reading','There is a clear difference between short-term and long-term memory.' UNION ALL
+  SELECT 'difference','n','speaking','The biggest difference is how much focus students need.' UNION ALL
+
+  SELECT 'differ' hw,'v' pos,'reading','Opinions differ among researchers.' UNION ALL
+  SELECT 'differ','v','speaking','My view differs from my friend’s view.' UNION ALL
+
+  SELECT 'preference' hw,'n' pos,'reading','Student preference can influence course design.' UNION ALL
+  SELECT 'preference','n','speaking','My preference is studying alone because I focus better.' UNION ALL
+
+  SELECT 'optional' hw,'adj' pos,'reading','The extra reading is optional, not required.' UNION ALL
+  SELECT 'optional','adj','speaking','Speaking practice is optional in class, but I do it anyway.' UNION ALL
+
+  SELECT 'balanced' hw,'adj' pos,'reading','A balanced schedule includes both study and rest.' UNION ALL
+  SELECT 'balanced','adj','speaking','I try to keep a balanced routine during exams.' UNION ALL
+
+  SELECT 'efficiency' hw,'n' pos,'reading','Efficiency improves when students use a clear study plan.' UNION ALL
+  SELECT 'efficiency','n','speaking','My efficiency increased after I removed distractions.' UNION ALL
+
+  -- recommendation / decision / motivation / confident / confidently
+  SELECT 'recommendation' hw,'n' pos,'reading','The doctor’s recommendation was to sleep more.' UNION ALL
+  SELECT 'recommendation','n','speaking','My recommendation is to review words with example sentences.' UNION ALL
+
+  SELECT 'decision' hw,'n' pos,'reading','Good decisions require careful thinking.' UNION ALL
+  SELECT 'decision','n','speaking','My decision was to practice speaking every day.' UNION ALL
+
+  SELECT 'motivation' hw,'n' pos,'reading','Motivation often increases when progress is visible.' UNION ALL
+  SELECT 'motivation','n','speaking','My motivation rises when I see small improvements.' UNION ALL
+
+  SELECT 'confident' hw,'adj' pos,'reading','Confident speakers make fewer long pauses.' UNION ALL
+  SELECT 'confident','adj','speaking','I feel confident when I practice with a clear pattern.' UNION ALL
+
+  SELECT 'confidently' hw,'adv' pos,'reading','She answered confidently during the interview.' UNION ALL
+  SELECT 'confidently','adv','speaking','I want to speak confidently in English class.' UNION ALL
+
+  -- agreement / disagreement / limitation / necessity / unnecessary / imbalance / unbalanced
+  SELECT 'agreement' hw,'n' pos,'reading','There is agreement that sleep is important for learning.' UNION ALL
+  SELECT 'agreement','n','speaking','We reached an agreement about study time.' UNION ALL
+
+  SELECT 'disagreement' hw,'n' pos,'reading','Disagreement often happens when evidence is unclear.' UNION ALL
+  SELECT 'disagreement','n','speaking','We had a disagreement, but we listened to each other.' UNION ALL
+
+  SELECT 'limitation' hw,'n' pos,'reading','One limitation of the study is the small sample size.' UNION ALL
+  SELECT 'limitation','n','speaking','A limitation is that I don’t have enough time on weekdays.' UNION ALL
+
+  SELECT 'necessity' hw,'n' pos,'reading','Sleep is a necessity for healthy growth.' UNION ALL
+  SELECT 'necessity','n','speaking','Daily review is a necessity for me, not a choice.' UNION ALL
+
+  SELECT 'unnecessary' hw,'adj' pos,'reading','Too much homework can create unnecessary stress.' UNION ALL
+  SELECT 'unnecessary','adj','speaking','It’s unnecessary to study for five hours without breaks.' UNION ALL
+
+  SELECT 'imbalance' hw,'n' pos,'reading','Imbalance between work and rest can harm health.' UNION ALL
+  SELECT 'imbalance','n','speaking','I noticed an imbalance: too much study and too little sleep.' UNION ALL
+
+  SELECT 'unbalanced' hw,'adj' pos,'reading','An unbalanced diet can cause health problems.' UNION ALL
+  SELECT 'unbalanced','adj','speaking','My schedule becomes unbalanced during exam week.'
+) x ON x.hw=w.headword AND x.pos=w.pos
+WHERE w.is_derived=1;
+
+
+COMMIT;
+
+
+/* =========================================================
+   ✅ 빠른 검증
+   ========================================================= */
+
+-- 1) 파생어 정의가 [AUTO]가 아닌지 확인
+SELECT headword, pos, cefr, definition_simple
+FROM words
+WHERE is_derived=1 AND definition_simple LIKE '[AUTO]%'
+ORDER BY headword
+LIMIT 50;
+
+-- 2) 특정 root의 파생어 카드 + 예문 유무 확인 (예: effect(n))
+SELECT
+  r.headword AS root, r.pos AS root_pos,
+  d.headword AS derived, d.pos AS derived_pos,
+  SUM(ex.ex_type='reading') AS has_reading,
+  SUM(ex.ex_type='speaking') AS has_speaking
+FROM word_family_edges e
+JOIN words r ON r.word_id=e.root_word_id
+JOIN words d ON d.word_id=e.derived_word_id
+LEFT JOIN example_sentences ex ON ex.word_id=d.word_id
+WHERE r.headword='effect' AND r.pos='n'
+GROUP BY d.word_id
+ORDER BY d.headword;
+
+
+
+/* =========================================================
+   HS1 Week1 Derived Words (A안): Collocations 정교화 SQL
+   - 목적: 파생어(word.is_derived=1)에 대해 “실제 빈출 연어”를 삽입
+   - 안전: 기존 placeholder( "... + (common pattern)" )는 삭제 후 재삽입
+   ========================================================= */
+
+START TRANSACTION;
+
+-- 0) 파생어 placeholder 연어 제거
+DELETE wc
+FROM word_collocations wc
+JOIN words w ON w.word_id = wc.word_id
+WHERE w.is_derived=1
+  AND wc.collocation LIKE '%(common pattern)%';
+
+/* =========================================================
+   1) 파생어 연어 INSERT
+   - freq_band: high/medium/low (학습 우선순위)
+   ========================================================= */
+
+INSERT INTO word_collocations (word_id, collocation, freq_band)
+SELECT w.word_id, x.col, x.fb
+FROM words w
+JOIN (
+  /* -------------------------
+     cause-family
+     ------------------------- */
+  SELECT 'causal' hw,'adj' pos,'causal relationship' col,'high' fb UNION ALL
+  SELECT 'causal','adj','causal link' ,'high' UNION ALL
+  SELECT 'causal','adj','causal factor','medium' UNION ALL
+
+  SELECT 'causation' hw,'n' pos,'correlation and causation' col,'high' fb UNION ALL
+  SELECT 'causation','n','the problem of causation','low' UNION ALL
+
+  SELECT 'cause-and-effect' hw,'n' pos,'cause-and-effect relationship' col,'high' fb UNION ALL
+  SELECT 'cause-and-effect','n','cause-and-effect reasoning' col,'medium' UNION ALL
+
+  /* -------------------------
+     effect-family
+     ------------------------- */
+  SELECT 'effective' hw,'adj' pos,'an effective way' col,'high' fb UNION ALL
+  SELECT 'effective','adj','highly effective' col,'high' UNION ALL
+  SELECT 'effective','adj','effective for' col,'high' UNION ALL
+  SELECT 'effective','adj','effective in' col,'medium' UNION ALL
+
+  SELECT 'effectively' hw,'adv' pos,'work effectively' col,'high' fb UNION ALL
+  SELECT 'effectively','adv','communicate effectively' col,'high' UNION ALL
+  SELECT 'effectively','adv','deal with effectively' col,'medium' UNION ALL
+  SELECT 'effectively','adv','use (time/resources) effectively' col,'high' UNION ALL
+
+  SELECT 'effectiveness' hw,'n' pos,'the effectiveness of' col,'high' fb UNION ALL
+  SELECT 'effectiveness','n','measure effectiveness' col,'medium' UNION ALL
+  SELECT 'effectiveness','n','prove effectiveness' col,'medium' UNION ALL
+
+  SELECT 'ineffective' hw,'adj' pos,'ineffective at' col,'medium' fb UNION ALL
+  SELECT 'ineffective','adj','largely ineffective' col,'medium' UNION ALL
+  SELECT 'ineffective','adj','ineffective method' col,'high' UNION ALL
+
+  /* -------------------------
+     increase/reduce/require/solution
+     ------------------------- */
+  SELECT 'increasing' hw,'adj' pos,'increasing number of' col,'high' fb UNION ALL
+  SELECT 'increasing','adj','increasing demand for' col,'high' UNION ALL
+  SELECT 'increasing','adj','an increasing trend' col,'medium' UNION ALL
+
+  SELECT 'increasingly' hw,'adv' pos,'increasingly common' col,'medium' fb UNION ALL
+  SELECT 'increasingly','adv','increasingly important' col,'high' UNION ALL
+  SELECT 'increasingly','adv','increasingly difficult' col,'medium' UNION ALL
+
+  SELECT 'reduction' hw,'n' pos,'a reduction in' col,'high' fb UNION ALL
+  SELECT 'reduction','n','significant reduction' col,'medium' UNION ALL
+  SELECT 'reduction','n','reduce (something) by a reduction' col,'low' UNION ALL
+
+  SELECT 'required' hw,'adj' pos,'be required to' col,'high' fb UNION ALL
+  SELECT 'required','adj','required for' col,'high' UNION ALL
+  SELECT 'required','adj','required reading' col,'medium' UNION ALL
+
+  SELECT 'requirement' hw,'n' pos,'meet the requirement' col,'high' fb UNION ALL
+  SELECT 'requirement','n','minimum requirement' col,'high' UNION ALL
+  SELECT 'requirement','n','basic requirement' col,'medium' UNION ALL
+  SELECT 'requirement','n','entry requirement' col,'medium' UNION ALL
+
+  SELECT 'solve' hw,'v' pos,'solve a problem' col,'high' fb UNION ALL
+  SELECT 'solve','v','solve the issue' col,'high' UNION ALL
+  SELECT 'solve','v','solve quickly' col,'low' UNION ALL
+
+  SELECT 'solvable' hw,'adj' pos,'a solvable problem' col,'high' fb UNION ALL
+  SELECT 'solvable','adj','easily solvable' col,'medium' UNION ALL
+
+  SELECT 'unsolved' hw,'adj' pos,'unsolved problem' col,'high' fb UNION ALL
+  SELECT 'unsolved','adj','remain unsolved' col,'high' UNION ALL
+
+  /* -------------------------
+     Day2 derived: prevention/preventive/avoidable/avoidance/supportive/suggestion/strategy/risky/beneficial/beneficiary
+     ------------------------- */
+  SELECT 'prevention' hw,'n' pos,'disease prevention' col,'high' fb UNION ALL
+  SELECT 'prevention','n','prevention of' col,'high' UNION ALL
+  SELECT 'prevention','n','prevention measures' col,'medium' UNION ALL
+
+  SELECT 'preventive' hw,'adj' pos,'preventive measures' col,'high' fb UNION ALL
+  SELECT 'preventive','adj','preventive action' col,'medium' UNION ALL
+
+  SELECT 'avoidable' hw,'adj' pos,'avoidable mistake' col,'high' fb UNION ALL
+  SELECT 'avoidable','adj','largely avoidable' col,'medium' UNION ALL
+
+  SELECT 'avoidance' hw,'n' pos,'avoidance of' col,'high' fb UNION ALL
+  SELECT 'avoidance','n','avoidance behavior' col,'medium' UNION ALL
+
+  SELECT 'supportive' hw,'adj' pos,'supportive environment' col,'high' fb UNION ALL
+  SELECT 'supportive','adj','supportive parents' col,'medium' UNION ALL
+  SELECT 'supportive','adj','be supportive of' col,'high' UNION ALL
+
+  SELECT 'suggestion' hw,'n' pos,'make a suggestion' col,'high' fb UNION ALL
+  SELECT 'suggestion','n','helpful suggestion' col,'high' UNION ALL
+  SELECT 'suggestion','n','follow a suggestion' col,'medium' UNION ALL
+
+  SELECT 'strategic' hw,'adj' pos,'strategic plan' col,'high' fb UNION ALL
+  SELECT 'strategic','adj','strategic decision' col,'high' UNION ALL
+  SELECT 'strategic','adj','strategic choice' col,'medium' UNION ALL
+
+  SELECT 'strategically' hw,'adv' pos,'think strategically' col,'high' fb UNION ALL
+  SELECT 'strategically','adv','plan strategically' col,'high' UNION ALL
+
+  SELECT 'strategist' hw,'n' pos,'political strategist' col,'medium' fb UNION ALL
+  SELECT 'strategist','n','marketing strategist' col,'medium' UNION ALL
+
+  SELECT 'risky' hw,'adj' pos,'risky behavior' col,'high' fb UNION ALL
+  SELECT 'risky','adj','too risky to' col,'medium' UNION ALL
+
+  SELECT 'beneficial' hw,'adj' pos,'beneficial for' col,'high' fb UNION ALL
+  SELECT 'beneficial','adj','highly beneficial' col,'medium' UNION ALL
+  SELECT 'beneficial','adj','beneficial effect' col,'medium' UNION ALL
+
+  SELECT 'beneficiary' hw,'n' pos,'the main beneficiary' col,'high' fb UNION ALL
+  SELECT 'beneficiary','n','beneficiary of' col,'high' UNION ALL
+
+  /* -------------------------
+     Day3 derived: evident/evidently/argument/conclusion/indication/researcher/database/research-based/data-driven
+     ------------------------- */
+  SELECT 'evident' hw,'adj' pos,'it is evident that' col,'high' fb UNION ALL
+  SELECT 'evident','adj','become evident' col,'medium' UNION ALL
+
+  SELECT 'evidently' hw,'adv' pos,'evidently, (sentence)' col,'high' fb UNION ALL
+  SELECT 'evidently','adv','quite evidently' col,'low' UNION ALL
+
+  SELECT 'argument' hw,'n' pos,'make an argument' col,'high' fb UNION ALL
+  SELECT 'argument','n','strong argument' col,'high' UNION ALL
+  SELECT 'argument','n','argument for/against' col,'high' UNION ALL
+
+  SELECT 'conclusion' hw,'n' pos,'draw a conclusion' col,'high' fb UNION ALL
+  SELECT 'conclusion','n','reach a conclusion' col,'high' UNION ALL
+  SELECT 'conclusion','n','in conclusion' col,'high' UNION ALL
+
+  SELECT 'indication' hw,'n' pos,'a clear indication' col,'high' fb UNION ALL
+  SELECT 'indication','n','indication of' col,'high' UNION ALL
+
+  SELECT 'researcher' hw,'n' pos,'researcher found that' col,'high' fb UNION ALL
+  SELECT 'researcher','n','lead researcher' col,'medium' UNION ALL
+
+  SELECT 'database' hw,'n' pos,'database system' col,'medium' fb UNION ALL
+  SELECT 'database','n','store in a database' col,'high' UNION ALL
+  SELECT 'database','n','database of' col,'high' UNION ALL
+
+  SELECT 'research-based' hw,'adj' pos,'research-based approach' col,'high' fb UNION ALL
+  SELECT 'research-based','adj','research-based learning' col,'medium' UNION ALL
+
+  SELECT 'data-driven' hw,'adj' pos,'data-driven approach' col,'high' fb UNION ALL
+  SELECT 'data-driven','adj','data-driven decision' col,'high' UNION ALL
+  SELECT 'data-driven','adj','data-driven insights' col,'medium' UNION ALL
+
+  /* -------------------------
+     Day4 derived: methodical/practical/improvement/maintenance/focused/revision/consistent/consistently/goal-setting
+     ------------------------- */
+  SELECT 'methodical' hw,'adj' pos,'methodical approach' col,'high' fb UNION ALL
+  SELECT 'methodical','adj','methodical way' col,'medium' UNION ALL
+
+  SELECT 'practical' hw,'adj' pos,'practical advice' col,'high' fb UNION ALL
+  SELECT 'practical','adj','practical skills' col,'high' UNION ALL
+  SELECT 'practical','adj','practical solution' col,'medium' UNION ALL
+
+  SELECT 'improvement' hw,'n' pos,'show improvement' col,'high' fb UNION ALL
+  SELECT 'improvement','n','significant improvement' col,'high' UNION ALL
+  SELECT 'improvement','n','room for improvement' col,'high' UNION ALL
+
+  SELECT 'maintenance' hw,'n' pos,'regular maintenance' col,'high' fb UNION ALL
+  SELECT 'maintenance','n','require maintenance' col,'medium' UNION ALL
+
+  SELECT 'focused' hw,'adj' pos,'stay focused' col,'high' fb UNION ALL
+  SELECT 'focused','adj','highly focused' col,'medium' UNION ALL
+
+  SELECT 'revision' hw,'n' pos,'do a revision' col,'medium' fb UNION ALL
+  SELECT 'revision','n','revision of' col,'high' UNION ALL
+  SELECT 'revision','n','final revision' col,'high' UNION ALL
+
+  SELECT 'consistent' hw,'adj' pos,'consistent effort' col,'high' fb UNION ALL
+  SELECT 'consistent','adj','consistent results' col,'medium' UNION ALL
+
+  SELECT 'consistently' hw,'adv' pos,'perform consistently' col,'medium' fb UNION ALL
+  SELECT 'consistently','adv','work consistently' col,'high' UNION ALL
+
+  SELECT 'goal-setting' hw,'n' pos,'goal-setting strategy' col,'medium' fb UNION ALL
+  SELECT 'goal-setting','n','goal-setting process' col,'medium' UNION ALL
+
+  /* -------------------------
+     Day5 derived: comparison/comparative/similarity/difference/differ/preference/optional/balanced/efficiency
+     ------------------------- */
+  SELECT 'comparison' hw,'n' pos,'in comparison' col,'high' fb UNION ALL
+  SELECT 'comparison','n','by comparison' col,'high' UNION ALL
+  SELECT 'comparison','n','make a comparison' col,'high' UNION ALL
+
+  SELECT 'comparative' hw,'adj' pos,'comparative study' col,'high' fb UNION ALL
+  SELECT 'comparative','adj','comparative analysis' col,'high' UNION ALL
+
+  SELECT 'similarity' hw,'n' pos,'similarity between' col,'high' fb UNION ALL
+  SELECT 'similarity','n','share a similarity' col,'medium' UNION ALL
+
+  SELECT 'difference' hw,'n' pos,'difference between' col,'high' fb UNION ALL
+  SELECT 'difference','n','make a difference' col,'high' UNION ALL
+  SELECT 'difference','n','tell the difference' col,'medium' UNION ALL
+
+  SELECT 'differ' hw,'v' pos,'differ from' col,'high' fb UNION ALL
+  SELECT 'differ','v','differ in' col,'high' UNION ALL
+
+  SELECT 'preference' hw,'n' pos,'personal preference' col,'high' fb UNION ALL
+  SELECT 'preference','n','preference for' col,'high' UNION ALL
+
+  SELECT 'optional' hw,'adj' pos,'optional course' col,'medium' fb UNION ALL
+  SELECT 'optional','adj','optional activity' col,'medium' UNION ALL
+
+  SELECT 'balanced' hw,'adj' pos,'balanced diet' col,'high' fb UNION ALL
+  SELECT 'balanced','adj','balanced schedule' col,'high' UNION ALL
+  SELECT 'balanced','adj','keep (things) balanced' col,'medium' UNION ALL
+
+  SELECT 'efficiency' hw,'n' pos,'improve efficiency' col,'high' fb UNION ALL
+  SELECT 'efficiency','n','increase efficiency' col,'high' UNION ALL
+  SELECT 'efficiency','n','operational efficiency' col,'low' UNION ALL
+
+  /* -------------------------
+     Day6 derived: recommendation/decision/motivation/confident/confidently
+     ------------------------- */
+  SELECT 'recommendation' hw,'n' pos,'follow a recommendation' col,'medium' fb UNION ALL
+  SELECT 'recommendation','n','strong recommendation' col,'medium' UNION ALL
+
+  SELECT 'decision' hw,'n' pos,'make a decision' col,'high' fb UNION ALL
+  SELECT 'decision','n','final decision' col,'high' UNION ALL
+  SELECT 'decision','n','difficult decision' col,'high' UNION ALL
+
+  SELECT 'motivation' hw,'n' pos,'motivation to' col,'high' fb UNION ALL
+  SELECT 'motivation','n','lack motivation' col,'medium' UNION ALL
+  SELECT 'motivation','n','increase motivation' col,'high' UNION ALL
+
+  SELECT 'confident' hw,'adj' pos,'feel confident' col,'high' fb UNION ALL
+  SELECT 'confident','adj','confident about' col,'high' UNION ALL
+
+  SELECT 'confidently' hw,'adv' pos,'speak confidently' col,'high' fb UNION ALL
+  SELECT 'confidently','adv','answer confidently' col,'medium' UNION ALL
+
+  /* -------------------------
+     Day7 derived: agreement/disagreement/limitation/necessity/unnecessary/imbalance/unbalanced
+     ------------------------- */
+  SELECT 'agreement' hw,'n' pos,'reach an agreement' col,'high' fb UNION ALL
+  SELECT 'agreement','n','in agreement' col,'high' UNION ALL
+
+  SELECT 'disagreement' hw,'n' pos,'have a disagreement' col,'high' fb UNION ALL
+  SELECT 'disagreement','n','disagreement about/over' col,'high' UNION ALL
+
+  SELECT 'limitation' hw,'n' pos,'a major limitation' col,'high' fb UNION ALL
+  SELECT 'limitation','n','limitation of' col,'high' UNION ALL
+
+  SELECT 'necessity' hw,'n' pos,'out of necessity' col,'medium' fb UNION ALL
+  SELECT 'necessity','n','a necessity for' col,'high' UNION ALL
+
+  SELECT 'unnecessary' hw,'adj' pos,'unnecessary stress' col,'high' fb UNION ALL
+  SELECT 'unnecessary','adj','completely unnecessary' col,'medium' UNION ALL
+
+  SELECT 'imbalance' hw,'n' pos,'imbalance between' col,'high' fb UNION ALL
+  SELECT 'imbalance','n','serious imbalance' col,'medium' UNION ALL
+
+  SELECT 'unbalanced' hw,'adj' pos,'an unbalanced diet' col,'high' fb UNION ALL
+  SELECT 'unbalanced','adj','unbalanced schedule' col,'medium'
+) x ON x.hw=w.headword AND x.pos=w.pos
+WHERE w.is_derived=1;
+
+COMMIT;
+
+
+/* =========================================================
+   ✅ 검증 쿼리
+   ========================================================= */
+
+-- 파생어 연어가 얼마나 들어갔는지
+SELECT COUNT(*) AS derived_collocations
+FROM word_collocations wc
+JOIN words w ON w.word_id=wc.word_id
+WHERE w.is_derived=1;
+
+-- 특정 파생어(예: decision)의 연어 확인
+SELECT w.headword, w.pos, wc.collocation, wc.freq_band
+FROM words w
+JOIN word_collocations wc ON wc.word_id=w.word_id
+WHERE w.headword='decision' AND w.pos='n' AND w.is_derived=1
+ORDER BY wc.freq_band DESC, wc.collocation;
+
+
+
+/* =========================================================
+   ✅ HS1 Week1 파생어 “학습세트” 완성 SQL
+   목표(파생어 카드 기준):
+   1) 파생어(words.is_derived=1)에 동의어(word_synonyms) 정교화
+   2) 이미 완료된 항목: 정의(words), 예문(example_sentences), 연어(word_collocations)
+   3) “학습세트 조회”를 위한 VIEW 2개 제공
+   ========================================================= */
+
+START TRANSACTION;
+
+/* ---------------------------------------------------------
+   0) (선택) 파생어 동의어 중복 방지용 UNIQUE 권장
+   - 이미 운영 중이면 스킵해도 됨
+--------------------------------------------------------- */
+-- ALTER TABLE word_synonyms ADD UNIQUE KEY uq_syn (word_id, synonym_word);
+
+/* ---------------------------------------------------------
+   1) 파생어 동의어 정교화 INSERT
+   - root 단어 동의어와 “겹치더라도” 파생어 카드에서는 별도 필요
+--------------------------------------------------------- */
+INSERT INTO word_synonyms (word_id, synonym_word, nuance_level)
+SELECT w.word_id, x.syn, x.lv
+FROM words w
+JOIN (
+  /* ===== cause-family ===== */
+  SELECT 'causal' hw,'adj' pos,'cause-and-effect' syn,1 lv UNION ALL
+  SELECT 'causal','adj','related' ,2 UNION ALL
+  SELECT 'causal','adj','direct' ,2 UNION ALL
+
+  SELECT 'causation' hw,'n' pos,'cause' syn,1 lv UNION ALL
+  SELECT 'causation','n','cause-and-effect' ,1 UNION ALL
+  SELECT 'causation','n','reason' ,2 UNION ALL
+
+  SELECT 'cause-and-effect' hw,'n' pos,'causation' syn,1 lv UNION ALL
+  SELECT 'cause-and-effect','n','relationship' ,2 UNION ALL
+  SELECT 'cause-and-effect','n','connection' ,2 UNION ALL
+
+  /* ===== effect-family ===== */
+  SELECT 'effective' hw,'adj' pos,'successful' syn,1 lv UNION ALL
+  SELECT 'effective','adj','useful' ,1 UNION ALL
+  SELECT 'effective','adj','efficient' ,2 UNION ALL
+
+  SELECT 'effectively' hw,'adv' pos,'successfully' syn,1 lv UNION ALL
+  SELECT 'effectively','adv','well' ,1 UNION ALL
+  SELECT 'effectively','adv','efficiently' ,2 UNION ALL
+
+  SELECT 'effectiveness' hw,'n' pos,'success' syn,2 lv UNION ALL
+  SELECT 'effectiveness','n','power' ,2 UNION ALL
+  SELECT 'effectiveness','n','impact' ,2 UNION ALL
+
+  SELECT 'ineffective' hw,'adj' pos,'useless' syn,1 lv UNION ALL
+  SELECT 'ineffective','adj','unsuccessful' ,2 UNION ALL
+  SELECT 'ineffective','adj','weak' ,2 UNION ALL
+
+  /* ===== increase/reduce/require/solution ===== */
+  SELECT 'increasing' hw,'adj' pos,'growing' syn,1 lv UNION ALL
+  SELECT 'increasing','adj','rising' ,1 UNION ALL
+  SELECT 'increasing','adj','expanding' ,2 UNION ALL
+
+  SELECT 'increasingly' hw,'adv' pos,'more and more' syn,1 lv UNION ALL
+  SELECT 'increasingly','adv','gradually' ,2 UNION ALL
+  SELECT 'increasingly','adv','progressively' ,3 UNION ALL
+
+  SELECT 'reduction' hw,'n' pos,'decrease' syn,1 lv UNION ALL
+  SELECT 'reduction','n','cut' ,1 UNION ALL
+  SELECT 'reduction','n','drop' ,2 UNION ALL
+
+  SELECT 'required' hw,'adj' pos,'necessary' syn,1 lv UNION ALL
+  SELECT 'required','adj','needed' ,1 UNION ALL
+  SELECT 'required','adj','mandatory' ,2 UNION ALL
+
+  SELECT 'requirement' hw,'n' pos,'condition' syn,2 lv UNION ALL
+  SELECT 'requirement','n','need' ,1 UNION ALL
+  SELECT 'requirement','n','rule' ,2 UNION ALL
+
+  SELECT 'solve' hw,'v' pos,'fix' syn,1 lv UNION ALL
+  SELECT 'solve','v','deal with' ,2 UNION ALL
+  SELECT 'solve','v','figure out' ,2 UNION ALL
+
+  SELECT 'solvable' hw,'adj' pos,'fixable' syn,1 lv UNION ALL
+  SELECT 'solvable','adj','manageable' ,2 UNION ALL
+  SELECT 'solvable','adj','possible' ,2 UNION ALL
+
+  SELECT 'unsolved' hw,'adj' pos,'unanswered' syn,2 lv UNION ALL
+  SELECT 'unsolved','adj','unresolved' ,2 UNION ALL
+  SELECT 'unsolved','adj','mysterious' ,3 UNION ALL
+
+  /* ===== prevention/avoid/support/strategy/risk/benefit ===== */
+  SELECT 'prevention' hw,'n' pos,'avoidance' syn,2 lv UNION ALL
+  SELECT 'prevention','n','protection' ,2 UNION ALL
+  SELECT 'prevention','n','control' ,3 UNION ALL
+
+  SELECT 'preventive' hw,'adj' pos,'protective' syn,2 lv UNION ALL
+  SELECT 'preventive','adj','preparatory' ,3 UNION ALL
+  SELECT 'preventive','adj','proactive' ,3 UNION ALL
+
+  SELECT 'avoidable' hw,'adj' pos,'preventable' syn,1 lv UNION ALL
+  SELECT 'avoidable','adj','unnecessary' ,2 UNION ALL
+  SELECT 'avoidable','adj','not required' ,2 UNION ALL
+
+  SELECT 'avoidance' hw,'n' pos,'prevention' syn,2 lv UNION ALL
+  SELECT 'avoidance','n','escape' ,2 UNION ALL
+  SELECT 'avoidance','n','refusal' ,3 UNION ALL
+
+  SELECT 'supportive' hw,'adj' pos,'helpful' syn,1 lv UNION ALL
+  SELECT 'supportive','adj','encouraging' ,2 UNION ALL
+  SELECT 'supportive','adj','caring' ,2 UNION ALL
+
+  SELECT 'suggestion' hw,'n' pos,'advice' syn,1 lv UNION ALL
+  SELECT 'suggestion','n','idea' ,1 UNION ALL
+  SELECT 'suggestion','n','proposal' ,2 UNION ALL
+
+  SELECT 'strategic' hw,'adj' pos,'planned' syn,1 lv UNION ALL
+  SELECT 'strategic','adj','smart' ,1 UNION ALL
+  SELECT 'strategic','adj','long-term' ,2 UNION ALL
+
+  SELECT 'strategically' hw,'adv' pos,'wisely' syn,2 lv UNION ALL
+  SELECT 'strategically','adv','carefully' ,2 UNION ALL
+  SELECT 'strategically','adv','purposefully' ,3 UNION ALL
+
+  SELECT 'strategist' hw,'n' pos,'planner' syn,2 lv UNION ALL
+  SELECT 'strategist','n','advisor' ,2 UNION ALL
+  SELECT 'strategist','n','expert' ,2 UNION ALL
+
+  SELECT 'risky' hw,'adj' pos,'dangerous' syn,1 lv UNION ALL
+  SELECT 'risky','adj','unsafe' ,1 UNION ALL
+  SELECT 'risky','adj','uncertain' ,2 UNION ALL
+
+  SELECT 'beneficial' hw,'adj' pos,'helpful' syn,1 lv UNION ALL
+  SELECT 'beneficial','adj','useful' ,1 UNION ALL
+  SELECT 'beneficial','adj','good for' ,1 UNION ALL
+
+  SELECT 'beneficiary' hw,'n' pos,'receiver' syn,2 lv UNION ALL
+  SELECT 'beneficiary','n','recipient' ,3 UNION ALL
+  SELECT 'beneficiary','n','winner' ,2 UNION ALL
+
+  /* ===== evidence/reasoning ===== */
+  SELECT 'evident' hw,'adj' pos,'clear' syn,1 lv UNION ALL
+  SELECT 'evident','adj','obvious' ,1 UNION ALL
+  SELECT 'evident','adj','noticeable' ,2 UNION ALL
+
+  SELECT 'evidently' hw,'adv' pos,'clearly' syn,1 lv UNION ALL
+  SELECT 'evidently','adv','obviously' ,1 UNION ALL
+  SELECT 'evidently','adv','apparently' ,2 UNION ALL
+
+  SELECT 'argument' hw,'n' pos,'reasoning' syn,2 lv UNION ALL
+  SELECT 'argument','n','claim' ,2 UNION ALL
+  SELECT 'argument','n','debate' ,2 UNION ALL
+
+  SELECT 'conclusion' hw,'n' pos,'ending' syn,1 lv UNION ALL
+  SELECT 'conclusion','n','result' ,1 UNION ALL
+  SELECT 'conclusion','n','summary' ,2 UNION ALL
+
+  SELECT 'indication' hw,'n' pos,'sign' syn,1 lv UNION ALL
+  SELECT 'indication','n','signal' ,2 UNION ALL
+  SELECT 'indication','n','evidence' ,2 UNION ALL
+
+  SELECT 'researcher' hw,'n' pos,'scientist' syn,2 lv UNION ALL
+  SELECT 'researcher','n','investigator' ,2 UNION ALL
+  SELECT 'researcher','n','scholar' ,3 UNION ALL
+
+  SELECT 'database' hw,'n' pos,'data system' syn,2 lv UNION ALL
+  SELECT 'database','n','data storage' ,2 UNION ALL
+  SELECT 'database','n','data bank' ,3 UNION ALL
+
+  SELECT 'research-based' hw,'adj' pos,'evidence-based' syn,2 lv UNION ALL
+  SELECT 'research-based','adj','scientific' ,2 UNION ALL
+  SELECT 'research-based','adj','proven' ,2 UNION ALL
+
+  SELECT 'data-driven' hw,'adj' pos,'evidence-based' syn,2 lv UNION ALL
+  SELECT 'data-driven','adj','fact-based' ,2 UNION ALL
+  SELECT 'data-driven','adj','analytical' ,3 UNION ALL
+
+  /* ===== study process ===== */
+  SELECT 'methodical' hw,'adj' pos,'systematic' syn,2 lv UNION ALL
+  SELECT 'methodical','adj','organized' ,1 UNION ALL
+  SELECT 'methodical','adj','careful' ,1 UNION ALL
+
+  SELECT 'practical' hw,'adj' pos,'useful' syn,1 lv UNION ALL
+  SELECT 'practical','adj','realistic' ,2 UNION ALL
+  SELECT 'practical','adj','hands-on' ,3 UNION ALL
+
+  SELECT 'improvement' hw,'n' pos,'progress' syn,1 lv UNION ALL
+  SELECT 'improvement','n','growth' ,2 UNION ALL
+  SELECT 'improvement','n','advance' ,2 UNION ALL
+
+  SELECT 'maintenance' hw,'n' pos,'upkeep' syn,2 lv UNION ALL
+  SELECT 'maintenance','n','care' ,1 UNION ALL
+  SELECT 'maintenance','n','repair' ,2 UNION ALL
+
+  SELECT 'focused' hw,'adj' pos,'concentrated' syn,2 lv UNION ALL
+  SELECT 'focused','adj','attentive' ,2 UNION ALL
+  SELECT 'focused','adj','not distracted' ,1 UNION ALL
+
+  SELECT 'revision' hw,'n' pos,'review' syn,1 lv UNION ALL
+  SELECT 'revision','n','editing' ,2 UNION ALL
+  SELECT 'revision','n','re-check' ,2 UNION ALL
+
+  SELECT 'consistent' hw,'adj' pos,'steady' syn,1 lv UNION ALL
+  SELECT 'consistent','adj','regular' ,1 UNION ALL
+  SELECT 'consistent','adj','reliable' ,2 UNION ALL
+
+  SELECT 'consistently' hw,'adv' pos,'regularly' syn,1 lv UNION ALL
+  SELECT 'consistently','adv','steadily' ,2 UNION ALL
+  SELECT 'consistently','adv','repeatedly' ,2 UNION ALL
+
+  SELECT 'goal-setting' hw,'n' pos,'planning' syn,1 lv UNION ALL
+  SELECT 'goal-setting','n','targeting' ,2 UNION ALL
+  SELECT 'goal-setting','n','goal planning' ,1 UNION ALL
+
+  /* ===== compare & contrast ===== */
+  SELECT 'comparison' hw,'n' pos,'contrast' syn,2 lv UNION ALL
+  SELECT 'comparison','n','evaluation' ,2 UNION ALL
+  SELECT 'comparison','n','matchup' ,3 UNION ALL
+
+  SELECT 'comparative' hw,'adj' pos,'relative' syn,2 lv UNION ALL
+  SELECT 'comparative','adj','comparing' ,1 UNION ALL
+  SELECT 'comparative','adj','contrastive' ,3 UNION ALL
+
+  SELECT 'similarity' hw,'n' pos,'likeness' syn,2 lv UNION ALL
+  SELECT 'similarity','n','resemblance' ,3 UNION ALL
+  SELECT 'similarity','n','common point' ,2 UNION ALL
+
+  SELECT 'difference' hw,'n' pos,'distinction' syn,3 lv UNION ALL
+  SELECT 'difference','n','gap' ,2 UNION ALL
+  SELECT 'difference','n','change' ,2 UNION ALL
+
+  SELECT 'differ' hw,'v' pos,'vary' syn,2 lv UNION ALL
+  SELECT 'differ','v','change' ,2 UNION ALL
+  SELECT 'differ','v','disagree' ,2 UNION ALL
+
+  SELECT 'preference' hw,'n' pos,'choice' syn,1 lv UNION ALL
+  SELECT 'preference','n','favorite' ,2 UNION ALL
+  SELECT 'preference','n','liking' ,2 UNION ALL
+
+  SELECT 'optional' hw,'adj' pos,'not required' syn,1 lv UNION ALL
+  SELECT 'optional','adj','extra' ,1 UNION ALL
+  SELECT 'optional','adj','elective' ,2 UNION ALL
+
+  SELECT 'balanced' hw,'adj' pos,'stable' syn,2 lv UNION ALL
+  SELECT 'balanced','adj','healthy' ,1 UNION ALL
+  SELECT 'balanced','adj','well-planned' ,2 UNION ALL
+
+  SELECT 'efficiency' hw,'n' pos,'productivity' syn,2 lv UNION ALL
+  SELECT 'efficiency','n','effectiveness' ,2 UNION ALL
+  SELECT 'efficiency','n','speed' ,2 UNION ALL
+
+  /* ===== speaking core ===== */
+  SELECT 'recommendation' hw,'n' pos,'advice' syn,1 lv UNION ALL
+  SELECT 'recommendation','n','suggestion' ,1 UNION ALL
+  SELECT 'recommendation','n','guidance' ,2 UNION ALL
+
+  SELECT 'decision' hw,'n' pos,'choice' syn,1 lv UNION ALL
+  SELECT 'decision','n','judgment' ,2 UNION ALL
+  SELECT 'decision','n','resolution' ,2 UNION ALL
+
+  SELECT 'motivation' hw,'n' pos,'drive' syn,2 lv UNION ALL
+  SELECT 'motivation','n','desire' ,1 UNION ALL
+  SELECT 'motivation','n','encouragement' ,2 UNION ALL
+
+  SELECT 'confident' hw,'adj' pos,'sure' syn,1 lv UNION ALL
+  SELECT 'confident','adj','self-assured' ,3 UNION ALL
+  SELECT 'confident','adj','comfortable' ,2 UNION ALL
+
+  SELECT 'confidently' hw,'adv' pos,'surely' syn,2 lv UNION ALL
+  SELECT 'confidently','adv','without hesitation' ,3 UNION ALL
+  SELECT 'confidently','adv','clearly' ,2 UNION ALL
+
+  /* ===== debate core ===== */
+  SELECT 'agreement' hw,'n' pos,'deal' syn,2 lv UNION ALL
+  SELECT 'agreement','n','understanding' ,2 UNION ALL
+  SELECT 'agreement','n','consensus' ,3 UNION ALL
+
+  SELECT 'disagreement' hw,'n' pos,'conflict' syn,2 lv UNION ALL
+  SELECT 'disagreement','n','difference of opinion' ,2 UNION ALL
+  SELECT 'disagreement','n','argument' ,2 UNION ALL
+
+  SELECT 'limitation' hw,'n' pos,'weakness' syn,2 lv UNION ALL
+  SELECT 'limitation','n','restriction' ,2 UNION ALL
+  SELECT 'limitation','n','drawback' ,2 UNION ALL
+
+  SELECT 'necessity' hw,'n' pos,'need' syn,1 lv UNION ALL
+  SELECT 'necessity','n','requirement' ,2 UNION ALL
+  SELECT 'necessity','n','must' ,2 UNION ALL
+
+  SELECT 'unnecessary' hw,'adj' pos,'not needed' syn,1 lv UNION ALL
+  SELECT 'unnecessary','adj','needless' ,2 UNION ALL
+  SELECT 'unnecessary','adj','extra' ,2 UNION ALL
+
+  SELECT 'imbalance' hw,'n' pos,'unevenness' syn,3 lv UNION ALL
+  SELECT 'imbalance','n','lack of balance' ,2 UNION ALL
+  SELECT 'imbalance','n','unfairness' ,3 UNION ALL
+
+  SELECT 'unbalanced' hw,'adj' pos,'uneven' syn,2 lv UNION ALL
+  SELECT 'unbalanced','adj','not healthy' ,2 UNION ALL
+  SELECT 'unbalanced','adj','unstable' ,2 UNION ALL
+) x ON x.hw=w.headword AND x.pos=w.pos
+WHERE w.is_derived=1
+-- 중복 방지
+AND NOT EXISTS (
+  SELECT 1 FROM word_synonyms s
+  WHERE s.word_id=w.word_id AND s.synonym_word=x.syn
+);
+
+COMMIT;
+
+
+/* =========================================================
+   2) ✅ 학습세트 조회용 VIEW
+   - (A) 파생어 카드 상세(정의/연어/예문/동의어) 1개 단어 기준
+   - (B) root 단어의 파생어 세트(관계 포함) 조회
+   ========================================================= */
+
+DROP VIEW IF EXISTS v_word_learning_card;
+CREATE VIEW v_word_learning_card AS
+SELECT
+  w.word_id,
+  w.headword,
+  w.pos,
+  w.cefr,
+  w.is_derived,
+  w.definition_simple,
+
+  -- 동의어(최대 10개)
+  (SELECT GROUP_CONCAT(CONCAT(s.synonym_word, ':L', s.nuance_level) ORDER BY s.nuance_level, s.synonym_word SEPARATOR ' | ')
+   FROM word_synonyms s
+   WHERE s.word_id=w.word_id
+  ) AS synonyms,
+
+  -- 연어(최대 12개 정도)
+  (SELECT GROUP_CONCAT(CONCAT(c.collocation, '(', c.freq_band, ')') ORDER BY FIELD(c.freq_band,'high','medium','low'), c.collocation SEPARATOR ' | ')
+   FROM word_collocations c
+   WHERE c.word_id=w.word_id
+  ) AS collocations,
+
+  -- 예문
+  (SELECT GROUP_CONCAT(e.sentence ORDER BY e.ex_id SEPARATOR ' || ')
+   FROM example_sentences e
+   WHERE e.word_id=w.word_id AND e.ex_type='reading'
+  ) AS reading_examples,
+
+  (SELECT GROUP_CONCAT(e.sentence ORDER BY e.ex_id SEPARATOR ' || ')
+   FROM example_sentences e
+   WHERE e.word_id=w.word_id AND e.ex_type='speaking'
+  ) AS speaking_examples
+
+FROM words w;
+
+DROP VIEW IF EXISTS v_root_to_derived_set;
+CREATE VIEW v_root_to_derived_set AS
+SELECT
+  r.word_id AS root_word_id,
+  r.headword AS root,
+  r.pos AS root_pos,
+  d.word_id AS derived_word_id,
+  d.headword AS derived,
+  d.pos AS derived_pos,
+  d.cefr AS derived_cefr,
+  d.definition_simple AS derived_definition
+FROM word_family_edges e
+JOIN words r ON r.word_id=e.root_word_id
+JOIN words d ON d.word_id=e.derived_word_id;
+
+
+/* =========================================================
+   3) ✅ 빠른 확인 쿼리
+   ========================================================= */
+
+-- (1) 파생어 카드 하나 완전체 보기 (예: effective)
+SELECT * FROM v_word_learning_card
+WHERE headword='effective' AND pos='adj';
+
+-- (2) root effect(n)의 파생어 세트 보기
+SELECT * FROM v_root_to_derived_set
+WHERE root='effect' AND root_pos='n'
+ORDER BY derived;
+
+-- (3) 파생어 중 “동의어/연어/예문” 누락 점검
+SELECT
+  w.headword, w.pos,
+  (SELECT COUNT(*) FROM word_synonyms s WHERE s.word_id=w.word_id) AS syn_cnt,
+  (SELECT COUNT(*) FROM word_collocations c WHERE c.word_id=w.word_id) AS col_cnt,
+  (SELECT COUNT(*) FROM example_sentences e WHERE e.word_id=w.word_id AND e.ex_type='reading') AS read_ex_cnt,
+  (SELECT COUNT(*) FROM example_sentences e WHERE e.word_id=w.word_id AND e.ex_type='speaking') AS speak_ex_cnt
+FROM words w
+WHERE w.is_derived=1
+HAVING syn_cnt < 2 OR col_cnt < 2 OR read_ex_cnt < 1 OR speak_ex_cnt < 1
+ORDER BY w.headword, w.pos;
+
+
+
+
+/* =========================================================
+   ✅ Day별 “학습세트(=root 10단어 + 추천 파생어 미션)” 자동 묶음
+   목표:
+   1) day_words(오늘의 root 10단어) 기준으로
+   2) word_family_edges로 연결된 파생어 중
+      - is_derived=1 AND (CEFR <= B2) 우선
+      - 주어진 개수만큼(기본 3개) 자동 추천
+   3) 앱에서 바로 쓸 수 있는 "오늘의 파생어 미션" 생성
+
+   구성:
+   - day_word_sets: day_id별 세트 메타
+   - day_word_set_items: root/derived 항목(학습 카드) 저장
+   - day_derived_missions: 오늘의 파생어 미션(derived만) 저장
+   ========================================================= */
+
+SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS day_derived_missions;
+DROP TABLE IF EXISTS day_word_set_items;
+DROP TABLE IF EXISTS day_word_sets;
+SET FOREIGN_KEY_CHECKS=1;
+
+/* ---------------------------------------------------------
+   1) Set tables
+--------------------------------------------------------- */
+CREATE TABLE day_word_sets (
+  set_id        INT AUTO_INCREMENT PRIMARY KEY,
+  day_id        INT NOT NULL UNIQUE,
+  title         VARCHAR(128) NOT NULL,
+  created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_dws_day FOREIGN KEY (day_id) REFERENCES days(day_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE day_word_set_items (
+  set_item_id   INT AUTO_INCREMENT PRIMARY KEY,
+  set_id        INT NOT NULL,
+  word_id       INT NOT NULL,
+  item_type     ENUM('root','derived') NOT NULL,
+  root_word_id  INT NULL,                 -- derived인 경우 어떤 root에서 왔는지
+  sort_no       INT NOT NULL,
+  UNIQUE KEY uq_set_word (set_id, word_id),
+  UNIQUE KEY uq_set_sort (set_id, sort_no),
+  CONSTRAINT fk_dws_item_set FOREIGN KEY (set_id) REFERENCES day_word_sets(set_id) ON DELETE CASCADE,
+  CONSTRAINT fk_dws_item_word FOREIGN KEY (word_id) REFERENCES words(word_id) ON DELETE CASCADE,
+  CONSTRAINT fk_dws_item_root FOREIGN KEY (root_word_id) REFERENCES words(word_id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE day_derived_missions (
+  mission_id    INT AUTO_INCREMENT PRIMARY KEY,
+  day_id        INT NOT NULL,
+  derived_word_id INT NOT NULL,
+  root_word_id  INT NOT NULL,
+  mission_type  ENUM('use_in_speaking','use_in_sentence','collocation_focus') NOT NULL DEFAULT 'use_in_speaking',
+  difficulty_tag VARCHAR(16) DEFAULT 'B1',
+  sort_no       INT NOT NULL,
+  UNIQUE KEY uq_day_mission_sort (day_id, sort_no),
+  UNIQUE KEY uq_day_derived (day_id, derived_word_id),
+  CONSTRAINT fk_ddm_day FOREIGN KEY (day_id) REFERENCES days(day_id) ON DELETE CASCADE,
+  CONSTRAINT fk_ddm_derived FOREIGN KEY (derived_word_id) REFERENCES words(word_id) ON DELETE CASCADE,
+  CONSTRAINT fk_ddm_root FOREIGN KEY (root_word_id) REFERENCES words(word_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+/* ---------------------------------------------------------
+   2) Set 생성: HS1 Week1 Day1~Day7
+--------------------------------------------------------- */
+INSERT INTO day_word_sets (day_id, title)
+SELECT d.day_id, CONCAT('HS1 W', d.week_no, ' D', d.day_no, ' Learning Set')
+FROM days d
+WHERE d.grade='HighSchool_1' AND d.week_no=1
+ON DUPLICATE KEY UPDATE title=VALUES(title);
+
+
+/* ---------------------------------------------------------
+   3) Root 10단어를 Set Items로 삽입 (item_type='root')
+   - sort_no는 day_words.sort_no를 그대로 사용
+--------------------------------------------------------- */
+INSERT INTO day_word_set_items (set_id, word_id, item_type, root_word_id, sort_no)
+SELECT s.set_id, dw.word_id, 'root' AS item_type, NULL AS root_word_id, dw.sort_no AS sort_no
+FROM day_word_sets s
+JOIN days d ON d.day_id=s.day_id
+JOIN day_words dw ON dw.day_id=d.day_id
+WHERE d.grade='HighSchool_1' AND d.week_no=1
+ON DUPLICATE KEY UPDATE sort_no=VALUES(sort_no);
+
+
+/* ---------------------------------------------------------
+   4) 파생어 추천 알고리즘(간단/실전형)
+   - 각 day의 root 10단어로부터 파생어 후보를 뽑고
+   - 우선순위:
+       1) cefr B1, B1+, B2, A2+ 순(대략)
+       2) freq_band(연어가 high인 파생어) 가산
+       3) 너무 어려운 C1 이상은 제외(기본)
+   - 오늘의 미션 개수: 3개(변경 가능)
+--------------------------------------------------------- */
+
+-- (A) 먼저 day_derived_missions 비우기(재생성 시)
+DELETE m
+FROM day_derived_missions m
+JOIN days d ON d.day_id=m.day_id
+WHERE d.grade='HighSchool_1' AND d.week_no=1;
+
+-- (B) Day별 Top 3 파생어 미션 생성 (MySQL 8 윈도우 함수 사용)
+WITH derived_candidates AS (
+  SELECT
+    d.day_id,
+    e.root_word_id,
+    e.derived_word_id,
+    dw.sort_no AS root_sort,
+    COALESCE(der.cefr,'B2') AS derived_cefr,
+    -- 연어 high 개수(있으면 가산)
+    (SELECT COUNT(*) FROM word_collocations wc
+      WHERE wc.word_id=e.derived_word_id AND wc.freq_band='high') AS high_col_cnt,
+    -- CEFR 우선순위 점수(낮을수록 우선)
+    CASE COALESCE(der.cefr,'B2')
+      WHEN 'A2'  THEN 5
+      WHEN 'A2+' THEN 4
+      WHEN 'B1'  THEN 1
+      WHEN 'B1+' THEN 2
+      WHEN 'B2'  THEN 3
+      ELSE 9
+    END AS cefr_rank
+  FROM days d
+  JOIN day_words dw ON dw.day_id=d.day_id
+  JOIN word_family_edges e ON e.root_word_id=dw.word_id
+  JOIN words der ON der.word_id=e.derived_word_id
+  WHERE d.grade='HighSchool_1' AND d.week_no=1
+    AND der.is_derived=1
+    AND COALESCE(der.cefr,'B2') NOT IN ('C1','C2')
+),
+ranked AS (
+  SELECT
+    dc.*,
+    ROW_NUMBER() OVER (
+      PARTITION BY dc.day_id
+      ORDER BY
+        dc.cefr_rank ASC,
+        dc.high_col_cnt DESC,
+        dc.root_sort ASC,
+        dc.derived_word_id ASC
+    ) AS rn
+  FROM derived_candidates dc
+)
+INSERT INTO day_derived_missions (day_id, derived_word_id, root_word_id, mission_type, difficulty_tag, sort_no)
+SELECT
+  r.day_id,
+  r.derived_word_id,
+  r.root_word_id,
+  'use_in_speaking' AS mission_type,
+  COALESCE(r.derived_cefr,'B1') AS difficulty_tag,
+  r.rn AS sort_no
+FROM ranked r
+WHERE r.rn <= 3;
+
+
+-- (C) 파생어도 Set Items로 넣기 (root 10개 다음부터 sort_no 이어붙임)
+--     - sort_no = 10 + mission.sort_no (Day1 기준 root 10개)
+INSERT INTO day_word_set_items (set_id, word_id, item_type, root_word_id, sort_no)
+SELECT
+  s.set_id,
+  m.derived_word_id AS word_id,
+  'derived' AS item_type,
+  m.root_word_id,
+  10 + m.sort_no AS sort_no
+FROM day_word_sets s
+JOIN day_derived_missions m ON m.day_id=s.day_id
+JOIN days d ON d.day_id=s.day_id
+WHERE d.grade='HighSchool_1' AND d.week_no=1
+ON DUPLICATE KEY UPDATE
+  root_word_id=VALUES(root_word_id),
+  sort_no=VALUES(sort_no);
+
+
+/* ---------------------------------------------------------
+   5) “파생어 미션 타입”을 다양화(선택)
+   - 미션 3개 중 1개는 collocation_focus로 바꾸고 싶다면:
+--------------------------------------------------------- */
+UPDATE day_derived_missions
+SET mission_type='collocation_focus'
+WHERE mission_type='use_in_speaking'
+  AND sort_no=2
+  AND day_id IN (SELECT day_id FROM days WHERE grade='HighSchool_1' AND week_no=1);
+
+
+/* =========================================================
+   ✅ 조회용 VIEW: Day 학습세트(루트+파생+카드정보)
+   ========================================================= */
+
+DROP VIEW IF EXISTS v_day_learning_set;
+CREATE VIEW v_day_learning_set AS
+SELECT
+  d.grade, d.week_no, d.day_no,
+  s.set_id,
+  i.sort_no,
+  i.item_type,
+  w.word_id, w.headword, w.pos, w.cefr, w.is_derived,
+  w.definition_simple,
+  i.root_word_id,
+  rw.headword AS from_root
+FROM day_word_sets s
+JOIN days d ON d.day_id=s.day_id
+JOIN day_word_set_items i ON i.set_id=s.set_id
+JOIN words w ON w.word_id=i.word_id
+LEFT JOIN words rw ON rw.word_id=i.root_word_id;
+
+
+/* =========================================================
+   ✅ 조회 예시
+   ========================================================= */
+
+-- (1) HS1 Week1 Day1 학습세트: root 10 + derived mission 3
+SELECT *
+FROM v_day_learning_set
+WHERE grade='HighSchool_1' AND week_no=1 AND day_no=1
+ORDER BY sort_no;
+
+-- (2) Day별 파생어 미션 확인
+SELECT d.day_no, m.sort_no, dw.headword AS derived_word, dw.pos, m.mission_type, rw.headword AS from_root, dw.cefr
+FROM day_derived_missions m
+JOIN days d ON d.day_id=m.day_id
+JOIN words dw ON dw.word_id=m.derived_word_id
+JOIN words rw ON rw.word_id=m.root_word_id
+WHERE d.grade='HighSchool_1' AND d.week_no=1
+ORDER BY d.day_no, m.sort_no;
+
+-- (3) 특정 Day의 “파생어 미션 카드”를 v_word_learning_card로 함께 보기(예: Day1)
+-- SELECT c.* FROM v_word_learning_card c
+-- JOIN day_derived_missions m ON m.derived_word_id=c.word_id
+-- JOIN days d ON d.day_id=m.day_id
+-- WHERE d.grade='HighSchool_1' AND d.week_no=1 AND d.day_no=1;
+
+
+
+
+const express = require("express");
+const mysql = require("mysql2");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "비밀번호",
+  database: "efl_vocab_app"
+});
+
+app.get("/day/:dayNo", (req, res) => {
+  const dayNo = req.params.dayNo;
+
+  const query = `
+    SELECT *
+    FROM v_day_learning_set
+    WHERE week_no = 1 AND day_no = ?
+    ORDER BY sort_no
+  `;
+
+  db.query(query, [dayNo], (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.json(result);
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});

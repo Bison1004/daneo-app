@@ -1,0 +1,348 @@
+{
+  "grade": "HighSchool_1",
+  "target_levels": { "CEFR": "A2+~B1", "ACTFL": "Intermediate Mid", "Lexile_band": "950~1100L" },
+  "week": 1,
+  "theme": "Cause-Effect & Problem-Solution (Suneung + Speaking)",
+  "days": [
+    {
+      "day": 1,
+      "focus": "cause-effect basics",
+      "words": [
+        {
+          "headword": "cause",
+          "pos": "v/n",
+          "cefr": "A2",
+          "definition_simple": "to make something happen; the reason something happens",
+          "family": ["causal (adj)", "causation (n)"],
+          "synonyms": [{ "w": "reason", "level": 1 }, { "w": "lead to", "level": 1 }, { "w": "trigger", "level": 2 }],
+          "collocations": ["cause a problem", "cause stress", "main cause"],
+          "examples": {
+            "reading": "Lack of sleep can cause serious health problems.",
+            "speaking": "Too much homework causes stress for many students."
+          }
+        },
+        {
+          "headword": "effect",
+          "pos": "n",
+          "cefr": "A2",
+          "definition_simple": "a result or change caused by something",
+          "family": ["effective (adj)", "effectively (adv)", "affect (v)"],
+          "synonyms": [{ "w": "result", "level": 1 }, { "w": "impact", "level": 2 }, { "w": "influence", "level": 2 }],
+          "collocations": ["have an effect on", "positive effect", "long-term effect"],
+          "examples": {
+            "reading": "Social media can have an effect on teenagers' self-esteem.",
+            "speaking": "Exercise has a positive effect on my mood."
+          }
+        },
+        {
+          "headword": "affect",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to change or influence something",
+          "family": ["effect (n)", "affective (adj, rare for HS1)"],
+          "synonyms": [{ "w": "influence", "level": 1 }, { "w": "impact", "level": 2 }],
+          "collocations": ["affect behavior", "affect health", "directly affect"],
+          "examples": {
+            "reading": "Weather can affect how people feel and behave.",
+            "speaking": "Noise affects my concentration when I study."
+          }
+        },
+        {
+          "headword": "result",
+          "pos": "n/v",
+          "cefr": "A2",
+          "definition_simple": "something that happens because of something else",
+          "family": ["resulting (adj)", "result in (phr)"],
+          "synonyms": [{ "w": "outcome", "level": 2 }, { "w": "consequence", "level": 3 }],
+          "collocations": ["result in", "as a result", "final result"],
+          "examples": {
+            "reading": "Poor planning often results in failure.",
+            "speaking": "As a result, students feel less motivated."
+          }
+        },
+        {
+          "headword": "factor",
+          "pos": "n",
+          "cefr": "B1",
+          "definition_simple": "one important part that influences a situation",
+          "family": ["factor in (v phr)"],
+          "synonyms": [{ "w": "element", "level": 1 }, { "w": "cause", "level": 1 }],
+          "collocations": ["key factor", "major factor", "a factor in"],
+          "examples": {
+            "reading": "Cost is a major factor in choosing a school.",
+            "speaking": "One key factor is how much time students have."
+          }
+        },
+        {
+          "headword": "increase",
+          "pos": "v/n",
+          "cefr": "A2",
+          "definition_simple": "to become larger or greater",
+          "family": ["increasing (adj)", "increasingly (adv)"],
+          "synonyms": [{ "w": "rise", "level": 1 }, { "w": "grow", "level": 1 }, { "w": "expand", "level": 2 }],
+          "collocations": ["increase the number", "sharp increase", "increase rapidly"],
+          "examples": {
+            "reading": "The number of online classes increased during the pandemic.",
+            "speaking": "I try to increase my study time little by little."
+          }
+        },
+        {
+          "headword": "reduce",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to make something smaller or less",
+          "family": ["reduction (n)", "reduced (adj)"],
+          "synonyms": [{ "w": "decrease", "level": 1 }, { "w": "lower", "level": 1 }, { "w": "cut", "level": 1 }],
+          "collocations": ["reduce stress", "reduce costs", "reduce the risk"],
+          "examples": {
+            "reading": "Regular exercise can reduce the risk of disease.",
+            "speaking": "To reduce stress, I take short breaks."
+          }
+        },
+        {
+          "headword": "require",
+          "pos": "v",
+          "cefr": "B1",
+          "definition_simple": "to need something; to make something necessary",
+          "family": ["requirement (n)", "required (adj)"],
+          "synonyms": [{ "w": "need", "level": 1 }, { "w": "demand", "level": 2 }],
+          "collocations": ["require time", "require effort", "be required to"],
+          "examples": {
+            "reading": "Most jobs require good communication skills.",
+            "speaking": "Success requires effort every day."
+          }
+        },
+        {
+          "headword": "solution",
+          "pos": "n",
+          "cefr": "B1",
+          "definition_simple": "a way to solve a problem",
+          "family": ["solve (v)", "solvable (adj)"],
+          "synonyms": [{ "w": "answer", "level": 1 }, { "w": "resolution", "level": 2 }],
+          "collocations": ["find a solution", "practical solution", "a solution to"],
+          "examples": {
+            "reading": "Scientists are looking for a solution to plastic pollution.",
+            "speaking": "One practical solution is to study in short sessions."
+          }
+        }
+      ],
+      "patterns": [
+        { "pattern_id": "P01", "structure": "A causes B.", "level": "A2", "example": "Lack of sleep causes stress." },
+        { "pattern_id": "P02", "structure": "A has a (positive/negative) effect on B.", "level": "B1", "example": "Exercise has a positive effect on mood." }
+      ],
+      "speaking_task": {
+        "prompt": "What causes students to feel stressed at school? Explain one main cause and one effect. Give one solution.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["have an effect on", "one key factor", "find a solution", "reduce stress"],
+        "connectors_to_check": ["because", "so", "therefore", "as a result", "however", "for example"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 2,
+      "focus": "problem-solution + prevention",
+      "words": [
+        { "headword": "issue", "pos": "n", "cefr": "B1", "definition_simple": "an important problem or topic", "family": ["issues (pl)"], "synonyms": [{ "w": "problem", "level": 1 }, { "w": "matter", "level": 1 }], "collocations": ["social issue", "serious issue", "deal with an issue"], "examples": { "reading": "Bullying is a serious issue in some schools.", "speaking": "One issue is that students don’t get enough sleep." } },
+        { "headword": "challenge", "pos": "n", "cefr": "B1", "definition_simple": "something difficult that tests you", "family": ["challenging (adj)"], "synonyms": [{ "w": "difficulty", "level": 1 }, { "w": "obstacle", "level": 2 }], "collocations": ["face a challenge", "a major challenge", "meet the challenge"], "examples": { "reading": "Adapting to a new school can be challenging.", "speaking": "Time management is my biggest challenge." } },
+        { "headword": "prevent", "pos": "v", "cefr": "B1", "definition_simple": "to stop something from happening", "family": ["prevention (n)", "preventive (adj)"], "synonyms": [{ "w": "stop", "level": 1 }, { "w": "avoid", "level": 1 }], "collocations": ["prevent disease", "prevent accidents", "prevent + object + from ~ing"], "examples": { "reading": "Wearing a seatbelt helps prevent injuries.", "speaking": "I turn off my phone to prevent distractions." } },
+        { "headword": "avoid", "pos": "v", "cefr": "A2", "definition_simple": "to stay away from; not do something", "family": ["avoidable (adj)", "avoidance (n)"], "synonyms": [{ "w": "prevent", "level": 1 }, { "w": "escape", "level": 2 }], "collocations": ["avoid mistakes", "avoid conflict", "avoid doing"], "examples": { "reading": "To avoid mistakes, check your work twice.", "speaking": "I avoid studying late at night." } },
+        { "headword": "manage", "pos": "v", "cefr": "B1", "definition_simple": "to control or handle something", "family": ["management (n)", "manager (n)"], "synonyms": [{ "w": "handle", "level": 1 }, { "w": "control", "level": 2 }], "collocations": ["manage time", "manage stress", "manage a project"], "examples": { "reading": "Good students manage their time well.", "speaking": "I try to manage stress by exercising." } },
+        { "headword": "support", "pos": "v/n", "cefr": "A2+", "definition_simple": "to help; help given", "family": ["supportive (adj)", "supporter (n)"], "synonyms": [{ "w": "help", "level": 1 }, { "w": "assist", "level": 2 }], "collocations": ["support a claim", "get support", "emotional support"], "examples": { "reading": "Strong evidence supports the scientist’s claim.", "speaking": "My family supports me when I feel tired." } },
+        { "headword": "suggest", "pos": "v", "cefr": "B1", "definition_simple": "to recommend an idea", "family": ["suggestion (n)"], "synonyms": [{ "w": "recommend", "level": 1 }, { "w": "propose", "level": 2 }], "collocations": ["suggest that", "suggest a plan", "strongly suggest"], "examples": { "reading": "The report suggests that students sleep more.", "speaking": "I suggest studying for 30 minutes and resting." } },
+        { "headword": "strategy", "pos": "n", "cefr": "B1", "definition_simple": "a plan to achieve a goal", "family": ["strategic (adj)"], "synonyms": [{ "w": "plan", "level": 1 }, { "w": "approach", "level": 2 }], "collocations": ["learning strategy", "effective strategy", "use a strategy"], "examples": { "reading": "A good strategy can improve reading speed.", "speaking": "My strategy is to review words every morning." } },
+        { "headword": "risk", "pos": "n", "cefr": "B1", "definition_simple": "the chance of something bad happening", "family": ["risky (adj)"], "synonyms": [{ "w": "danger", "level": 1 }, { "w": "threat", "level": 2 }], "collocations": ["reduce the risk", "at risk", "high risk"], "examples": { "reading": "Smoking increases the risk of disease.", "speaking": "Using my phone late increases the risk of poor sleep." } },
+        { "headword": "benefit", "pos": "n/v", "cefr": "B1", "definition_simple": "a good result; to help", "family": ["beneficial (adj)"], "synonyms": [{ "w": "advantage", "level": 1 }, { "w": "gain", "level": 2 }], "collocations": ["benefit from", "health benefits", "mutual benefit"], "examples": { "reading": "Students benefit from regular feedback.", "speaking": "Reading daily benefits my vocabulary." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P03", "structure": "One problem is that ~.", "level": "A2+", "example": "One problem is that students sleep too late." },
+        { "pattern_id": "P04", "structure": "A possible solution is to ~.", "level": "A2+", "example": "A possible solution is to set a fixed bedtime." }
+      ],
+      "speaking_task": {
+        "prompt": "Choose one school issue (sleep, phone use, or homework). Describe the problem, explain one risk, and suggest one strategy to prevent it.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["reduce the risk", "benefit from", "effective strategy", "prevent distractions"],
+        "connectors_to_check": ["because", "so", "therefore", "however", "for example"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 3,
+      "focus": "evidence + claims (Suneung logic)",
+      "words": [
+        { "headword": "evidence", "pos": "n", "cefr": "B1", "definition_simple": "facts or signs that show something is true", "family": ["evident (adj)", "evidently (adv)"], "synonyms": [{ "w": "proof", "level": 2 }, { "w": "sign", "level": 1 }], "collocations": ["strong evidence", "evidence of", "scientific evidence"], "examples": { "reading": "There is strong evidence that exercise improves memory.", "speaking": "I have evidence because my scores improved after practice." } },
+        { "headword": "claim", "pos": "n/v", "cefr": "B1", "definition_simple": "to say something is true (often without proof); a statement", "family": ["claimant (n, rare)", "claimed (adj)"], "synonyms": [{ "w": "argue", "level": 2 }, { "w": "state", "level": 1 }], "collocations": ["make a claim", "support a claim", "false claim"], "examples": { "reading": "The article claims that teens need more sleep.", "speaking": "Some people claim phones help learning, but it depends." } },
+        { "headword": "argue", "pos": "v", "cefr": "B1", "definition_simple": "to give reasons for your opinion", "family": ["argument (n)", "argumentative (adj)"], "synonyms": [{ "w": "claim", "level": 1 }, { "w": "insist", "level": 2 }], "collocations": ["argue that", "argue against", "strongly argue"], "examples": { "reading": "Many researchers argue that reading builds empathy.", "speaking": "I argue that school should start later." } },
+        { "headword": "support", "pos": "v", "cefr": "A2+", "definition_simple": "to help prove or show something is true", "family": ["supportive (adj)"], "synonyms": [{ "w": "back up", "level": 1 }, { "w": "confirm", "level": 2 }], "collocations": ["support an idea", "support a claim", "support with evidence"], "examples": { "reading": "The graph supports the writer’s conclusion.", "speaking": "I can support my opinion with an example." } },
+        { "headword": "conclude", "pos": "v", "cefr": "B1", "definition_simple": "to decide after thinking; to end", "family": ["conclusion (n)"], "synonyms": [{ "w": "decide", "level": 1 }, { "w": "determine", "level": 2 }], "collocations": ["conclude that", "reach a conclusion", "final conclusion"], "examples": { "reading": "The study concludes that short naps can help learning.", "speaking": "So I conclude that balance is important." } },
+        { "headword": "indicate", "pos": "v", "cefr": "B1", "definition_simple": "to show or suggest", "family": ["indication (n)", "indicative (adj)"],
+          "synonyms": [{ "w": "show", "level": 1 }, { "w": "suggest", "level": 1 }],
+          "collocations": ["indicate that", "clear indication", "results indicate"],
+          "examples": { "reading": "The results indicate that stress lowers performance.", "speaking": "This indicates we need a better schedule." }
+        },
+        { "headword": "research", "pos": "n/v", "cefr": "B1", "definition_simple": "careful study to discover facts", "family": ["researcher (n)", "research-based (adj)"], "synonyms": [{ "w": "study", "level": 1 }, { "w": "investigation", "level": 2 }], "collocations": ["do research", "research shows", "research findings"], "examples": { "reading": "Research shows that sleep affects memory.", "speaking": "I read research that supports this idea." } },
+        { "headword": "data", "pos": "n", "cefr": "B1", "definition_simple": "information, often numbers, used for analysis", "family": ["database (n)"], "synonyms": [{ "w": "information", "level": 1 }, { "w": "figures", "level": 2 }], "collocations": ["collect data", "analyze data", "data shows"], "examples": { "reading": "The scientist collected data from 300 students.", "speaking": "The data shows a clear trend." } },
+        { "headword": "trend", "pos": "n", "cefr": "B1", "definition_simple": "a general direction of change", "family": ["trendy (adj, casual)"], "synonyms": [{ "w": "pattern", "level": 1 }, { "w": "tendency", "level": 2 }], "collocations": ["a growing trend", "trend toward", "follow a trend"], "examples": { "reading": "There is a growing trend toward online learning.", "speaking": "I notice a trend: students rely on short videos." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P05", "structure": "There is evidence that ~.", "level": "B1", "example": "There is evidence that sleep improves memory." },
+        { "pattern_id": "P06", "structure": "This suggests/indicates that ~.", "level": "B1", "example": "This indicates that we should rest more." }
+      ],
+      "speaking_task": {
+        "prompt": "Make one claim about studying (sleep, review, or phone use). Give evidence (a fact, research, or personal example), and conclude your opinion.",
+        "target_words_min": 5,
+        "recommended_time_sec": 70
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["strong evidence", "make a claim", "reach a conclusion", "results indicate that"],
+        "connectors_to_check": ["for example", "because", "therefore", "however"],
+        "fluency_targets": { "min_words": 55, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 4,
+      "focus": "process & steps (speaking clarity)",
+      "words": [
+        { "headword": "process", "pos": "n", "cefr": "B1", "definition_simple": "a series of actions to achieve a result", "family": ["process (v)", "processing (n/adj)"], "synonyms": [{ "w": "procedure", "level": 2 }, { "w": "method", "level": 1 }], "collocations": ["learning process", "in the process of", "a slow process"], "examples": { "reading": "Language learning is a long process.", "speaking": "My study process has three steps." } },
+        { "headword": "method", "pos": "n", "cefr": "B1", "definition_simple": "a way of doing something", "family": ["methodical (adj)"], "synonyms": [{ "w": "way", "level": 1 }, { "w": "approach", "level": 2 }], "collocations": ["effective method", "teaching method", "use a method"], "examples": { "reading": "The teacher used an effective method to teach reading.", "speaking": "One method is to review words with sentences." } },
+        { "headword": "step", "pos": "n", "cefr": "A2", "definition_simple": "one action in a process", "family": ["step-by-step (adj)"], "synonyms": [{ "w": "stage", "level": 2 }, { "w": "phase", "level": 3 }], "collocations": ["first step", "next step", "take steps to"], "examples": { "reading": "The first step is to understand the question.", "speaking": "My next step is to practice speaking." } },
+        { "headword": "practice", "pos": "n/v", "cefr": "A2", "definition_simple": "to do something repeatedly to improve", "family": ["practical (adj)", "practically (adv)"], "synonyms": [{ "w": "train", "level": 2 }, { "w": "rehearse", "level": 3 }], "collocations": ["practice speaking", "daily practice", "practice makes perfect"], "examples": { "reading": "Regular practice improves fluency.", "speaking": "I practice speaking for five minutes every day." } },
+        { "headword": "improve", "pos": "v", "cefr": "A2", "definition_simple": "to make something better", "family": ["improvement (n)", "improved (adj)"], "synonyms": [{ "w": "enhance", "level": 2 }, { "w": "develop", "level": 2 }], "collocations": ["improve skills", "improve performance", "greatly improve"], "examples": { "reading": "Reading daily can improve vocabulary.", "speaking": "I want to improve my speaking confidence." } },
+        { "headword": "maintain", "pos": "v", "cefr": "B1", "definition_simple": "to keep something at the same level", "family": ["maintenance (n)"], "synonyms": [{ "w": "keep", "level": 1 }, { "w": "preserve", "level": 2 }], "collocations": ["maintain health", "maintain a habit", "maintain quality"], "examples": { "reading": "It is hard to maintain good habits during exams.", "speaking": "I maintain my routine even when I’m busy." } },
+        { "headword": "focus", "pos": "v/n", "cefr": "A2+", "definition_simple": "to pay attention to one thing", "family": ["focused (adj)", "focus on (phr)"], "synonyms": [{ "w": "concentrate", "level": 2 }, { "w": "pay attention", "level": 1 }], "collocations": ["focus on", "stay focused", "main focus"], "examples": { "reading": "Students should focus on key ideas in a passage.", "speaking": "I focus on collocations, not single words." } },
+        { "headword": "review", "pos": "v/n", "cefr": "B1", "definition_simple": "to look at something again to remember it", "family": ["reviewer (n)"], "synonyms": [{ "w": "check", "level": 1 }, { "w": "revise", "level": 2 }], "collocations": ["review notes", "weekly review", "review for a test"], "examples": { "reading": "A quick review helps long-term memory.", "speaking": "I review today’s words before I sleep." } },
+        { "headword": "consistency", "pos": "n", "cefr": "B1", "definition_simple": "doing something in the same way regularly", "family": ["consistent (adj)", "consistently (adv)"], "synonyms": [{ "w": "regularity", "level": 2 }, { "w": "steadiness", "level": 3 }], "collocations": ["build consistency", "consistent effort", "practice consistently"], "examples": { "reading": "Consistency matters more than intensity in learning.", "speaking": "Consistency is the key to improving English." } },
+        { "headword": "goal", "pos": "n", "cefr": "A2", "definition_simple": "something you want to achieve", "family": ["goal-setting (n)"], "synonyms": [{ "w": "aim", "level": 1 }, { "w": "objective", "level": 2 }], "collocations": ["set a goal", "reach a goal", "long-term goal"], "examples": { "reading": "Setting a clear goal increases motivation.", "speaking": "My goal is to speak for one minute without stopping." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P07", "structure": "First, ~. Next, ~. Finally, ~.", "level": "A2+", "example": "First, review. Next, practice. Finally, record your speaking." },
+        { "pattern_id": "P08", "structure": "To ~, you need to ~.", "level": "A2+", "example": "To improve speaking, you need to practice consistently." }
+      ],
+      "speaking_task": {
+        "prompt": "Explain your study process in three steps. Include one method you use to maintain consistency and reach your goal.",
+        "target_words_min": 5,
+        "recommended_time_sec": 60
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["set a goal", "focus on", "weekly review", "practice consistently"],
+        "connectors_to_check": ["first", "next", "finally", "because", "so"],
+        "fluency_targets": { "min_words": 45, "min_sentences": 3 }
+      }
+    },
+
+    {
+      "day": 5,
+      "focus": "comparison (Suneung frequent)",
+      "words": [
+        { "headword": "compare", "pos": "v", "cefr": "A2+", "definition_simple": "to look at similarities and differences", "family": ["comparison (n)", "comparative (adj)"], "synonyms": [{ "w": "contrast", "level": 2 }, { "w": "examine", "level": 2 }], "collocations": ["compare A and B", "compared to", "compare with"], "examples": { "reading": "Compared to print books, e-books are easier to carry.", "speaking": "I compared my results before and after practice." } },
+        { "headword": "contrast", "pos": "v/n", "cefr": "B1", "definition_simple": "to show differences clearly", "family": ["contrast (n)", "contrasting (adj)"], "synonyms": [{ "w": "compare", "level": 1 }, { "w": "differ", "level": 1 }], "collocations": ["in contrast", "contrast with", "sharp contrast"], "examples": { "reading": "In contrast, the second group improved faster.", "speaking": "In contrast to last year, I feel more confident." } },
+        { "headword": "similar", "pos": "adj", "cefr": "A2", "definition_simple": "almost the same", "family": ["similarity (n)"], "synonyms": [{ "w": "alike", "level": 2 }, { "w": "close", "level": 1 }], "collocations": ["similar to", "very similar", "in a similar way"], "examples": { "reading": "Their opinions are similar in many ways.", "speaking": "My routine is similar to my friend’s routine." } },
+        { "headword": "different", "pos": "adj", "cefr": "A1", "definition_simple": "not the same", "family": ["difference (n)", "differ (v)"], "synonyms": [{ "w": "not the same", "level": 1 }, { "w": "distinct", "level": 3 }], "collocations": ["different from", "completely different", "a big difference"], "examples": { "reading": "There is a big difference between short-term and long-term memory.", "speaking": "It’s different from what I expected." } },
+        { "headword": "advantage", "pos": "n", "cefr": "B1", "definition_simple": "a good point or benefit", "family": ["advantageous (adj)"], "synonyms": [{ "w": "benefit", "level": 1 }, { "w": "strength", "level": 2 }], "collocations": ["an advantage of", "main advantage", "take advantage of"], "examples": { "reading": "One advantage of online learning is flexibility.", "speaking": "The main advantage is that I can study anywhere." } },
+        { "headword": "disadvantage", "pos": "n", "cefr": "B1", "definition_simple": "a bad point", "family": [], "synonyms": [{ "w": "drawback", "level": 2 }, { "w": "weakness", "level": 2 }], "collocations": ["a disadvantage of", "main disadvantage", "serious disadvantage"], "examples": { "reading": "A disadvantage is that students may lose focus.", "speaking": "One drawback is that it’s easy to get distracted." } },
+        { "headword": "prefer", "pos": "v", "cefr": "A2", "definition_simple": "to like one thing more than another", "family": ["preference (n)", "preferable (adj)"], "synonyms": [{ "w": "like better", "level": 1 }, { "w": "choose", "level": 1 }], "collocations": ["prefer A to B", "prefer to do", "personal preference"], "examples": { "reading": "Some students prefer studying alone.", "speaking": "I prefer reading to watching short videos." } },
+        { "headword": "option", "pos": "n", "cefr": "A2", "definition_simple": "a choice", "family": ["optional (adj)"], "synonyms": [{ "w": "choice", "level": 1 }, { "w": "alternative", "level": 2 }], "collocations": ["a good option", "choose an option", "have the option to"], "examples": { "reading": "Students have the option to take online classes.", "speaking": "A good option is to study in the morning." } },
+        { "headword": "balance", "pos": "n/v", "cefr": "B1", "definition_simple": "a healthy mix; to keep things equal", "family": ["balanced (adj)"], "synonyms": [{ "w": "stability", "level": 2 }, { "w": "harmony", "level": 3 }], "collocations": ["keep a balance", "work-life balance", "balance A and B"], "examples": { "reading": "A balance between study and rest improves performance.", "speaking": "I try to balance homework and sleep." } },
+        { "headword": "efficient", "pos": "adj", "cefr": "B1", "definition_simple": "working well without wasting time or energy", "family": ["efficiency (n)", "efficiently (adv)"], "synonyms": [{ "w": "effective", "level": 2 }, { "w": "productive", "level": 2 }], "collocations": ["an efficient way", "work efficiently", "time-efficient"], "examples": { "reading": "Spaced repetition is an efficient way to learn words.", "speaking": "This method is efficient because it saves time." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P09", "structure": "Compared to A, B is ~.", "level": "B1", "example": "Compared to late-night study, morning study is more efficient." },
+        { "pattern_id": "P10", "structure": "One advantage/disadvantage of A is that ~.", "level": "B1", "example": "One disadvantage of phones is that they distract students." }
+      ],
+      "speaking_task": {
+        "prompt": "Compare online learning and offline learning. Mention one advantage and one disadvantage, and say which you prefer and why.",
+        "target_words_min": 5,
+        "recommended_time_sec": 70
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["compared to", "one advantage of", "one disadvantage of", "balance A and B"],
+        "connectors_to_check": ["however", "on the other hand", "for example", "because"],
+        "fluency_targets": { "min_words": 55, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 6,
+      "focus": "opinion + reason + example (speaking core)",
+      "words": [
+        { "headword": "opinion", "pos": "n", "cefr": "A2+", "definition_simple": "what you think or believe", "family": [], "synonyms": [{ "w": "view", "level": 2 }, { "w": "belief", "level": 2 }], "collocations": ["in my opinion", "public opinion", "share an opinion"], "examples": { "reading": "Public opinion can influence policy.", "speaking": "In my opinion, schools should start later." } },
+        { "headword": "reason", "pos": "n", "cefr": "A2", "definition_simple": "a cause or explanation", "family": ["reasonable (adj)", "reasonably (adv)"], "synonyms": [{ "w": "cause", "level": 1 }, { "w": "explanation", "level": 2 }], "collocations": ["main reason", "for this reason", "a reason why"], "examples": { "reading": "One reason is that teens need more sleep.", "speaking": "The main reason is that students are tired." } },
+        { "headword": "example", "pos": "n", "cefr": "A2", "definition_simple": "something that shows what you mean", "family": ["for example (phr)"], "synonyms": [{ "w": "case", "level": 2 }, { "w": "instance", "level": 3 }], "collocations": ["give an example", "for example", "real-life example"], "examples": { "reading": "For example, short breaks can improve focus.", "speaking": "Let me give an example from my experience." } },
+        { "headword": "explain", "pos": "v", "cefr": "A2+", "definition_simple": "to make something clear", "family": ["explanation (n)", "explanatory (adj)"], "synonyms": [{ "w": "describe", "level": 1 }, { "w": "clarify", "level": 2 }], "collocations": ["explain why", "explain clearly", "explain the reason"], "examples": { "reading": "The author explains why habits are hard to change.", "speaking": "I will explain why this is beneficial." } },
+        { "headword": "recommend", "pos": "v", "cefr": "B1", "definition_simple": "to suggest something as good", "family": ["recommendation (n)"], "synonyms": [{ "w": "suggest", "level": 1 }, { "w": "advise", "level": 2 }], "collocations": ["recommend that", "highly recommend", "recommend a method"], "examples": { "reading": "Experts recommend that teens sleep at least eight hours.", "speaking": "I recommend studying with spaced repetition." } },
+        { "headword": "decide", "pos": "v", "cefr": "A2", "definition_simple": "to choose after thinking", "family": ["decision (n)", "decisive (adj)"], "synonyms": [{ "w": "choose", "level": 1 }, { "w": "determine", "level": 2 }], "collocations": ["make a decision", "decide to", "hard decision"], "examples": { "reading": "People make decisions faster under pressure.", "speaking": "I decided to study in the morning." } },
+        { "headword": "pressure", "pos": "n", "cefr": "B1", "definition_simple": "stress or force from expectations", "family": ["pressured (adj)"], "synonyms": [{ "w": "stress", "level": 1 }, { "w": "burden", "level": 2 }], "collocations": ["feel pressure", "under pressure", "peer pressure"], "examples": { "reading": "Students often feel pressure before exams.", "speaking": "Under pressure, I sometimes forget easy words." } },
+        { "headword": "motivate", "pos": "v", "cefr": "B1", "definition_simple": "to make someone want to do something", "family": ["motivation (n)", "motivated (adj)"], "synonyms": [{ "w": "encourage", "level": 1 }, { "w": "inspire", "level": 2 }], "collocations": ["motivate students", "stay motivated", "motivation to"], "examples": { "reading": "Clear goals can motivate learners.", "speaking": "A small success motivates me to continue." } },
+        { "headword": "confidence", "pos": "n", "cefr": "B1", "definition_simple": "belief that you can do something well", "family": ["confident (adj)", "confidently (adv)"], "synonyms": [{ "w": "self-belief", "level": 2 }, { "w": "assurance", "level": 3 }], "collocations": ["build confidence", "lack confidence", "gain confidence"], "examples": { "reading": "Practice helps students build confidence.", "speaking": "Recording myself helped me gain confidence." } },
+        { "headword": "habit", "pos": "n", "cefr": "A2+", "definition_simple": "something you do regularly", "family": ["habitual (adj)"], "synonyms": [{ "w": "routine", "level": 1 }, { "w": "pattern", "level": 2 }], "collocations": ["good habit", "bad habit", "form a habit"], "examples": { "reading": "A good habit is more powerful than motivation.", "speaking": "I’m trying to form a habit of daily review." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P11", "structure": "In my opinion, ~.", "level": "A2+", "example": "In my opinion, daily practice is essential." },
+        { "pattern_id": "P12", "structure": "One reason is that ~. For example, ~.", "level": "B1", "example": "One reason is that habits save time. For example, I review every night." }
+      ],
+      "speaking_task": {
+        "prompt": "In your opinion, what is the best way to improve English speaking? Give one reason and one example, and recommend a habit.",
+        "target_words_min": 5,
+        "recommended_time_sec": 75
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["in my opinion", "one reason is that", "for example", "make a decision", "build confidence"],
+        "connectors_to_check": ["because", "so", "therefore", "for example"],
+        "fluency_targets": { "min_words": 60, "min_sentences": 4 }
+      }
+    },
+
+    {
+      "day": 7,
+      "focus": "mini debate (counterargument)",
+      "words": [
+        { "headword": "argue", "pos": "v", "cefr": "B1", "definition_simple": "to give reasons for your opinion", "family": ["argument (n)"], "synonyms": [{ "w": "claim", "level": 1 }, { "w": "say", "level": 1 }], "collocations": ["argue that", "argue against", "argue for"], "examples": { "reading": "Some people argue that homework is necessary.", "speaking": "I argue that less homework can be more effective." } },
+        { "headword": "agree", "pos": "v", "cefr": "A2", "definition_simple": "to have the same opinion", "family": ["agreement (n)"], "synonyms": [{ "w": "accept", "level": 2 }, { "w": "support", "level": 2 }], "collocations": ["agree with", "agree that", "completely agree"], "examples": { "reading": "Many students agree that sleep is important.", "speaking": "I agree that rest matters, but balance is needed." } },
+        { "headword": "disagree", "pos": "v", "cefr": "A2+", "definition_simple": "to have a different opinion", "family": ["disagreement (n)"], "synonyms": [{ "w": "oppose", "level": 2 }, { "w": "object", "level": 2 }], "collocations": ["disagree with", "strongly disagree", "disagree about"], "examples": { "reading": "Experts sometimes disagree about the best method.", "speaking": "I disagree because the evidence is weak." } },
+        { "headword": "however", "pos": "adv", "cefr": "B1", "definition_simple": "used to show a contrast", "family": [], "synonyms": [{ "w": "but", "level": 1 }, { "w": "nevertheless", "level": 3 }], "collocations": ["however, + clause", "however + adj/adv"], "examples": { "reading": "The idea sounds good; however, it is expensive.", "speaking": "However, phones can also be useful for learning." } },
+        { "headword": "although", "pos": "conj", "cefr": "B1", "definition_simple": "used to introduce a contrast", "family": [], "synonyms": [{ "w": "even though", "level": 2 }], "collocations": ["although + clause", "although it is true"], "examples": { "reading": "Although the method is simple, it is effective.", "speaking": "Although I like videos, I prefer reading for deep learning." } },
+        { "headword": "consider", "pos": "v", "cefr": "B1", "definition_simple": "to think carefully about", "family": ["consideration (n)", "considerate (adj)"], "synonyms": [{ "w": "think about", "level": 1 }, { "w": "take into account", "level": 2 }], "collocations": ["consider + noun", "consider doing", "consider the fact that"], "examples": { "reading": "We should consider both costs and benefits.", "speaking": "We must consider students’ mental health." } },
+        { "headword": "perspective", "pos": "n", "cefr": "B1+", "definition_simple": "a way of thinking about something", "family": [], "synonyms": [{ "w": "viewpoint", "level": 2 }, { "w": "point of view", "level": 1 }], "collocations": ["from a perspective", "different perspectives", "broaden perspective"], "examples": { "reading": "From a cultural perspective, the rule may seem strict.", "speaking": "From my perspective, quality matters more than quantity." } },
+        { "headword": "limit", "pos": "v/n", "cefr": "B1", "definition_simple": "to control the size or amount; a maximum amount", "family": ["limitation (n)", "limited (adj)"], "synonyms": [{ "w": "restrict", "level": 2 }, { "w": "reduce", "level": 1 }], "collocations": ["set a limit", "limit screen time", "within limits"], "examples": { "reading": "Many schools limit phone use during class.", "speaking": "We should set a limit on screen time." } },
+        { "headword": "necessary", "pos": "adj", "cefr": "A2+", "definition_simple": "needed; important", "family": ["necessity (n)", "necessarily (adv)"], "synonyms": [{ "w": "required", "level": 1 }, { "w": "essential", "level": 2 }], "collocations": ["it is necessary to", "absolutely necessary", "necessary for"], "examples": { "reading": "It is necessary to get enough sleep for learning.", "speaking": "I think it is necessary to practice speaking daily." } },
+        { "headword": "effective", "pos": "adj", "cefr": "B1", "definition_simple": "working well and producing results", "family": ["effect (n)", "effectively (adv)"], "synonyms": [{ "w": "efficient", "level": 2 }, { "w": "useful", "level": 1 }], "collocations": ["effective way", "highly effective", "effective for"], "examples": { "reading": "Spaced repetition is an effective way to remember words.", "speaking": "This is effective because it forces me to use the words." } }
+      ],
+      "patterns": [
+        { "pattern_id": "P13", "structure": "Some people argue that ~. However, ~.", "level": "B1", "example": "Some people argue that phones help learning. However, they can distract students." },
+        { "pattern_id": "P14", "structure": "Although ~, ~.", "level": "B1", "example": "Although homework is necessary, too much can increase stress." }
+      ],
+      "speaking_task": {
+        "prompt": "Topic: Smartphones in school. Present one argument for, one argument against, and your final opinion. Use however/although at least once.",
+        "target_words_min": 5,
+        "recommended_time_sec": 80
+      },
+      "scoring_checklist": {
+        "target_word_hits": { "min": 5, "max": 10, "points": 25 },
+        "family_bonus": { "use_any": true, "points": 10 },
+        "collocations_to_check": ["some people argue that", "from my perspective", "set a limit", "effective way"],
+        "connectors_to_check": ["however", "although", "on the other hand", "therefore", "for example"],
+        "fluency_targets": { "min_words": 65, "min_sentences": 5 }
+      }
+    }
+  ]
+}

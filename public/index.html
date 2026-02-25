@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EFL MVP</title>
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b0f1a;color:#d7e3ff}
+    header{position:sticky;top:0;z-index:10;background:#0b0f1a;border-bottom:1px solid rgba(255,255,255,.08);padding:14px 16px}
+    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .muted{opacity:.75;font-size:13px}
+    button,select,input,textarea{
+      background:#0f1526;color:#d7e3ff;border:1px solid rgba(255,255,255,.18);
+      border-radius:10px;padding:10px 12px
+    }
+    button{cursor:pointer}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    main{max-width:1100px;margin:0 auto;padding:16px}
+    h2,h3{margin:14px 0 10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;padding:12px
+    }
+    .card b{font-size:18px}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:12px;opacity:.9}
+    .sep{height:1px;background:rgba(255,255,255,.08);margin:16px 0}
+    .panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:12px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width: 900px){ .two{grid-template-columns:1fr} }
+    textarea{width:100%;resize:vertical}
+    .scoreNum{font-size:30px;font-weight:900}
+    .good{color:#b8ffcf}
+    .warn{color:#ffe7a8}
+    .bad{color:#ffb4b4}
+    pre{white-space:pre-wrap;margin:0}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="row">
+    <div style="font-weight:900;">EFL MVP</div>
+    <span class="muted">HighSchool_1 · Week1</span>
+
+    <select id="daySelect">
+      <option value="1">Day 1</option>
+      <option value="2">Day 2</option>
+      <option value="3">Day 3</option>
+      <option value="4">Day 4</option>
+      <option value="5">Day 5</option>
+      <option value="6">Day 6</option>
+      <option value="7">Day 7</option>
+    </select>
+
+    <button id="loadBtn">Load</button>
+    <span id="status" class="muted"></span>
+  </div>
+</header>
+
+<main>
+  <h2>Cards</h2>
+  <div class="muted" id="meta"></div>
+  <div id="cards" class="grid"></div>
+
+  <div class="sep"></div>
+
+  <h3>Student</h3>
+  <div class="panel">
+    <div class="row">
+      <b>Student</b>
+      <input id="studentKey" placeholder="student key (e.g., s1234)" />
+      <input id="studentName" placeholder="display name (e.g., JinWook)" />
+      <button id="saveStudentBtn">Save Student</button>
+      <span id="studentStatus" class="muted"></span>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:12px;">
+    <div class="row" style="justify-content:space-between;">
+      <b>My Attempts (recent)</b>
+      <button id="refreshAttemptsBtn">Refresh</button>
+    </div>
+    <pre id="attemptsBox" class="muted" style="margin-top:8px;">Enter student key first.</pre>
+  </div>
+
+  <div class="sep"></div>
+
+  <h2>Speaking + Scoring</h2>
+
+  <div class="two">
+    <div class="panel">
+      <div class="row" style="justify-content:space-between;">
+        <b>Speech to Text</b>
+        <span class="tag" id="micStatus">idle</span>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="row">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <div class="sep"></div>
+
+      <textarea id="transcript" rows="8" placeholder="Speak or paste text here..."></textarea>
+
+      <div class="sep"></div>
+      <div class="muted">
+        Tip: Try to use at least <b>5</b> of today’s 10 words, plus 1 connector and 1 collocation from today’s checklist.
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="row" style="justify-content:space-between;">
+        <b>Score</b>
+        <div id="scoreNum" class="scoreNum">--</div>
+      </div>
+
+      <div class="sep"></div>
+
+      <pre id="scoreDetail" class="muted">Press Start → speak → Stop, or press Score Now.</pre>
+
+      <div class="sep"></div>
+
+      <button id="scoreNowBtn">Score Now</button>
+      <span id="saveStatus" class="muted" style="margin-left:10px;"></span>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+  <pre id="debugBox" class="muted"></pre>
+</main>
+
+<script>
+/* ===============================
+   Global state
+================================ */
+const grade = "HighSchool_1";
+const weekNo = 1;
+
+let dayItems = [];                 // from /api/day (expect root rows at least)
+let familyMap = new Map();         // root -> Set(derived)
+let dayRules = { checklist:null, connectors:[], collocations:[] };
+
+let recognition = null;
+
+/* ===============================
+   DOM
+================================ */
+const statusEl = document.getElementById("status");
+const metaEl = document.getElementById("meta");
+const cardsEl = document.getElementById("cards");
+const debugBox = document.getElementById("debugBox");
+
+const daySelect = document.getElementById("daySelect");
+const loadBtn = document.getElementById("loadBtn");
+
+const studentKeyEl = document.getElementById("studentKey");
+const studentNameEl = document.getElementById("studentName");
+const saveStudentBtn = document.getElementById("saveStudentBtn");
+const studentStatusEl = document.getElementById("studentStatus");
+const refreshAttemptsBtn = document.getElementById("refreshAttemptsBtn");
+const attemptsBox = document.getElementById("attemptsBox");
+
+const micStatus = document.getElementById("micStatus");
+const startBtn = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
+const clearBtn = document.getElementById("clearBtn");
+const transcriptEl = document.getElementById("transcript");
+
+const scoreNumEl = document.getElementById("scoreNum");
+const scoreDetailEl = document.getElementById("scoreDetail");
+const scoreNowBtn = document.getElementById("scoreNowBtn");
+const saveStatusEl = document.getElementById("saveStatus");
+
+/* ===============================
+   Utils
+================================ */
+function debug(msg){
+  debugBox.textContent = String(msg || "");
+}
+
+function setStatus(msg, ok=true){
+  statusEl.textContent = msg;
+  statusEl.style.color = ok ? "#b8ffcf" : "#ffb4b4";
+}
+
+async function fetchJSON(url, opts){
+  const r = await fetch(url, opts);
+  const text = await r.text();
+  // JSON 파싱 실패 시 text를 보여주기
+  try{
+    const j = JSON.parse(text);
+    if(!r.ok) throw new Error(j.error || ("HTTP " + r.status));
+    return j;
+  }catch(e){
+    if(!r.ok) throw new Error(text || ("HTTP " + r.status));
+    throw new Error("Not JSON response: " + text.slice(0, 80));
+  }
+}
+
+async function apiPost(url, body){
+  return fetchJSON(url, {
+    method:"POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(body)
+  });
+}
+
+function normalizeText(s){
+  return (s||"")
+    .toLowerCase()
+    .replace(/\[interim\][\s\S]*$/m, "")
+    .replace(/[^a-z0-9\s'-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/* ===============================
+   Lemma (simple rule-based)
+================================ */
+function lemmaToken(tok){
+  if(!tok) return tok;
+  const irregular = { "went":"go","gone":"go","children":"child","men":"man","women":"woman","people":"person" };
+  if(irregular[tok]) return irregular[tok];
+
+  if(tok.length > 4 && tok.endsWith("ies")) return tok.slice(0, -3) + "y";
+  if(tok.length > 3 && tok.endsWith("es")) return tok.slice(0, -2);
+  if(tok.length > 3 && tok.endsWith("s") && !tok.endsWith("ss")) return tok.slice(0, -1);
+
+  if(tok.length > 5 && tok.endsWith("ing")){
+    let base = tok.slice(0, -3);
+    if(base.length >= 2 && base[base.length-1] === base[base.length-2]) base = base.slice(0, -1);
+    if(base === "mak") return "make";
+    return base;
+  }
+  if(tok.length > 4 && tok.endsWith("ed")){
+    let base = tok.slice(0, -2);
+    if(base.endsWith("i")) return base.slice(0, -1) + "y";
+    if(base.length >= 2 && base[base.length-1] === base[base.length-2]) base = base.slice(0, -1);
+    if(base === "chang") return "change";
+    return base;
+  }
+  return tok;
+}
+
+/* ===============================
+   Load Day: /api/day + /api/day_family + /api/day_rules
+================================ */
+function renderCards(items){
+  cardsEl.innerHTML = (items||[]).map(it => {
+    const tag = it.item_type ? it.item_type : "root";
+    return `
+      <div class="card">
+        <div class="row" style="justify-content:space-between;">
+          <b>${it.headword}</b>
+          <span class="tag">${tag}</span>
+        </div>
+        <div class="muted">${it.pos} · ${it.cefr || ""}</div>
+        <div style="margin-top:8px;">${it.definition_simple || ""}</div>
+      </div>
+    `;
+  }).join("");
+}
+
+async function loadDay(){
+  const dayNo = Number(daySelect.value);
+  setStatus("Loading...", true);
+  saveStatusEl.textContent = "";
+  scoreNumEl.textContent = "--";
+  scoreNumEl.className = "scoreNum";
+  scoreDetailEl.textContent = "Press Start → speak → Stop, or press Score Now.";
+  transcriptEl.value = "";
+
+  // 1) day items
+  const data = await fetchJSON(`/api/day?grade=${encodeURIComponent(grade)}&week=1&day=${dayNo}`);
+  dayItems = data.items || [];
+
+  // 만약 item_type이 아예 없으면, 전부 root로 간주
+  const hasType = dayItems.some(x => x.item_type);
+  if(!hasType){
+    dayItems = dayItems.map(x => ({...x, item_type:"root"}));
+  }
+
+  renderCards(dayItems);
+  metaEl.textContent = `Grade: ${grade} · Week: 1 · Day: ${dayNo} · Items: ${dayItems.length}`;
+
+  // 2) family map (optional)
+  familyMap = new Map();
+  try{
+    const fam = await fetchJSON(`/api/day_family?grade=${encodeURIComponent(grade)}&week=1&day=${dayNo}`);
+    for(const r of (fam.rows || [])){
+      const root = String(r.root_headword || "").toLowerCase();
+      const der  = String(r.derived_headword || "").toLowerCase();
+      if(!root || !der) continue;
+      if(!familyMap.has(root)) familyMap.set(root, new Set());
+      familyMap.get(root).add(der);
+    }
+  }catch(e){
+    // ignore
+  }
+
+  // 3) rules (optional)
+  dayRules = { checklist:null, connectors:[], collocations:[] };
+  try{
+    const rules = await fetchJSON(`/api/day_rules?grade=${encodeURIComponent(grade)}&week=1&day=${dayNo}`);
+    dayRules = rules;
+  }catch(e){
+    // ignore
+  }
+
+  const rootCount = dayItems.filter(x => x.item_type === "root").length;
+  debug(
+    `Loaded dayItems=${dayItems.length}\n`+
+    `rootCount=${rootCount}\n`+
+    `familyRoots=${familyMap.size}\n`+
+    `rules: connectors=${(dayRules.connectors||[]).length}, collocations=${(dayRules.collocations||[]).length}`
+  );
+
+  setStatus("Loaded ✅", true);
+}
+
+/* ===============================
+   SpeechRecognition
+================================ */
+function initSpeech(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR){
+    micStatus.textContent = "unsupported";
+    startBtn.disabled = true;
+    stopBtn.disabled = true;
+    return;
+  }
+
+  recognition = new SR();
+  recognition.lang = "en-US";
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+  recognition.onstart = () => {
+    micStatus.textContent = "listening";
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+  };
+
+  recognition.onend = () => {
+    micStatus.textContent = "idle";
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+  };
+
+  recognition.onerror = (e) => {
+    micStatus.textContent = "error";
+    debug("Speech error: " + (e.error || ""));
+  };
+
+  recognition.onresult = (event) => {
+    let finalText = "";
+    let interimText = "";
+    for (let i = 0; i < event.results.length; i++) {
+      const res = event.results[i];
+      if(res.isFinal) finalText += res[0].transcript + " ";
+      else interimText += res[0].transcript + " ";
+    }
+    const base = transcriptEl.value.replace(/\s*\[interim\][\s\S]*$/m, "").trim();
+    const merged = (base + " " + finalText).trim();
+    transcriptEl.value = merged + (interimText.trim() ? `\n[interim] ${interimText.trim()}` : "");
+  };
+}
+
+/* ===============================
+   Student local storage + attempts
+================================ */
+function loadStudentLocal(){
+  studentKeyEl.value = localStorage.getItem("student_key") || "";
+  studentNameEl.value = localStorage.getItem("student_name") || "";
+}
+
+function saveStudentLocal(){
+  localStorage.setItem("student_key", studentKeyEl.value.trim());
+  localStorage.setItem("student_name", studentNameEl.value.trim());
+}
+
+async function refreshAttempts(){
+  const key = studentKeyEl.value.trim();
+  if(!key){
+    attemptsBox.textContent = "Enter student key first.";
+    return;
+  }
+  const j = await fetchJSON(`/api/attempts?student_key=${encodeURIComponent(key)}&limit=30`);
+  const rows = j.attempts || [];
+  if(!rows.length){
+    attemptsBox.textContent = "No attempts yet.";
+    return;
+  }
+  attemptsBox.textContent = rows.map(a =>
+    `${a.created_at} | W${a.week_no} D${a.day_no} | score=${a.score} | vocab=${a.vocab_hits} family=${a.family_hits} conn=${a.connector_hits} coll=${a.collocation_hits} | words=${a.word_count}`
+  ).join("\n");
+}
+
+/* ===============================
+   Scoring (lemma + family + DB rules)
+================================ */
+function computeScore(){
+  const dayNo = Number(daySelect.value);
+
+  const raw = transcriptEl.value || "";
+  const text = normalizeText(raw);
+  const tokens = text.split(" ").filter(Boolean);
+  const lemmas = tokens.map(t => lemmaToken(t));
+  const tokenSet = new Set(lemmas);
+
+  // roots for today
+  const roots = dayItems.filter(x => x.item_type === "root").map(x => String(x.headword||"").toLowerCase());
+  const rootLemmas = roots.map(r => lemmaToken(r));
+
+  // derived map: rootLemma -> Set(derivedLemma)
+  const derivedByRoot = new Map();
+  for(let i=0;i<roots.length;i++){
+    const root = roots[i];
+    const rLemma = rootLemmas[i];
+    const ders = familyMap.get(root);
+    if(!ders) continue;
+    derivedByRoot.set(rLemma, new Set([...ders].map(d => lemmaToken(String(d).toLowerCase()))));
+  }
+
+  // hits
+  const hits = [];
+  const familyHits = [];
+  const usedDerived = [];
+
+  for(const rLemma of rootLemmas){
+    if(tokenSet.has(rLemma)){
+      hits.push(rLemma);
+      continue;
+    }
+    const ders = derivedByRoot.get(rLemma);
+    if(!ders) continue;
+    for(const dLemma of ders){
+      if(tokenSet.has(dLemma)){
+        hits.push(rLemma);
+        familyHits.push(rLemma);
+        usedDerived.push(dLemma);
+        break;
+      }
+    }
+  }
+
+  const uniqHits = [...new Set(hits)];
+  const uniqFamilyHits = [...new Set(familyHits)];
+  const uniqUsedDerived = [...new Set(usedDerived)];
+
+  // connectors/collocations from DB rules
+  const connectorsList = (dayRules.connectors || []).map(s => String(s).toLowerCase());
+  const collocationsList = (dayRules.collocations || []).map(s => String(s).toLowerCase());
+
+  const connectorHits = connectorsList.filter(c => c && text.includes(c));
+  const collocationHits = collocationsList.filter(c => c && text.includes(c));
+
+  // checklist
+  const chk = dayRules.checklist || null;
+  const minHit = chk?.target_hits_min ?? 5;
+  const minWords = chk?.min_words ?? 45;
+
+  const pointsVocab = chk?.points_vocab ?? 25;
+  const pointsFamily = chk?.points_family ?? 10;
+  const familyOn = (chk?.family_bonus_on ?? 1) === 1;
+
+  // scoring
+  const vocabScore = Math.round((uniqHits.length / 10) * pointsVocab);
+  const familyBonus = familyOn ? Math.min(pointsFamily, uniqFamilyHits.length * 2) : 0;
+
+  // connectors: up to 10 points (5 each)
+  const connScore = Math.min(10, connectorHits.length * 5);
+
+  // collocations: up to 10 points (10 each)
+  const colScore = Math.min(10, collocationHits.length * 10);
+
+  const lengthPenalty = tokens.length < minWords ? 5 : 0;
+
+  let total = vocabScore + familyBonus + connScore + colScore - lengthPenalty;
+  if(total < 0) total = 0;
+  if(total > 100) total = 100;
+
+  // UI
+  scoreNumEl.textContent = String(total);
+  scoreNumEl.className = "scoreNum " + (total>=80 ? "good" : total<50 ? "bad" : "warn");
+
+  const lines = [
+    `Vocab hits: ${uniqHits.length}/10  (+${vocabScore})  [min target: ${minHit}]`,
+    `Hits: ${uniqHits.join(", ") || "(none)"}`,
+    "",
+    `Family hits (via derived): ${uniqFamilyHits.length}  (+${familyBonus})`,
+    `Derived used: ${uniqUsedDerived.join(", ") || "(none)"}`,
+    "",
+    `Connectors (DB): ${connectorHits.length}  (+${connScore})`,
+    `Found: ${connectorHits.join(", ") || "(none)"}`,
+    "",
+    `Collocations (DB): ${collocationHits.length}  (+${colScore})`,
+    `Found: ${collocationHits.join(", ") || "(none)"}`,
+    "",
+    `Length: ${tokens.length} words (min ${minWords})`,
+  ];
+  if(tokens.length < minWords){
+    lines.push("", `⚠️ Too short. Aim for ${minWords}–80 words (about 60s).`);
+  }
+  scoreDetailEl.textContent = lines.join("\n");
+
+  // Save attempt (after total computed)
+  saveAttempt({
+    grade,
+    week_no: weekNo,
+    day_no: dayNo,
+    score: total,
+    vocab_hits: uniqHits.length,
+    family_hits: uniqFamilyHits.length,
+    connector_hits: connectorHits.length,
+    collocation_hits: collocationHits.length,
+    word_count: tokens.length,
+    transcript: raw
+  });
+}
+
+/* ===============================
+   Save attempt (DB)
+================================ */
+async function saveAttempt(payload){
+  const student_key = studentKeyEl.value.trim();
+  const display_name = studentNameEl.value.trim();
+  if(!student_key || !display_name) return;
+
+  try{
+    saveStatusEl.textContent = "Saving...";
+    await apiPost("/api/attempt", { student_key, display_name, ...payload });
+    saveStatusEl.textContent = "Saved attempt ✅";
+    await refreshAttempts();
+  }catch(e){
+    saveStatusEl.textContent = "Save failed: " + e.message;
+  }
+}
+
+/* ===============================
+   Events
+================================ */
+loadBtn.addEventListener("click", () => loadDay());
+
+saveStudentBtn.addEventListener("click", async () => {
+  try{
+    const student_key = studentKeyEl.value.trim();
+    const display_name = studentNameEl.value.trim();
+    if(!student_key || !display_name){
+      studentStatusEl.textContent = "Fill both key and name.";
+      return;
+    }
+    await apiPost("/api/student", { student_key, display_name });
+    saveStudentLocal();
+    studentStatusEl.textContent = "Saved ✅";
+    await refreshAttempts();
+  }catch(e){
+    studentStatusEl.textContent = "Error: " + e.message;
+  }
+});
+
+refreshAttemptsBtn.addEventListener("click", refreshAttempts);
+
+startBtn.addEventListener("click", () => {
+  if(!recognition) return;
+  try{ recognition.start(); }catch(e){}
+});
+
+stopBtn.addEventListener("click", () => {
+  if(!recognition) return;
+  recognition.stop();
+  setTimeout(computeScore, 250);
+});
+
+clearBtn.addEventListener("click", () => {
+  transcriptEl.value = "";
+  scoreNumEl.textContent = "--";
+  scoreNumEl.className = "scoreNum";
+  scoreDetailEl.textContent = "Press Start → speak → Stop, or press Score Now.";
+  saveStatusEl.textContent = "";
+});
+
+scoreNowBtn.addEventListener("click", () => {
+  computeScore();
+});
+
+/* ===============================
+   Init
+================================ */
+window.addEventListener("load", async () => {
+  loadStudentLocal();
+  initSpeech();
+  await loadDay();
+  // auto refresh attempts if key exists
+  if(studentKeyEl.value.trim()) refreshAttempts();
+});
+</script>
+</body>
+</html>
