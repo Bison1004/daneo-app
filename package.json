@@ -4,7 +4,11 @@
   "description": "EFL vocab MVP (MySQL + Express + HTML)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "wordbook:template": "node scripts/generate_wordbook_templates.js",
+    "wordbook:import": "node scripts/import_wordbook_csv.js",
+    "wordbook:validate": "node scripts/validate_wordbook_csv.js",
+    "wordbook:validate:strict": "node scripts/validate_wordbook_csv.js --strict"
   },
   "dependencies": {
     "cors": "^2.8.5",

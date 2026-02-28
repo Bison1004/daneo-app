@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>관리자 | 학생 등록/수정</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#f6f8fc; color:#111827; }
+    header { padding:16px 20px; border-bottom:1px solid #dbe2ee; background:#fff; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+    main { max-width:800px; margin:0 auto; padding:20px; }
+    .card { background:#fff; border:1px solid #dbe2ee; border-radius:12px; padding:16px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    @media (max-width:700px){ .grid{ grid-template-columns:1fr; } }
+    label { display:block; font-size:13px; color:#374151; margin-bottom:6px; }
+    input, select, textarea, button { width:100%; box-sizing:border-box; border:1px solid #c9d4e7; border-radius:10px; padding:10px 12px; font-size:14px; }
+    textarea { min-height:100px; resize:vertical; }
+    button { cursor:pointer; }
+    .row { display:flex; gap:10px; align-items:center; }
+    .header-actions a { text-decoration:none; display:inline-flex; }
+    .header-actions button { width:auto; }
+    .key-row { display:flex; gap:10px; align-items:center; }
+    .key-row input { flex:1; min-width:0; }
+    .key-row button { width:auto; white-space:nowrap; flex-shrink:0; }
+    .submit-row button { width:auto; min-width:92px; }
+    .message { margin-top:12px; font-size:14px; }
+    .success { color:#047857; }
+    .error { color:#b91c1c; }
+    .muted { color:#6b7280; font-size:13px; }
+    @media (max-width: 640px){
+      main { padding:12px; }
+      .card { padding:12px; }
+      .key-row { flex-wrap:wrap; }
+      .key-row button { width:100%; }
+      .submit-row button { width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><b>관리자 학생관리</b> <span id="pageMode" class="muted">학생 등록</span></div>
+    <div class="row header-actions">
+      <a href="/admin/students"><button type="button">목록으로</button></a>
+      <a href="/"><button type="button">학습앱으로 이동</button></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <form id="studentForm">
+        <div class="grid">
+          <div>
+            <label for="studentName">학생 이름 *</label>
+            <input id="studentName" required />
+          </div>
+
+          <div>
+            <label for="studentKey">학생 키 *</label>
+            <div class="key-row">
+              <input id="studentKey" required />
+              <button id="generateKeyBtn" type="button">키 자동 생성</button>
+            </div>
+          </div>
+
+          <div>
+            <label for="grade">학년</label>
+            <input id="grade" placeholder="예: 1" />
+          </div>
+
+          <div>
+            <label for="className">반</label>
+            <input id="className" placeholder="예: 3" />
+          </div>
+
+          <div>
+            <label for="status">상태</label>
+            <select id="status">
+              <option value="active">active</option>
+              <option value="inactive">inactive</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;">
+          <label for="memo">메모</label>
+          <textarea id="memo" placeholder="관리자 메모를 입력하세요."></textarea>
+        </div>
+
+        <div class="row submit-row" style="margin-top:12px;">
+          <button id="submitBtn" type="submit">저장</button>
+        </div>
+
+        <div id="message" class="message muted">필수 항목을 입력한 뒤 저장하세요.</div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/admin/students/student-form.js"></script>
+</body>
+</html>

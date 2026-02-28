@@ -29,6 +29,12 @@
     .panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:12px}
     .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media (max-width: 900px){ .two{grid-template-columns:1fr} }
+    .studentRow input{min-width:200px}
+    .studentStatus{flex:1 1 100%}
+    @media (max-width: 700px){
+      .studentRow input,.studentRow button{width:100%}
+      .attemptsHeader{align-items:flex-start}
+    }
     textarea{width:100%;resize:vertical}
     .scoreNum{font-size:30px;font-weight:900}
     .good{color:#b8ffcf}
@@ -68,17 +74,17 @@
 
   <h3>Student</h3>
   <div class="panel">
-    <div class="row">
+    <div class="row studentRow">
       <b>Student</b>
       <input id="studentKey" placeholder="student key (e.g., s1234)" />
       <input id="studentName" placeholder="display name (e.g., JinWook)" />
       <button id="saveStudentBtn">Save Student</button>
-      <span id="studentStatus" class="muted"></span>
+      <span id="studentStatus" class="muted studentStatus"></span>
     </div>
   </div>
 
   <div class="panel" style="margin-top:12px;">
-    <div class="row" style="justify-content:space-between;">
+    <div class="row attemptsHeader" style="justify-content:space-between;">
       <b>My Attempts (recent)</b>
       <button id="refreshAttemptsBtn">Refresh</button>
     </div>
@@ -145,6 +151,7 @@ const weekNo = 1;
 let dayItems = [];                 // from /api/day (expect root rows at least)
 let familyMap = new Map();         // root -> Set(derived)
 let dayRules = { checklist:null, connectors:[], collocations:[] };
+let studentVerified = false;
 
 let recognition = null;
 
@@ -189,6 +196,20 @@ function setStatus(msg, ok=true){
   statusEl.style.color = ok ? "#b8ffcf" : "#ffb4b4";
 }
 
+function setLearningEnabled(enabled){
+  daySelect.disabled = !enabled;
+  loadBtn.disabled = !enabled;
+  scoreNowBtn.disabled = !enabled;
+  clearBtn.disabled = !enabled;
+  transcriptEl.disabled = !enabled;
+  if(recognition){
+    startBtn.disabled = !enabled;
+  }else{
+    startBtn.disabled = true;
+  }
+  stopBtn.disabled = true;
+}
+
 async function fetchJSON(url, opts){
   const r = await fetch(url, opts);
   const text = await r.text();
@@ -209,6 +230,48 @@ async function apiPost(url, body){
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify(body)
   });
+}
+
+async function verifyStudentAccess(auto=false){
+  const student_key = studentKeyEl.value.trim();
+  const student_name = studentNameEl.value.trim();
+
+  if(!student_key){
+    studentVerified = false;
+    setLearningEnabled(false);
+    if(!auto) studentStatusEl.textContent = "학생 키를 먼저 입력하세요.";
+    return false;
+  }
+
+  try{
+    studentStatusEl.textContent = auto ? "학생 키 확인 중..." : "학생 키를 확인하는 중...";
+
+    const verify = await apiPost("/api/student/verify-key", { student_key });
+
+    if(student_name){
+      await apiPost("/api/student", { student_key, student_name });
+    }
+
+    const verifiedName = verify?.student?.student_name || "";
+    if(!studentNameEl.value.trim() && verifiedName){
+      studentNameEl.value = verifiedName;
+    }
+
+    saveStudentLocal();
+    studentVerified = true;
+    setLearningEnabled(true);
+    studentStatusEl.textContent = "학생 키 확인 완료 ✅";
+
+    await loadDay();
+    await refreshAttempts();
+    return true;
+  }catch(e){
+    studentVerified = false;
+    setLearningEnabled(false);
+    studentStatusEl.textContent = "학생 키 확인 실패: " + e.message;
+    setStatus("학생 키 확인 후 학습을 시작할 수 있어요.", false);
+    return false;
+  }
 }
 
 function normalizeText(s){
@@ -268,6 +331,11 @@ function renderCards(items){
 }
 
 async function loadDay(){
+  if(!studentVerified){
+    setStatus("학생 키 확인이 필요합니다.", false);
+    return;
+  }
+
   const dayNo = Number(daySelect.value);
   setStatus("Loading...", true);
   saveStatusEl.textContent = "";
@@ -406,6 +474,11 @@ async function refreshAttempts(){
    Scoring (lemma + family + DB rules)
 ================================ */
 function computeScore(){
+  if(!studentVerified){
+    saveStatusEl.textContent = "학생 키 확인 후 채점할 수 있습니다.";
+    return;
+  }
+
   const dayNo = Number(daySelect.value);
 
   const raw = transcriptEl.value || "";
@@ -550,16 +623,7 @@ loadBtn.addEventListener("click", () => loadDay());
 
 saveStudentBtn.addEventListener("click", async () => {
   try{
-    const student_key = studentKeyEl.value.trim();
-    const display_name = studentNameEl.value.trim();
-    if(!student_key || !display_name){
-      studentStatusEl.textContent = "Fill both key and name.";
-      return;
-    }
-    await apiPost("/api/student", { student_key, display_name });
-    saveStudentLocal();
-    studentStatusEl.textContent = "Saved ✅";
-    await refreshAttempts();
+    await verifyStudentAccess(false);
   }catch(e){
     studentStatusEl.textContent = "Error: " + e.message;
   }
@@ -595,10 +659,15 @@ scoreNowBtn.addEventListener("click", () => {
 ================================ */
 window.addEventListener("load", async () => {
   loadStudentLocal();
+  setLearningEnabled(false);
   initSpeech();
-  await loadDay();
-  // auto refresh attempts if key exists
-  if(studentKeyEl.value.trim()) refreshAttempts();
+  // student_key 확인이 끝나야 학습 진입 허용
+  if(studentKeyEl.value.trim()){
+    await verifyStudentAccess(true);
+  }else{
+    setStatus("학생 키를 확인한 뒤 학습을 시작하세요.", false);
+    studentStatusEl.textContent = "학생 키를 입력하고 Save Student를 눌러주세요.";
+  }
 });
 </script>
 </body>

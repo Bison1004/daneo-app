@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>관리자 | 학생 목록</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#f6f8fc; color:#111827; }
+    header { padding:16px 20px; border-bottom:1px solid #dbe2ee; background:#fff; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+    main { max-width:1200px; margin:0 auto; padding:20px; }
+    .card { background:#fff; border:1px solid #dbe2ee; border-radius:12px; padding:16px; }
+    .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    input, select, button, textarea { border:1px solid #c9d4e7; border-radius:10px; padding:9px 12px; font-size:14px; }
+    button { cursor:pointer; }
+    .header-actions a { text-decoration:none; display:inline-flex; }
+    .filter-row input, .filter-row select { min-width: 140px; }
+    .filter-row button { min-width: 86px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th, td { border-bottom:1px solid #e8eef7; padding:10px; text-align:left; font-size:14px; vertical-align:top; }
+    th { background:#f8fbff; }
+    th:nth-child(1), td:nth-child(1), th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5), th:nth-child(6), td:nth-child(6), th:nth-child(8), td:nth-child(8), th:nth-child(9), td:nth-child(9) { white-space:nowrap; }
+    .active { color:#047857; font-weight:700; }
+    .inactive { color:#b91c1c; font-weight:700; }
+    .message { margin-top:10px; font-size:14px; }
+    .success { color:#047857; }
+    .error { color:#b91c1c; }
+    .muted { color:#6b7280; font-size:13px; }
+    .right { margin-left:auto; }
+    @media (max-width: 640px){
+      main { padding:12px; }
+      .card { padding:12px; }
+      .filter-row input, .filter-row select { width:100%; min-width:0; }
+      .filter-row button { flex:1; min-width:0; }
+      th, td { padding:8px; font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><b>관리자 학생관리</b> <span class="muted">학생 목록</span></div>
+    <div class="row header-actions">
+      <a href="/admin/students/new"><button type="button">+ 학생 등록</button></a>
+      <a href="/"><button type="button">학습앱으로 이동</button></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="row filter-row">
+        <input id="filterName" placeholder="이름 검색" />
+        <input id="filterKey" placeholder="학생 키 검색" />
+        <input id="filterGrade" placeholder="학년 예: 1" />
+        <input id="filterClass" placeholder="반 예: 3" />
+        <select id="filterStatus">
+          <option value="">상태 전체</option>
+          <option value="active">active</option>
+          <option value="inactive">inactive</option>
+        </select>
+        <button id="searchBtn" type="button">검색</button>
+        <button id="resetBtn" type="button">초기화</button>
+      </div>
+      <div id="message" class="message muted">학생 목록을 불러오는 중입니다...</div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>학생 이름</th>
+              <th>학생 키</th>
+              <th>학년</th>
+              <th>반</th>
+              <th>상태</th>
+              <th>등록일</th>
+              <th>수정</th>
+              <th>비활성화</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin/students/students-list.js"></script>
+</body>
+</html>
