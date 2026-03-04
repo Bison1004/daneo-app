@@ -41,6 +41,49 @@ mysql -u <user> -p <db_name> < students_table.sql
 mysql -u <user> -p <db_name> < cefr_actfl_365_wordbook.sql
 ```
 
+### 로컬 MySQL 빠른 설정(권장)
+
+로컬에서 계정/권한 이슈가 있으면 아래 스크립트를 먼저 실행하세요.
+
+```bash
+mysql -u root -p < mysql_local_setup.sql
+```
+
+Windows PowerShell에서는 아래 명령을 사용하세요.
+
+```powershell
+Get-Content .\mysql_local_setup.sql | mysql -u root -p
+```
+
+### AWS RDS SSH 터널 접속(키페어 사용)
+
+키페어 파일이 프로젝트에 있을 때(예: `maru-ec2-seoul-main.pem`) 아래 스크립트로 터널을 열 수 있습니다.
+
+1) `.env`를 터널 모드로 변경
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\use-rds-tunnel-env.ps1
+```
+
+2) SSH 터널 시작 (EC2 퍼블릭 DNS/퍼블릭 IP 입력)
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start-rds-tunnel.ps1 -Ec2Host ec2-xx-xx-xx-xx.ap-northeast-2.compute.amazonaws.com
+```
+
+- 기본 포워딩: `127.0.0.1:3307 -> efl-db.czmumoegmwa5.ap-northeast-2.rds.amazonaws.com:3306`
+- 터널 터미널은 앱 실행 동안 계속 열어두세요.
+
+그 다음 `.env`를 아래처럼 맞춥니다.
+
+```env
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=admin
+DB_PASSWORD=admin1234!
+DB_NAME=efl_vocab_app
+```
+
 필요 시 학습 데이터 SQL 파일(`g10_*.sql`)도 순서에 맞게 적용하세요.
 
 ## 실행
