@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "test": "node tests/run-tests.js",
+    "check:syntax": "node --check server.js && node --check controllers/lingoloopController.js && node --check controllers/lingoloopAuthController.js && node --check routes/lingoloopRoutes.js && node --check middleware/lingoloopAuth.js && node --check middleware/lingoloopRateLimit.js && node --check lib/lingoloop/tokenService.js && node --check lib/lingoloop/quizEngine.js && node --check repositories/lingoloopRepository.js && node --check repositories/lingoloopMysqlRepository.js && node --check public/lingoloop/app.js",
     "wordbook:template": "node scripts/generate_wordbook_templates.js",
     "wordbook:import": "node scripts/import_wordbook_csv.js",
     "wordbook:validate": "node scripts/validate_wordbook_csv.js",

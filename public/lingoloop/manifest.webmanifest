@@ -1,0 +1,9 @@
+﻿{
+  "name": "LingoLoop Mobile",
+  "short_name": "LingoLoop",
+  "start_url": "/lingoloop/",
+  "display": "standalone",
+  "background_color": "#0c1b33",
+  "theme_color": "#10243f",
+  "icons": []
+}
