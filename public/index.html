@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>EFL MVP</title>
   <style>
+    *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#0b0f1a;color:#d7e3ff}
     header{position:sticky;top:0;z-index:10;background:#0b0f1a;border-bottom:1px solid rgba(255,255,255,.08);padding:14px 16px}
     .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -29,12 +30,6 @@
     .panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:12px}
     .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media (max-width: 900px){ .two{grid-template-columns:1fr} }
-    .studentRow input{min-width:200px}
-    .studentStatus{flex:1 1 100%}
-    @media (max-width: 700px){
-      .studentRow input,.studentRow button{width:100%}
-      .attemptsHeader{align-items:flex-start}
-    }
     textarea{width:100%;resize:vertical}
     .scoreNum{font-size:30px;font-weight:900}
     .good{color:#b8ffcf}
@@ -51,91 +46,92 @@
     <span class="muted">HighSchool_1 · Week1</span>
 
     <select id="daySelect">
-      <option value="1">Day 1</option>
-      <option value="2">Day 2</option>
-      <option value="3">Day 3</option>
-      <option value="4">Day 4</option>
-      <option value="5">Day 5</option>
-      <option value="6">Day 6</option>
-      <option value="7">Day 7</option>
+      <option value="1">1일차</option>
+      <option value="2">2일차</option>
+      <option value="3">3일차</option>
+      <option value="4">4일차</option>
+      <option value="5">5일차</option>
+      <option value="6">6일차</option>
+      <option value="7">7일차</option>
     </select>
 
-    <button id="loadBtn">Load</button>
+    <button id="loadBtn">선택</button>
     <span id="status" class="muted"></span>
   </div>
 </header>
 
 <main>
-  <h2>Cards</h2>
+  <h2>오늘의 단어</h2>
   <div class="muted" id="meta"></div>
   <div id="cards" class="grid"></div>
 
   <div class="sep"></div>
 
-  <h3>Student</h3>
+  <h3>학생</h3>
   <div class="panel">
-    <div class="row studentRow">
-      <b>Student</b>
-      <input id="studentKey" placeholder="student key (e.g., s1234)" />
-      <input id="studentName" placeholder="display name (e.g., JinWook)" />
-      <button id="saveStudentBtn">Save Student</button>
-      <span id="studentStatus" class="muted studentStatus"></span>
+    <div class="row">
+      <b>학생</b>
+      <input id="studentKey" placeholder="학생 키 (예: s1234)" />
+      <input id="studentName" placeholder="표시 이름 (예: 홍길동)" />
+      <button id="saveStudentBtn">학생 정보를 입력하세요</button>
+      <span id="studentStatus" class="muted"></span>
     </div>
   </div>
 
   <div class="panel" style="margin-top:12px;">
-    <div class="row attemptsHeader" style="justify-content:space-between;">
-      <b>My Attempts (recent)</b>
-      <button id="refreshAttemptsBtn">Refresh</button>
+    <div class="row" style="justify-content:space-between;">
+      <b>오늘의 배울 단어</b>
+      <button id="refreshAttemptsBtn">어제 배운 단어</button>
     </div>
-    <pre id="attemptsBox" class="muted" style="margin-top:8px;">Enter student key first.</pre>
+    <pre id="attemptsBox" class="muted" style="margin-top:8px;"></pre>
   </div>
 
   <div class="sep"></div>
 
-  <h2>Speaking + Scoring</h2>
+  <h2>문장을 말해 보세요</h2>
 
   <div class="two">
     <div class="panel">
       <div class="row" style="justify-content:space-between;">
-        <b>Speech to Text</b>
-        <span class="tag" id="micStatus">idle</span>
+        <b>음성-텍스트 변환</b>
+        <span class="tag" id="micStatus">대기중</span>
       </div>
 
       <div class="sep"></div>
 
       <div class="row">
-        <button id="startBtn">Start</button>
-        <button id="stopBtn" disabled>Stop</button>
-        <button id="clearBtn">Clear</button>
+        <button id="startBtn">시작</button>
+        <button id="stopBtn" disabled>멈추다</button>
+        <button id="clearBtn">다시 시도</button>
       </div>
 
       <div class="sep"></div>
 
-      <textarea id="transcript" rows="8" placeholder="Speak or paste text here..."></textarea>
+      <textarea id="transcript" rows="8" placeholder="오늘 연습한 문장입니다."></textarea>
 
       <div class="sep"></div>
       <div class="muted">
-        Tip: Try to use at least <b>5</b> of today’s 10 words, plus 1 connector and 1 collocation from today’s checklist.
+        팁: 오늘의 단어 <b>5개</b> 이상, 그리고 오늘의 체크리스트에 있는 접속사와 연어(Collocation)를 1개씩 포함해서 문장을 만들어 보세요.
       </div>
     </div>
 
     <div class="panel">
       <div class="row" style="justify-content:space-between;">
-        <b>Score</b>
+        <b>점수</b>
         <div id="scoreNum" class="scoreNum">--</div>
       </div>
 
       <div class="sep"></div>
 
-      <pre id="scoreDetail" class="muted">Press Start → speak → Stop, or press Score Now.</pre>
+      <pre id="scoreDetail" class="muted">말하기 버튼을 누르고 문장을 말씀하세요. 완료 후 멈추다 버튼이나 점수 확인을 누르세요.</pre>
 
       <div class="sep"></div>
 
-      <button id="scoreNowBtn">Score Now</button>
+      <button id="scoreNowBtn">점수 확인</button>
       <span id="saveStatus" class="muted" style="margin-left:10px;"></span>
     </div>
   </div>
+
 
   <div class="sep"></div>
   <pre id="debugBox" class="muted"></pre>
@@ -151,7 +147,6 @@ const weekNo = 1;
 let dayItems = [];                 // from /api/day (expect root rows at least)
 let familyMap = new Map();         // root -> Set(derived)
 let dayRules = { checklist:null, connectors:[], collocations:[] };
-let studentVerified = false;
 
 let recognition = null;
 
@@ -196,20 +191,6 @@ function setStatus(msg, ok=true){
   statusEl.style.color = ok ? "#b8ffcf" : "#ffb4b4";
 }
 
-function setLearningEnabled(enabled){
-  daySelect.disabled = !enabled;
-  loadBtn.disabled = !enabled;
-  scoreNowBtn.disabled = !enabled;
-  clearBtn.disabled = !enabled;
-  transcriptEl.disabled = !enabled;
-  if(recognition){
-    startBtn.disabled = !enabled;
-  }else{
-    startBtn.disabled = true;
-  }
-  stopBtn.disabled = true;
-}
-
 async function fetchJSON(url, opts){
   const r = await fetch(url, opts);
   const text = await r.text();
@@ -230,48 +211,6 @@ async function apiPost(url, body){
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify(body)
   });
-}
-
-async function verifyStudentAccess(auto=false){
-  const student_key = studentKeyEl.value.trim();
-  const student_name = studentNameEl.value.trim();
-
-  if(!student_key){
-    studentVerified = false;
-    setLearningEnabled(false);
-    if(!auto) studentStatusEl.textContent = "학생 키를 먼저 입력하세요.";
-    return false;
-  }
-
-  try{
-    studentStatusEl.textContent = auto ? "학생 키 확인 중..." : "학생 키를 확인하는 중...";
-
-    const verify = await apiPost("/api/student/verify-key", { student_key });
-
-    if(student_name){
-      await apiPost("/api/student", { student_key, student_name });
-    }
-
-    const verifiedName = verify?.student?.student_name || "";
-    if(!studentNameEl.value.trim() && verifiedName){
-      studentNameEl.value = verifiedName;
-    }
-
-    saveStudentLocal();
-    studentVerified = true;
-    setLearningEnabled(true);
-    studentStatusEl.textContent = "학생 키 확인 완료 ✅";
-
-    await loadDay();
-    await refreshAttempts();
-    return true;
-  }catch(e){
-    studentVerified = false;
-    setLearningEnabled(false);
-    studentStatusEl.textContent = "학생 키 확인 실패: " + e.message;
-    setStatus("학생 키 확인 후 학습을 시작할 수 있어요.", false);
-    return false;
-  }
 }
 
 function normalizeText(s){
@@ -331,11 +270,6 @@ function renderCards(items){
 }
 
 async function loadDay(){
-  if(!studentVerified){
-    setStatus("학생 키 확인이 필요합니다.", false);
-    return;
-  }
-
   const dayNo = Number(daySelect.value);
   setStatus("Loading...", true);
   saveStatusEl.textContent = "";
@@ -346,13 +280,8 @@ async function loadDay(){
 
   // 1) day items
   const data = await fetchJSON(`/api/day?grade=${encodeURIComponent(grade)}&week=1&day=${dayNo}`);
-  dayItems = data.items || [];
-
-  // 만약 item_type이 아예 없으면, 전부 root로 간주
-  const hasType = dayItems.some(x => x.item_type);
-  if(!hasType){
-    dayItems = dayItems.map(x => ({...x, item_type:"root"}));
-  }
+  const rawItems = data.items || [];
+  dayItems = rawItems.map(x => ({...x, item_type: x.item_type || "root"}));
 
   renderCards(dayItems);
   metaEl.textContent = `Grade: ${grade} · Week: 1 · Day: ${dayNo} · Items: ${dayItems.length}`;
@@ -389,6 +318,17 @@ async function loadDay(){
     `rules: connectors=${(dayRules.connectors||[]).length}, collocations=${(dayRules.collocations||[]).length}`
   );
 
+  // Update "오늘의 배울 단어" (attemptsBox) with detailed list
+  if(attemptsBox){
+    const rootItems = dayItems.filter(x => x.item_type === "root").slice(0, 10);
+    const content = rootItems.map((it, idx) => {
+       const root = String(it.headword).toLowerCase();
+       const ders = familyMap.has(root) ? [...familyMap.get(root)].join(", ") : "(없음)";
+       return `${idx+1}. ${it.headword} (${it.pos})\n   뜻: ${it.definition_simple || "(없음)"}\n   파생어: ${ders}\n`;
+    }).join("\n");
+    attemptsBox.textContent = content || "오늘의 단어가 없습니다.";
+  }
+
   setStatus("Loaded ✅", true);
 }
 
@@ -410,20 +350,26 @@ function initSpeech(){
   recognition.interimResults = true;
 
   recognition.onstart = () => {
-    micStatus.textContent = "listening";
+    micStatus.textContent = "듣는중...";
     startBtn.disabled = true;
-    stopBtn.disabled = false;
+    stopBtn.disabled = false; // 버튼 활성화
+    debug("Speech recognition started.");
   };
 
   recognition.onend = () => {
-    micStatus.textContent = "idle";
+    micStatus.textContent = "대기중";
     startBtn.disabled = false;
     stopBtn.disabled = true;
+    debug("Speech recognition ended.");
   };
 
   recognition.onerror = (e) => {
-    micStatus.textContent = "error";
+    micStatus.textContent = "오류";
     debug("Speech error: " + (e.error || ""));
+    startBtn.disabled = false;
+    if(e.error === 'not-allowed' || e.error === 'service-not-allowed'){
+      alert("마이크 사용이 차단되었습니다. HTTP 사이트에서는 마이크 사용이 제한될 수 있습니다. 브라우저 설정(chrome://flags)에서 해당 IP를 'Insecure origins treated as secure' 항목에 추가하거나 localhost를 이용하세요.");
+    }
   };
 
   recognition.onresult = (event) => {
@@ -454,31 +400,15 @@ function saveStudentLocal(){
 }
 
 async function refreshAttempts(){
-  const key = studentKeyEl.value.trim();
-  if(!key){
-    attemptsBox.textContent = "Enter student key first.";
-    return;
-  }
-  const j = await fetchJSON(`/api/attempts?student_key=${encodeURIComponent(key)}&limit=30`);
-  const rows = j.attempts || [];
-  if(!rows.length){
-    attemptsBox.textContent = "No attempts yet.";
-    return;
-  }
-  attemptsBox.textContent = rows.map(a =>
-    `${a.created_at} | W${a.week_no} D${a.day_no} | score=${a.score} | vocab=${a.vocab_hits} family=${a.family_hits} conn=${a.connector_hits} coll=${a.collocation_hits} | words=${a.word_count}`
-  ).join("\n");
+  // 더 이상 "시도 기록"을 화면에 표시하지 않습니다.
+  // 대신 "오늘의 배울 단어" 목록은 loadDay()에서 처리합니다.
+  console.log("refreshAttempts called (deprecated)");
 }
 
 /* ===============================
    Scoring (lemma + family + DB rules)
 ================================ */
 function computeScore(){
-  if(!studentVerified){
-    saveStatusEl.textContent = "학생 키 확인 후 채점할 수 있습니다.";
-    return;
-  }
-
   const dayNo = Number(daySelect.value);
 
   const raw = transcriptEl.value || "";
@@ -623,13 +553,32 @@ loadBtn.addEventListener("click", () => loadDay());
 
 saveStudentBtn.addEventListener("click", async () => {
   try{
-    await verifyStudentAccess(false);
+    const student_key = studentKeyEl.value.trim();
+    const display_name = studentNameEl.value.trim();
+    if(!student_key || !display_name){
+      studentStatusEl.textContent = "키와 이름을 모두 입력하세요.";
+      return;
+    }
+    await apiPost("/api/student", { student_key, display_name });
+    saveStudentLocal();
+    studentStatusEl.textContent = "학생 정보 입력 완료 ✅";
+    // load words for today
+    await loadDay();
   }catch(e){
-    studentStatusEl.textContent = "Error: " + e.message;
+    studentStatusEl.textContent = "오류: " + e.message;
   }
 });
 
-refreshAttemptsBtn.addEventListener("click", refreshAttempts);
+refreshAttemptsBtn.addEventListener("click", () => {
+  // Logic: "어제 배운 단어" -> Go to previous day
+  const current = Number(daySelect.value);
+  if(current > 1){
+    daySelect.value = current - 1;
+    loadDay();
+  } else {
+    alert("첫째 날입니다.");
+  }
+});
 
 startBtn.addEventListener("click", () => {
   if(!recognition) return;
@@ -659,15 +608,10 @@ scoreNowBtn.addEventListener("click", () => {
 ================================ */
 window.addEventListener("load", async () => {
   loadStudentLocal();
-  setLearningEnabled(false);
   initSpeech();
-  // student_key 확인이 끝나야 학습 진입 허용
-  if(studentKeyEl.value.trim()){
-    await verifyStudentAccess(true);
-  }else{
-    setStatus("학생 키를 확인한 뒤 학습을 시작하세요.", false);
-    studentStatusEl.textContent = "학생 키를 입력하고 Save Student를 눌러주세요.";
-  }
+  await loadDay();
+  // auto refresh attempts if key exists
+  if(studentKeyEl.value.trim()) refreshAttempts();
 });
 </script>
 </body>

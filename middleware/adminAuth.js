@@ -26,7 +26,8 @@ function requireAdminAuth(req, res, next) {
   }
 
   if (credentials.username !== expectedUsername || credentials.password !== expectedPassword) {
-    return res.status(403).json({ error: "관리자 권한이 없습니다." });
+    res.setHeader("WWW-Authenticate", 'Basic realm="Admin Area"');
+    return res.status(401).json({ error: "비밀번호가 틀렸습니다. 다시 입력하세요." });
   }
 
   next();
