@@ -7,6 +7,7 @@ const pool = require("./db/pool");
 const { requireAdminAuth } = require("./middleware/adminAuth");
 const adminStudentsRoutes = require("./routes/adminStudentsRoutes");
 const studentAccessRoutes = require("./routes/studentAccessRoutes");
+const lingoloopRoutes = require("./routes/lingoloopRoutes");
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -38,6 +39,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api", studentAccessRoutes);
+app.use("/api/lingoloop", lingoloopRoutes);
 app.use("/api/admin", requireAdminAuth, adminStudentsRoutes);
 app.use("/admin", requireAdminAuth);
 
