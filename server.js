@@ -39,6 +39,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api", studentAccessRoutes);
+app.use("/api", lingoloopRoutes);
 app.use("/api/lingoloop", lingoloopRoutes);
 app.use("/api/admin", requireAdminAuth, adminStudentsRoutes);
 app.use("/admin", requireAdminAuth);

@@ -1,0 +1,82 @@
+﻿:root {
+  --bg: #0c1b33;
+  --card: #122a4a;
+  --text: #eff6ff;
+  --muted: #98acc7;
+  --line: #24446f;
+  --accent: #2ea8ff;
+  --ok: #4cd4a0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 0%, #193860 0%, var(--bg) 55%);
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(11, 26, 46, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar h1 { margin: 0; font-size: 18px; }
+.container { padding: 14px; max-width: 460px; margin: 0 auto; }
+.tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 12px; }
+.tab {
+  border: 1px solid var(--line);
+  background: #10223d;
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 9px 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.tab.active { color: #fff; border-color: var(--accent); background: #15375e; }
+.panel {
+  background: rgba(18, 42, 74, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.key-panel {
+  margin-bottom: 10px;
+}
+h2 { margin: 0 0 10px; font-size: 15px; }
+.row, .stack { display: flex; gap: 8px; margin-bottom: 10px; }
+.row > * { flex: 1; }
+.stack { flex-direction: column; }
+input, select, textarea, button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #2f5280;
+  background: #0f2039;
+  color: var(--text);
+  padding: 10px;
+  font-size: 13px;
+}
+button { background: #17426f; font-weight: 700; }
+button.ghost { width: auto; padding: 8px 12px; }
+.list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.list li { padding: 10px; border: 1px solid #315884; border-radius: 10px; background: #102641; }
+.result {
+  white-space: pre-wrap;
+  min-height: 88px;
+  margin: 10px 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #315884;
+  background: #0c1e34;
+  color: #d6e7ff;
+}
+.status { color: var(--ok); font-size: 12px; margin: 12px 4px 0; }
+.hidden { display: none; }
+
+@media (min-width: 768px) {
+  .container { max-width: 560px; }
+}

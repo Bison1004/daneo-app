@@ -1,16 +1,26 @@
-﻿const state = {
-  words: [],
-  reviews: [],
-  speechLogs: [],
-  chatLogs: [],
-};
+﻿const stateByUser = new Map();
 
-function createWord(input) {
+function getState(userId) {
+  const key = String(userId || "public");
+  if (!stateByUser.has(key)) {
+    stateByUser.set(key, {
+      words: [],
+      reviews: [],
+      speechLogs: [],
+      chatLogs: [],
+    });
+  }
+  return stateByUser.get(key);
+}
+
+async function createWord(userId, input) {
+  const state = getState(userId);
   const now = new Date();
   const id = String(state.words.length + 1);
 
   const word = {
     id,
+    userId: String(userId),
     word: String(input.word || "").trim(),
     translation: String(input.translation || "").trim(),
     examples: Array.isArray(input.examples) ? input.examples.slice(0, 3) : [],
@@ -26,34 +36,41 @@ function createWord(input) {
   return word;
 }
 
-function getWordById(id) {
-  return state.words.find((item) => item.id === String(id));
+async function getWordById(userId, id) {
+  const state = getState(userId);
+  return state.words.find((item) => item.id === String(id)) || null;
 }
 
-function replaceWord(id, updatedWord) {
+async function replaceWord(userId, id, updatedWord) {
+  const state = getState(userId);
   const idx = state.words.findIndex((item) => item.id === String(id));
   if (idx === -1) return null;
   state.words[idx] = updatedWord;
   return state.words[idx];
 }
 
-function addReview(log) {
+async function addReview(userId, log) {
+  const state = getState(userId);
   state.reviews.push({ ...log, createdAt: new Date() });
 }
 
-function addSpeechLog(log) {
+async function addSpeechLog(userId, log) {
+  const state = getState(userId);
   state.speechLogs.push({ ...log, createdAt: new Date() });
 }
 
-function addChatLog(log) {
+async function addChatLog(userId, log) {
+  const state = getState(userId);
   state.chatLogs.push({ ...log, createdAt: new Date() });
 }
 
-function listWords() {
+async function listWords(userId) {
+  const state = getState(userId);
   return state.words.slice();
 }
 
-function getProgressSnapshot() {
+async function getProgressSnapshot(userId) {
+  const state = getState(userId);
   return {
     words: state.words.slice(),
     reviews: state.reviews.slice(),

@@ -23,42 +23,50 @@
 
 ### 공정 3. 백엔드 API 구현
 - 산출물
-  - `GET /api/lingoloop/words`
-  - `POST /api/lingoloop/words`
-  - `PATCH /api/lingoloop/words/:id`
-  - `POST /api/lingoloop/speech/score`
-  - `POST /api/lingoloop/chat`
-  - `GET /api/lingoloop/progress`
+  - `GET /api/words`
+  - `POST /api/words`
+  - `PATCH /api/words/:id`
+  - `POST /api/speech/score`
+  - `POST /api/chat`
+  - `GET /api/progress`
 - 완료 기준
   - 모바일 클라이언트가 엔드포인트를 호출해 기본 플로우 시연 가능
 
 ### 공정 4. 모바일 UI/PWA 구현
 - 산출물
-  - 홈/학습/발음/대화/진도 화면
+  - 홈/학습/퀴즈/발음/대화/진도 화면
   - 오프라인 fallback 및 캐시 전략
 - 완료 기준
   - 모바일 뷰포트에서 핵심 루프 1회 완료 가능
 
 ### 공정 5. 인증/보안/운영
 - 산출물
-  - 인증 계층, 레이트리밋, 비밀키 보호
-  - 로깅/에러 핸들링
+  - 접근키 + JWT 인증 계층
+  - 레이트리밋, 비밀키 보호
+  - 저장소 모드 전환(memory/mysql)
+  - 사용자별 데이터 분리
 - 완료 기준
   - 민감 정보 노출 없이 운영 가능
 
 ### 공정 6. 테스트 및 배포
 - 산출물
-  - Unit/Integration/E2E 테스트
-  - CI 파이프라인
+  - Unit 테스트
+  - CI 파이프라인(GitHub Actions)
 - 완료 기준
-  - main 브랜치 배포 자동화
+  - push/PR 시 자동 검사 수행
 
-## 이번 작업에서 완료한 항목
-- 공정 1: 구조/범위 문서화 완료
-- 공정 2: SRS/발음/진도 엔진 코드 추가
-- 공정 3: LingoLoop 프로토타입 API 추가
+## 완료 상태
+- 공정 1 완료
+- 공정 2 완료
+- 공정 3 완료
+- 공정 4 완료
+- 공정 5 완료
+- 공정 6 완료
 
-## 다음 작업 우선순위
-1. 모바일 UI(PWA) 골격 생성
-2. Chat endpoint를 실제 Claude 연동으로 교체
-3. 메모리 저장소를 DB 저장소로 전환
+## 최종 진행률
+- **100% 완료 (남은 필수 공정 없음)**
+
+## 후속 개선(선택)
+1. Claude 실시간 토큰 스트리밍(SSE chunk passthrough)
+2. Supabase/JWT + RLS 완전 이관
+3. E2E 테스트(Playwright) 추가

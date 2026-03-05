@@ -147,3 +147,41 @@ npm start
 ## 저장소
 
 - GitHub: https://github.com/Bison1004/daneo-app
+
+## LingoLoop 모바일 API 보안/AI 설정
+
+아래 값을 `.env`에 추가하면 `/api/lingoloop/*` 보안과 Claude 연동을 사용할 수 있습니다.
+
+```env
+LINGOLOOP_STORAGE=memory
+LINGOLOOP_ACCESS_KEY=your-mobile-key
+LINGOLOOP_RATE_WINDOW_MS=60000
+LINGOLOOP_RATE_MAX=60
+LINGOLOOP_CHAT_WINDOW_MS=86400000
+DAILY_CHAT_LIMIT=20
+MAX_TOKENS_PER_CHAT=800
+CLAUDE_MODEL=claude-sonnet-4-5
+ANTHROPIC_API_KEY=sk-ant-xxxxx
+```
+
+- `LINGOLOOP_STORAGE=mysql`로 설정하면 LingoLoop 데이터(단어/복습/발음/대화 로그)를 MySQL에 저장합니다.
+- `LINGOLOOP_ACCESS_KEY`를 비우면 인증 없이 접근 가능합니다.
+- `ANTHROPIC_API_KEY`가 없으면 `/api/lingoloop/chat`은 mock 응답으로 자동 fallback 됩니다.
+- 모바일 페이지: `http://localhost:3000/lingoloop/`
+
+## LingoLoop 인증/퀴즈/테스트 최종 설정
+
+```env
+LINGOLOOP_STORAGE=mysql
+LINGOLOOP_REQUIRE_AUTH=1
+LINGOLOOP_JWT_SECRET=change-me-lingoloop-jwt
+LINGOLOOP_JWT_EXPIRES_SEC=604800
+```
+
+- `POST /api/auth/guest` 로 게스트 JWT를 발급받고, 이후 `Authorization: Bearer <token>` 헤더로 호출합니다.
+- 퀴즈 API
+  - `GET /api/quiz/question`
+  - `POST /api/quiz/submit`
+- 테스트/검증
+  - `npm run check:syntax`
+  - `npm test`
